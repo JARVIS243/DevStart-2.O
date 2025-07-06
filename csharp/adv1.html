@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 1: Exception Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 1: Exception Handling</h1>
+    <p>Learn how to handle runtime errors safely using try-catch</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚠️ What is an Exception?</h2>
+      <p>An exception is an error that occurs during program execution. Without handling, it can crash your program.</p>
+    </section>
+
+    <section>
+      <h2>🛡️ try-catch Block</h2>
+      <pre><code class="language-csharp">
+try
+{
+    int num = int.Parse("abc");  // Error!
+    Console.WriteLine(num);
+}
+catch (FormatException e)
+{
+    Console.WriteLine("Invalid format: " + e.Message);
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ finally Block</h2>
+      <p><code>finally</code> runs no matter what – used to clean up resources.</p>
+      <pre><code class="language-csharp">
+try
+{
+    int[] arr = { 1, 2 };
+    Console.WriteLine(arr[5]);
+}
+catch (IndexOutOfRangeException e)
+{
+    Console.WriteLine("Index error: " + e.Message);
+}
+finally
+{
+    Console.WriteLine("This always runs.");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use specific catch blocks for known errors</li>
+        <li>Avoid catching general <code>Exception</code> unless necessary</li>
+        <li>Use <code>finally</code> for closing files, connections, etc.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Parse a number from user input inside a <code>try</code> block</li>
+        <li>Handle invalid input using <code>FormatException</code></li>
+        <li>Use <code>finally</code> to print “Thank you for using this app”</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter10.html">← Previous</a>
+      <a href="adv2.html">Next → Custom Exceptions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

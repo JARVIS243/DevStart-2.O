@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 8: Async & Await</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 8: Async & Await</h1>
+    <p>Run non-blocking tasks using async programming</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚡ What is Async Programming?</h2>
+      <p>Async lets your program continue running while waiting for tasks like file read, web download, or delay.</p>
+      <p>Use <code>async</code> and <code>await</code> keywords to implement it easily.</p>
+    </section>
+
+    <section>
+      <h2>📄 Example – Async Method</h2>
+      <pre><code class="language-csharp">
+using System;
+using System.Threading.Tasks;
+
+class Program
+{
+    static async Task DoTask()
+    {
+        Console.WriteLine("Task started...");
+        await Task.Delay(2000); // Wait 2 seconds
+        Console.WriteLine("Task completed.");
+    }
+
+    static void Main()
+    {
+        Task t = DoTask();
+        Console.WriteLine("Main method continues...");
+        t.Wait(); // Wait for async task to finish
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li><code>async</code> keyword marks a method as asynchronous</li>
+        <li><code>await</code> pauses execution until the task finishes</li>
+        <li>Use <code>Task</code> or <code>Task&lt;T&gt;</code> return types</li>
+        <li>Don't block main thread with long operations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an async method that downloads a webpage using <code>HttpClient</code></li>
+        <li>Print the first 100 characters</li>
+        <li>Use <code>await</code> properly to wait for result</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous</a>
+      <a href="adv9.html">Next → Advanced Collections</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

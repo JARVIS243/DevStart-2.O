@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Multithreading</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 16 – Multithreading</h1>
+    <p>Run multiple threads to achieve concurrent execution</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧵 What is Multithreading?</h2>
+      <p>
+        Multithreading lets you run multiple threads (lightweight processes) simultaneously within a program, improving performance.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Creating Threads</h2>
+      <pre><code class="language-java">
+// Using Thread class
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread running: " + Thread.currentThread().getName());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 Using Runnable Interface</h2>
+      <pre><code class="language-java">
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Runnable thread: " + Thread.currentThread().getName());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread t = new Thread(new MyRunnable());
+        t.start();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Thread Lifecycle</h2>
+      <ul>
+        <li>New → Runnable → Running → Terminated</li>
+        <li>Use methods: <code>start()</code>, <code>sleep()</code>, <code>join()</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Synchronization</h2>
+      <p>Synchronize shared resources to avoid race conditions.</p>
+      <pre><code class="language-java">
+synchronized void method() {
+    // thread-safe code
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create two threads printing numbers 1-5</li>
+        <li>Use <code>sleep()</code> to pause between prints</li>
+        <li>Experiment with synchronized methods</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv15.html">← Previous: Exception Handling</a>
+      <a href="adv17.html">Next → JavaFX Basics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

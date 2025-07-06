@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS – Advanced 4: Responsive Images</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 4: Responsive Images</h1>
+    <p>Use <code>&lt;picture&gt;</code> for different screen sizes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🖼 Example</h2>
+      <picture>
+        <source media="(max-width: 600px)" srcset="../assets/img-small.jpg" />
+        <source media="(min-width: 601px)" srcset="../assets/img-large.jpg" />
+        <img src="../assets/img-large.jpg" alt="Responsive Image" style="width: 100%; max-width: 400px;" />
+      </picture>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create two image versions and try switching</li>
+        <li>Try using <code>srcset</code> in <code>&lt;img&gt;</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous</a>
+      <a href="adv5.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

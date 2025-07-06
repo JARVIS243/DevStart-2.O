@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Constructors</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 1 – Constructors</h1>
+    <p>Initialize objects with default or custom values</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🏗️ What is a Constructor?</h2>
+      <p>
+        A constructor is a special method that is automatically called when an object is created.  
+        It is used to initialize object values.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧠 Default Constructor</h2>
+      <pre><code class="language-java">
+public class Student {
+    String name;
+
+    // Default constructor
+    Student() {
+        name = "Unknown";
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🛠️ Parameterized Constructor</h2>
+      <pre><code class="language-java">
+public class Student {
+    String name;
+
+    // Constructor with parameter
+    Student(String n) {
+        name = n;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Using the Constructor</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Aju");
+        s1.display();  // Output: Name: Aju
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Book</code> class with title and author</li>
+        <li>Use constructor to assign values</li>
+        <li>Print book details using a method</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Constructor</strong> is used to initialize objects</li>
+        <li><strong>Default constructor</strong> has no parameters</li>
+        <li><strong>Parameterized constructor</strong> allows setting values</li>
+        <li>Constructor name must match the class name</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../java/basic10.html">← Previous: OOP Basics</a>
+      <a href="inter2.html">Next → Inheritance</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

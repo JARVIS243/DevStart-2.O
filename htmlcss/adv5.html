@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS – Advanced 5: CSS Grid</title>
+  <link rel="stylesheet" href="../style-v2.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 5: CSS Grid</h1>
+    <p>Create powerful layouts using the grid system</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Add more items</li>
+        <li>Try <code>grid-template-rows</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous</a>
+      <a href="adv6.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

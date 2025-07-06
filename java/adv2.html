@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Multiple Catch Blocks</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 2 – Multiple Catch Blocks</h1>
+    <p>Handle different types of exceptions using multiple catch blocks</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 What Are Multiple Catch Blocks?</h2>
+      <p>
+        When a block of code may throw more than one type of exception, we can use multiple <code>catch</code> blocks to handle each type separately.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Example</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]);  // ArrayIndexOutOfBoundsException
+            int result = 10 / 0;             // ArithmeticException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array error: " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println("Math error: Cannot divide by zero.");
+        } catch (Exception e) {
+            System.out.println("General error: " + e.getMessage());
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Notes</h2>
+      <ul>
+        <li><strong>Order matters:</strong> Catch more specific exceptions first</li>
+        <li>General <code>Exception</code> block should come last</li>
+        <li>Only one catch block will be executed per exception</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create code that might throw multiple types of exceptions</li>
+        <li>Handle each using separate catch blocks</li>
+        <li>Add a final catch with <code>Exception e</code> to handle any unexpected ones</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Use multiple <code>catch</code> blocks to handle different exceptions</li>
+        <li>Always catch the most specific exceptions first</li>
+        <li>Helps make code more robust and understandable</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous: Exception Handling</a>
+      <a href="adv3.html">Next → Finally Block</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

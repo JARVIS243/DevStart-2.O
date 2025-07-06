@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Generics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 10 – Generics</h1>
+    <p>Write flexible and type-safe code using generics</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 What are Generics?</h2>
+      <p>
+        Generics allow you to write code that works with different types, while ensuring type safety at compile time.  
+        They're commonly used with collections like <code>ArrayList</code>, <code>HashMap</code>, etc.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Example: Without vs With Generics</h2>
+      <pre><code class="language-java">
+// Without generics
+ArrayList list = new ArrayList();
+list.add("Hello");
+String s = (String) list.get(0);  // requires casting
+
+// With generics
+ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+list.add("Hello");
+String s = list.get(0);  // no casting needed
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📦 Generic Class</h2>
+      <pre><code class="language-java">
+class Box&lt;T&gt; {
+    private T value;
+
+    public void set(T value) {
+        this.value = value;
+    }
+
+    public T get() {
+        return value;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Box&lt;String&gt; stringBox = new Box&lt;&gt;();
+        stringBox.set("DevStart");
+        System.out.println(stringBox.get());
+
+        Box&lt;Integer&gt; intBox = new Box&lt;&gt;();
+        intBox.set(123);
+        System.out.println(intBox.get());
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Benefits of Generics</h2>
+      <ul>
+        <li>Type safety – catch errors at compile time</li>
+        <li>No need for explicit type casting</li>
+        <li>Code reusability – same code works with different types</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a generic class called <code>Pair&lt;K, V&gt;</code> that stores a key and a value</li>
+        <li>Use it with different data types (e.g., <code>String, Integer</code>)</li>
+        <li>Print out the stored key-value pairs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Generics help you write cleaner, reusable, and safer code</li>
+        <li>Use <code>&lt;T&gt;</code>, <code>&lt;E&gt;</code>, <code>&lt;K, V&gt;</code> for generic classes and methods</li>
+        <li>Commonly used in collections</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv9.html">← Previous: Collections Framework</a>
+      <a href="adv11.html">Next → Lambda Expressions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

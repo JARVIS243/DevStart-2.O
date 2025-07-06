@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 4: Static Members</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 4: Static Members</h1>
+    <p>Learn how to use static variables and methods in C#</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📌 What is Static?</h2>
+      <p><strong>Static</strong> means shared – belongs to the class, not individual objects.</p>
+      <p>You can use static for:</p>
+      <ul>
+        <li>Variables shared by all objects</li>
+        <li>Methods that can be called without creating an object</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧮 Static Variable</h2>
+      <pre><code class="language-csharp">
+class Counter
+{
+    public static int count = 0;
+
+    public Counter()
+    {
+        count++;
+    }
+}
+
+// Usage
+Counter c1 = new Counter();
+Counter c2 = new Counter();
+Console.WriteLine(Counter.count);  // Output: 2
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚙️ Static Method</h2>
+      <pre><code class="language-csharp">
+class MathUtils
+{
+    public static int Square(int x)
+    {
+        return x * x;
+    }
+}
+
+// Call without object:
+int result = MathUtils.Square(5);  // 25
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Use <code>static</code> for utility methods (like Math)</li>
+        <li>Don't use static when each object needs its own copy</li>
+        <li><code>static</code> members are accessed using the class name</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Student</code> class with a static field <code>schoolName</code></li>
+        <li>Set it from one place and access it in multiple objects</li>
+        <li>Create a static method that returns today’s date</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous</a>
+      <a href="inter5.html">Next → Inheritance</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

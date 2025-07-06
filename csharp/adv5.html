@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 5: LINQ Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 5: LINQ Basics</h1>
+    <p>Use Language Integrated Query (LINQ) to query data easily</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 What is LINQ?</h2>
+      <p><strong>LINQ (Language Integrated Query)</strong> lets you query collections like arrays, lists, or databases using readable syntax.</p>
+    </section>
+
+    <section>
+      <h2>📄 Basic LINQ Query</h2>
+      <pre><code class="language-csharp">
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = { 5, 10, 15, 20, 25 };
+
+        var result = from n in numbers
+                     where n > 10
+                     select n;
+
+        foreach (int num in result)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+      </code></pre>
+      <p>Output:</p>
+      <pre><code>
+15
+20
+25
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚙️ Method Syntax</h2>
+      <pre><code class="language-csharp">
+var result = numbers.Where(n => n > 10);
+      </code></pre>
+
+      <p>This is equivalent to the query syntax using lambda expressions.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use LINQ for filtering, sorting, selecting, grouping, etc.</li>
+        <li>LINQ works with arrays, lists, and even databases (with LINQ to SQL)</li>
+        <li>Method syntax and query syntax are interchangeable</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a list of strings (names)</li>
+        <li>Use LINQ to select names starting with 'A'</li>
+        <li>Print the result</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous</a>
+      <a href="adv6.html">Next → Generics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

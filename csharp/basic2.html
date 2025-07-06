@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 2: Variables & Data Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 2: Variables & Data Types</h1>
+    <p>Store and manage values using variables and data types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔤 What is a Variable?</h2>
+      <p>A variable is like a container to store data that your program can use and change.</p>
+    </section>
+
+    <section>
+      <h2>🧱 Declaring Variables</h2>
+      <pre><code class="language-csharp">
+int age = 20;
+string name = "Aju";
+double pi = 3.14;
+bool isStudent = true;
+      </code></pre>
+      <ul>
+        <li><code>int</code> – whole numbers</li>
+        <li><code>string</code> – text</li>
+        <li><code>double</code> – decimal numbers</li>
+        <li><code>bool</code> – true or false</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📥 Input & 📤 Output</h2>
+      <pre><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter your name: ");
+        string userName = Console.ReadLine();
+        Console.WriteLine("Hello, " + userName + "!");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Focus</h2>
+      <p>Understand how data is stored, labeled, and reused in your code.</p>
+      <ul>
+        <li>Use meaningful variable names</li>
+        <li>Remember to match type with value (e.g., don’t assign text to an int)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create variables for your name, age, and favorite number</li>
+        <li>Use <code>Console.WriteLine()</code> to display them</li>
+        <li>Try changing the values and see the output</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic1.html">← Previous</a>
+      <a href="basic3.html">Next → Input and Output</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

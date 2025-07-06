@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Custom Exceptions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 5 – Custom Exceptions</h1>
+    <p>Create your own error types using user-defined exceptions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎯 What is a Custom Exception?</h2>
+      <p>
+        A custom exception is a user-defined class that extends the <code>Exception</code> class.  
+        You can use it to represent specific error conditions in your application.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Creating a Custom Exception</h2>
+      <pre><code class="language-java">
+// Step 1: Define custom exception
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Using the Custom Exception</h2>
+      <pre><code class="language-java">
+public class Main {
+    static void checkAge(int age) throws AgeException {
+        if (age < 18) {
+            throw new AgeException("Age must be 18 or above");
+        } else {
+            System.out.println("Access granted");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(16);
+        } catch (AgeException e) {
+            System.out.println("Custom Exception: " + e.getMessage());
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a custom exception called <code>LowBalanceException</code></li>
+        <li>Throw it if account balance is less than 500</li>
+        <li>Handle it using try-catch block</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Custom exceptions = special errors for your app</li>
+        <li>Extend <code>Exception</code> or <code>RuntimeException</code></li>
+        <li>Use meaningful names for clarity</li>
+        <li>Helps improve code readability and debugging</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous: Throw and Throws</a>
+      <a href="adv6.html">Next → Multithreading</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

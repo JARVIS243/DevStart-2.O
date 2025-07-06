@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS – Intermediate 2: Flexbox Layout</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .flex-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .box {
+      background: lightcoral;
+      padding: 20px;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Intermediate 2: Flexbox Layout</h1>
+    <p>Use Flexbox to align and space elements easily</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Flex Container Example</h2>
+      <pre><code class="language-html">
+<div class="flex-container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+      </code></pre>
+      <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Make 4 boxes using Flexbox</li>
+        <li>Change <code>justify-content</code> to <code>space-between</code> and observe</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous</a>
+      <a href="inter3.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

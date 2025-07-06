@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Abstract Classes</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 8 – Abstract Classes</h1>
+    <p>Define a blueprint class that cannot be directly instantiated</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧩 What is an Abstract Class?</h2>
+      <p>
+        An abstract class in Java is a class that <strong>cannot be instantiated</strong>.  
+        It can have both abstract (no body) and regular methods.  
+        It's used to define a common structure for subclasses.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Syntax</h2>
+      <pre><code class="language-java">
+abstract class Animal {
+    abstract void makeSound();  // abstract method
+
+    void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Using It</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.makeSound();  // Dog barks
+        d.sleep();      // Sleeping...
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Key Points</h2>
+      <ul>
+        <li>Use <code>abstract</code> keyword to define abstract class or method</li>
+        <li>You cannot create an object of an abstract class</li>
+        <li>Child classes must implement all abstract methods</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an abstract class <code>Shape</code> with an abstract method <code>area()</code></li>
+        <li>Implement it in <code>Circle</code> and <code>Square</code> classes</li>
+        <li>Call their <code>area()</code> methods</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>abstract</code> class = partial blueprint</li>
+        <li>Can include normal and abstract methods</li>
+        <li>Cannot be directly instantiated</li>
+        <li>Forces subclasses to implement key functionality</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous: Final Keyword</a>
+      <a href="inter9.html">Next → Interfaces</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

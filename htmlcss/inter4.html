@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS – Intermediate 4: Positioning</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .container {
+      position: relative;
+      height: 200px;
+      background: #eee;
+      margin-bottom: 30px;
+    }
+    .box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: orange;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Intermediate 4: CSS Positioning</h1>
+    <p>Control where elements appear on the screen</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📌 Position Types</h2>
+      <ul>
+        <li><code>static</code> – default</li>
+        <li><code>relative</code> – moves relative to normal</li>
+        <li><code>absolute</code> – relative to nearest positioned parent</li>
+        <li><code>fixed</code> – relative to viewport</li>
+      </ul>
+
+      <div class="container">
+        <div class="box">I'm absolutely positioned</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create two boxes using absolute and relative</li>
+        <li>Try adding <code>fixed</code> header</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous</a>
+      <a href="inter5.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

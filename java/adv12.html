@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Streams API</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 12 – Streams API</h1>
+    <p>Process collections of data in a functional style using Streams</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🌊 What is Streams API?</h2>
+      <p>
+        The Streams API in Java lets you process data (like collections) using a pipeline of operations (filtering, mapping, reducing, etc.) in a clean and functional style.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Basic Example</h2>
+      <pre><code class="language-java">
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;String&gt; names = Arrays.asList("Anna", "John", "Mike", "Amanda");
+
+        names.stream()
+            .filter(name -> name.startsWith("A"))
+            .forEach(System.out::println);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔧 Common Stream Operations</h2>
+      <ul>
+        <li><code>filter()</code> – filter elements based on a condition</li>
+        <li><code>map()</code> – transform elements</li>
+        <li><code>forEach()</code> – perform an action for each element</li>
+        <li><code>collect()</code> – convert stream back to list/set</li>
+        <li><code>sorted()</code> – sort elements</li>
+        <li><code>reduce()</code> – reduce elements to a single value</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Example: Mapping and Reducing</h2>
+      <pre><code class="language-java">
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+        int sum = numbers.stream()
+            .map(n -> n * 2)
+            .reduce(0, Integer::sum);
+
+        System.out.println("Sum of doubled numbers: " + sum);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Benefits</h2>
+      <ul>
+        <li>Write clean, readable, functional-style code</li>
+        <li>Chain multiple operations easily</li>
+        <li>Parallel stream support for performance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a list of names. Filter names longer than 4 characters</li>
+        <li>Convert them to uppercase using <code>map()</code></li>
+        <li>Sort and print the result using <code>forEach()</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv11.html">← Previous: Lambda Expressions</a>
+      <a href="adv13.html">Next → File and Directory Operations</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

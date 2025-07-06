@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Throw and Throws</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 4 – Throw and Throws</h1>
+    <p>Manually throw exceptions and declare them in method signatures</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🚀 What is <code>throw</code>?</h2>
+      <p>
+        The <code>throw</code> keyword is used to explicitly throw an exception from your code.
+        You can use it to trigger custom or built-in exceptions.
+      </p>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        int age = 15;
+        if (age < 18) {
+            throw new ArithmeticException("Not eligible to vote");
+        }
+        System.out.println("Eligible");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📢 What is <code>throws</code>?</h2>
+      <p>
+        The <code>throws</code> keyword is used to declare that a method may throw an exception.
+        It tells the caller to handle the exception.
+      </p>
+      <pre><code class="language-java">
+import java.io.*;
+
+public class Example {
+    static void readFile() throws IOException {
+        FileReader fr = new FileReader("data.txt");
+        fr.read();
+        fr.close();
+    }
+
+    public static void main(String[] args) {
+        try {
+            readFile();
+        } catch (IOException e) {
+            System.out.println("Handled IOException: " + e.getMessage());
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Key Differences</h2>
+      <ul>
+        <li><code>throw</code> is used to trigger an exception</li>
+        <li><code>throws</code> is used to declare an exception</li>
+        <li><code>throw</code> is followed by a single exception object</li>
+        <li><code>throws</code> is used in method declaration and can list multiple exceptions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Use <code>throw</code> to raise a custom exception based on a condition</li>
+        <li>Create a method that uses <code>throws</code> to declare a checked exception</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong><code>throw</code></strong> → triggers an exception manually</li>
+        <li><strong><code>throws</code></strong> → tells that method might throw an exception</li>
+        <li>Used to handle errors and maintain cleaner code</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous: Finally Block</a>
+      <a href="adv5.html">Next → Custom Exceptions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – File and Directory Operations</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 13 – File and Directory Operations</h1>
+    <p>Read, write, create, and delete files and folders in Java</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📁 Working with Files and Folders</h2>
+      <p>
+        Java provides two main packages for file operations:
+      </p>
+      <ul>
+        <li><code>java.io</code> – basic file reading/writing</li>
+        <li><code>java.nio.file</code> – advanced file and path handling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Writing to a File</h2>
+      <pre><code class="language-java">
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FileWriter writer = new FileWriter("output.txt");
+        writer.write("Welcome to DevStart 2.0!\nJava File Handling Example.");
+        writer.close();
+        System.out.println("File written successfully.");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📖 Reading from a File</h2>
+      <pre><code class="language-java">
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("output.txt"));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+        reader.close();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📂 Creating and Deleting Files/Directories</h2>
+      <pre><code class="language-java">
+import java.nio.file.*;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        Path path = Paths.get("newfile.txt");
+
+        // Create file
+        Files.createFile(path);
+        System.out.println("File created: " + path);
+
+        // Delete file
+        Files.delete(path);
+        System.out.println("File deleted: " + path);
+
+        // Create directory
+        Path dir = Paths.get("myfolder");
+        Files.createDirectory(dir);
+        System.out.println("Directory created: " + dir);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a folder called <code>logs</code></li>
+        <li>Write some text to <code>logs/devstart.txt</code></li>
+        <li>Read the file and print contents</li>
+        <li>Delete the file afterward</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Use <code>FileWriter</code> and <code>BufferedReader</code> for basic text file operations</li>
+        <li>Use <code>java.nio.file</code> for file/directory creation and deletion</li>
+        <li>Always close your file streams</li>
+        <li>Wrap in <code>try-catch</code> or use <code>throws IOException</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv12.html">← Previous: Streams API</a>
+      <a href="adv14.html">Next → Networking Basics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

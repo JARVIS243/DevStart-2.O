@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Packages</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 10 – Packages</h1>
+    <p>Organize your Java classes into structured folders</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Package?</h2>
+      <p>
+        A package is a namespace that organizes related classes and interfaces.  
+        Think of it like a folder structure in your project.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Creating a Package</h2>
+      <pre><code class="language-java">
+// File: MyClass.java
+package mypackage;
+
+public class MyClass {
+    public void sayHello() {
+        System.out.println("Hello from MyClass in mypackage!");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Using a Package</h2>
+      <pre><code class="language-java">
+// File: Main.java
+import mypackage.MyClass;
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.sayHello();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Built-in Packages</h2>
+      <ul>
+        <li><code>java.util</code> – for collections like ArrayList, HashMap</li>
+        <li><code>java.io</code> – for file handling</li>
+        <li><code>java.net</code> – for networking</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a package <code>mathutils</code></li>
+        <li>Add a class <code>Calculator</code> with methods like <code>add()</code> and <code>subtract()</code></li>
+        <li>Use the <code>Calculator</code> class in another file by importing the package</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Best Practices</h2>
+      <ul>
+        <li>Use lowercase names for packages (e.g., <code>myapp.tools</code>)</li>
+        <li>Group related classes in meaningful packages</li>
+        <li>Keep file structure consistent with package names</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>package</code> keyword defines a class's package</li>
+        <li><code>import</code> keyword is used to use classes from other packages</li>
+        <li>Packages help organize and avoid name conflicts</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous: Interfaces</a>
+      <a href="adv1.html">Next → Java Advanced: Exception Handling</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

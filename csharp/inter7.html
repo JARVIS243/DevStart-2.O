@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 7: Properties</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 7: Properties</h1>
+    <p>Use properties to control access to class fields</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 Why Properties?</h2>
+      <p>Properties help manage access to private fields, allowing you to read or update values safely.</p>
+    </section>
+
+    <section>
+      <h2>⚙️ Example</h2>
+      <pre><code class="language-csharp">
+class Student
+{
+    private int age;
+
+    public int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value >= 0)
+                age = value;
+            else
+                Console.WriteLine("Age must be positive.");
+        }
+    }
+}
+
+// Usage
+Student s = new Student();
+s.Age = 21;  // set
+Console.WriteLine(s.Age);  // get
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚡ Auto-Implemented Properties</h2>
+      <pre><code class="language-csharp">
+class Book
+{
+    public string Title { get; set; }
+}
+
+// Usage
+Book b = new Book();
+b.Title = "DevStart C# Guide";
+Console.WriteLine(b.Title);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Use properties instead of public fields</li>
+        <li>They add a layer of control and validation</li>
+        <li>Auto-properties are short and useful for simple cases</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Product</code> class with properties: <code>Name</code>, <code>Price</code></li>
+        <li>Validate that price can’t be negative</li>
+        <li>Print the product’s info</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous</a>
+      <a href="inter8.html">Next → Indexers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

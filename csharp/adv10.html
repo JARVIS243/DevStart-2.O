@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 10: File I/O with Streams</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 10: File I/O with Streams</h1>
+    <p>Read and write files using StreamReader and StreamWriter</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📄 Writing to a File</h2>
+      <pre><code class="language-csharp">
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        using (StreamWriter writer = new StreamWriter("data.txt"))
+        {
+            writer.WriteLine("Welcome to DevStart!");
+            writer.WriteLine("This is advanced C# file handling.");
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📖 Reading from a File</h2>
+      <pre><code class="language-csharp">
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        using (StreamReader reader = new StreamReader("data.txt"))
+        {
+            string content;
+            while ((content = reader.ReadLine()) != null)
+            {
+                Console.WriteLine(content);
+            }
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>using</code> to auto-close the file</li>
+        <li><code>StreamWriter</code> is for writing, <code>StreamReader</code> for reading</li>
+        <li>Good for handling large files or line-by-line operations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a file with names of your favorite programming languages</li>
+        <li>Read and display each language</li>
+        <li>Write a log file that stores the current date and time</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv9.html">← Previous</a>
+      <a href="../index.html">🏠 Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 8: Indexers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 8: Indexers</h1>
+    <p>Access elements in a class using array-like syntax</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is an Indexer?</h2>
+      <p>An indexer lets you access instances of a class like arrays, using square brackets.</p>
+    </section>
+
+    <section>
+      <h2>🔢 Example</h2>
+      <pre><code class="language-csharp">
+class Numbers
+{
+    private int[] data = new int[5];
+
+    public int this[int index]
+    {
+        get { return data[index]; }
+        set { data[index] = value; }
+    }
+}
+
+// Usage
+Numbers n = new Numbers();
+n[0] = 100;
+n[1] = 200;
+Console.WriteLine(n[0]);  // Output: 100
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Indexers use <code>this</code> keyword with square brackets</li>
+        <li>Useful for wrapping arrays or list-like behavior in custom classes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Week</code> that holds 7 days</li>
+        <li>Use indexer to set/get names of each day</li>
+        <li>Print all 7 days using a loop</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous</a>
+      <a href="inter9.html">Next → Interfaces</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

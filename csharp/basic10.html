@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 10: Project – Grade Calculator</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 10: Project – Grade Calculator</h1>
+    <p>Use everything you’ve learned to build a simple real-world console app</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎯 Goal</h2>
+      <p>Create a program that asks for a student’s name and 3 subject marks, calculates the average, and shows the grade.</p>
+    </section>
+
+    <section>
+      <h2>💻 Code Example</h2>
+      <pre><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter student name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter mark 1: ");
+        int mark1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter mark 2: ");
+        int mark2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter mark 3: ");
+        int mark3 = int.Parse(Console.ReadLine());
+
+        int total = mark1 + mark2 + mark3;
+        float average = total / 3f;
+
+        Console.WriteLine($"\n{name}'s average is: {average}");
+
+        if (average >= 90)
+            Console.WriteLine("Grade: A");
+        else if (average >= 75)
+            Console.WriteLine("Grade: B");
+        else if (average >= 60)
+            Console.WriteLine("Grade: C");
+        else
+            Console.WriteLine("Grade: Fail");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Concepts Used</h2>
+      <ul>
+        <li>Input/Output</li>
+        <li>Variables & Data Types</li>
+        <li>Arithmetic and Logic</li>
+        <li>Conditionals (if-else)</li>
+        <li>String Interpolation (<code>$"..."</code>)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Show total marks along with average and grade</li>
+        <li>Handle invalid input using try-catch</li>
+        <li>Ask user if they want to run again using a loop</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic9.html">← Previous</a>
+      <a href="inter1.html">Next → Intermediate C# Begins</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

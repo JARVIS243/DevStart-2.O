@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Arrays</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Basic Lesson 8 – Arrays</h1>
+    <p>Store and access multiple values using arrays</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is an Array?</h2>
+      <p>
+        An array is a collection of similar data items stored in a single variable.  
+        Each element can be accessed using its index (starting from 0).
+      </p>
+    </section>
+
+    <section>
+      <h2>🧠 Example: Declaring and Using Arrays</h2>
+      <pre><code class="language-java">
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        System.out.println("First number: " + numbers[0]);
+        System.out.println("Last number: " + numbers[4]);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Loop Through Arrays</h2>
+      <pre><code class="language-java">
+int[] marks = {80, 90, 85, 95, 100};
+
+for (int i = 0; i < marks.length; i++) {
+    System.out.println("Subject " + (i+1) + ": " + marks[i]);
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an array of 5 names and print each using a loop</li>
+        <li>Find the total and average of an array of 5 marks</li>
+        <li>Change the value at index 2 and print it again</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>int[] arr = new int[5];</code> – creates empty array</li>
+        <li><code>arr[i]</code> – access item at index <code>i</code></li>
+        <li><code>.length</code> – gives total number of elements</li>
+        <li>Arrays are zero-indexed and fixed in size</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic7.html">← Previous: Loops</a>
+      <a href="basic9.html">Next → String Handling</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

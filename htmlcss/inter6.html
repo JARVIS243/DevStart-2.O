@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS – Intermediate 6: Transitions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .btn {
+      background: steelblue;
+      color: white;
+      padding: 12px 24px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Intermediate 6: Transitions</h1>
+    <p>Animate changes smoothly using CSS transitions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎨 Hover Example</h2>
+      <pre><code class="language-css">
+.btn {
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: darkblue;
+}
+      </code></pre>
+
+      <button class="btn">Hover Me</button>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a button that changes color when hovered</li>
+        <li>Use <code>transition</code> on <code>color</code> or <code>transform</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous</a>
+      <a href="inter7.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

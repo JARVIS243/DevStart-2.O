@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Networking Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 14 – Networking Basics</h1>
+    <p>Connect programs over a network using sockets</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🌐 What is Networking in Java?</h2>
+      <p>
+        Java provides built-in libraries for networking using classes in <code>java.net</code>.  
+        You can create network applications like chat apps, web clients, and servers.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔌 Key Networking Classes</h2>
+      <ul>
+        <li><code>Socket</code> – used by clients to connect to servers</li>
+        <li><code>ServerSocket</code> – used by servers to listen for client requests</li>
+        <li><code>InetAddress</code> – represents an IP address</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Example: Server Program</h2>
+      <pre><code class="language-java">
+import java.net.*;
+import java.io.*;
+
+public class Server {
+    public static void main(String[] args) throws IOException {
+        ServerSocket server = new ServerSocket(1234);
+        System.out.println("Server is waiting...");
+
+        Socket socket = server.accept();
+        System.out.println("Client connected!");
+
+        DataInputStream input = new DataInputStream(socket.getInputStream());
+        String message = input.readUTF();
+        System.out.println("Message: " + message);
+
+        input.close();
+        socket.close();
+        server.close();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 Example: Client Program</h2>
+      <pre><code class="language-java">
+import java.net.*;
+import java.io.*;
+
+public class Client {
+    public static void main(String[] args) throws IOException {
+        Socket socket = new Socket("localhost", 1234);
+
+        DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+        output.writeUTF("Hello from client!");
+
+        output.close();
+        socket.close();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Notes</h2>
+      <ul>
+        <li>Run the <strong>Server</strong> first</li>
+        <li>Then run the <strong>Client</strong> (they must be on the same machine or reachable over network)</li>
+        <li>Use try-catch for production-level apps to handle exceptions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Modify the server to reply back to the client</li>
+        <li>Use <code>BufferedReader</code> and <code>PrintWriter</code> instead of <code>DataStream</code></li>
+        <li>Make a simple echo server</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>Socket</code> and <code>ServerSocket</code> allow two-way communication</li>
+        <li>Use streams to send/receive messages</li>
+        <li>Java makes it easy to build basic network applications</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv13.html">← Previous: File & Directory</a>
+      <a href="adv15.html">Next → Final Java Project Idea</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

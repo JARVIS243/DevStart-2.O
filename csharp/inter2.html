@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 2: Constructors</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 2: Constructors</h1>
+    <p>Initialize objects with custom values using constructors</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🏗️ What is a Constructor?</h2>
+      <p>A constructor is a special method that is automatically called when an object is created.</p>
+    </section>
+
+    <section>
+      <h2>🧱 Default Constructor</h2>
+      <pre><code class="language-csharp">
+class Student
+{
+    public Student()
+    {
+        Console.WriteLine("Student object created.");
+    }
+}
+
+// Usage:
+Student s1 = new Student();  // Output: Student object created.
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚙️ Parameterized Constructor</h2>
+      <pre><code class="language-csharp">
+class Student
+{
+    public string Name;
+    public int Age;
+
+    public Student(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public void Show()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+// Usage:
+Student s2 = new Student("Aju", 21);
+s2.Show();  // Output: Name: Aju, Age: 21
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Constructor name must match the class name</li>
+        <li>No return type is used (not even void)</li>
+        <li>You can overload constructors with different parameters</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Book</code> class with <code>title</code> and <code>author</code></li>
+        <li>Use a parameterized constructor to set values</li>
+        <li>Create 2 book objects and display their data</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous</a>
+      <a href="inter3.html">Next → Access Modifiers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

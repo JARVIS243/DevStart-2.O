@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – String Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Basic Lesson 9 – String Handling</h1>
+    <p>Work with text using Java Strings</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧵 What is a String?</h2>
+      <p>
+        A <code>String</code> is a sequence of characters enclosed in double quotes.  
+        Java provides many useful methods to handle strings.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧠 Declaring Strings</h2>
+      <pre><code class="language-java">
+String name = "Aju";
+String greeting = "Welcome to DevStart!";
+System.out.println(name);
+System.out.println(greeting);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📚 Common String Methods</h2>
+      <pre><code class="language-java">
+String message = "  Java Programming  ";
+
+System.out.println(message.length());        // 20
+System.out.println(message.toUpperCase());  // "  JAVA PROGRAMMING  "
+System.out.println(message.trim());         // "Java Programming"
+System.out.println(message.contains("Java")); // true
+System.out.println(message.indexOf("g"));   // 10
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔗 String Concatenation</h2>
+      <pre><code class="language-java">
+String first = "Dev";
+String second = "Start";
+
+String full = first + second;
+System.out.println(full);  // DevStart
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 String Comparison</h2>
+      <pre><code class="language-java">
+String a = "hello";
+String b = "hello";
+
+System.out.println(a.equals(b));     // true
+System.out.println(a == b);          // true (in some cases)
+
+String c = new String("hello");
+System.out.println(a.equals(c));     // true
+System.out.println(a == c);          // false (different objects)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Take a name input from user, convert to uppercase, and print</li>
+        <li>Check if a string contains the word "Java"</li>
+        <li>Join two user-given words into one string</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>String</code> is used for text</li>
+        <li>Use <code>+</code> to join strings</li>
+        <li>Use <code>.equals()</code> for string comparison</li>
+        <li>Helpful methods: <code>length()</code>, <code>toUpperCase()</code>, <code>trim()</code>, <code>contains()</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic8.html">← Previous: Arrays</a>
+      <a href="basic10.html">Next → Introduction to OOP</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

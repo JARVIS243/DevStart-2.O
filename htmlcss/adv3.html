@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS – Advanced 3: CSS Variables</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    :root {
+      --main-color: teal;
+      --padding: 20px;
+    }
+
+    .card {
+      background: var(--main-color);
+      color: white;
+      padding: var(--padding);
+      border-radius: 8px;
+      max-width: 300px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 3: CSS Variables</h1>
+    <p>Reuse values easily using <code>--custom-properties</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔧 Example</h2>
+      <div class="card">
+        <p>This box uses CSS variables for color and spacing.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create your own <code>--font-size</code> or <code>--border-color</code></li>
+        <li>Change values from <code>:root</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous</a>
+      <a href="adv4.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

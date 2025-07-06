@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 2: Custom Exceptions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 2: Custom Exceptions</h1>
+    <p>Create and throw your own exception types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🛠️ Why Custom Exceptions?</h2>
+      <p>Built-in exceptions (like <code>FormatException</code>) are useful, but sometimes you need to define your own errors specific to your app.</p>
+    </section>
+
+    <section>
+      <h2>📄 Defining a Custom Exception</h2>
+      <pre><code class="language-csharp">
+class AgeException : Exception
+{
+    public AgeException(string message) : base(message)
+    {
+    }
+}
+
+class Person
+{
+    public void SetAge(int age)
+    {
+        if (age < 0)
+        {
+            throw new AgeException("Age cannot be negative.");
+        }
+        Console.WriteLine("Age is set to " + age);
+    }
+}
+
+// Usage
+try
+{
+    Person p = new Person();
+    p.SetAge(-5);  // Triggers exception
+}
+catch (AgeException ex)
+{
+    Console.WriteLine("Custom Error: " + ex.Message);
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Inherit from <code>Exception</code></li>
+        <li>Pass custom message to <code>base()</code> constructor</li>
+        <li>Use <code>throw</code> to raise your custom exception</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>BalanceException</code> for invalid withdrawals</li>
+        <li>Throw the exception if withdrawal is more than balance</li>
+        <li>Catch and display the message</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous</a>
+      <a href="adv3.html">Next → Delegates</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

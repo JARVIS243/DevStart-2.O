@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 9: Interfaces</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 9: Interfaces</h1>
+    <p>Define contracts for classes using interfaces</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📘 What is an Interface?</h2>
+      <p>An interface defines a contract – a set of method signatures a class must implement.</p>
+      <p>It does not contain any implementation (only definitions).</p>
+    </section>
+
+    <section>
+      <h2>🧩 Interface Example</h2>
+      <pre><code class="language-csharp">
+interface IShape
+{
+    void Draw();
+}
+
+class Circle : IShape
+{
+    public void Draw()
+    {
+        Console.WriteLine("Drawing a circle.");
+    }
+}
+
+// Usage
+IShape shape = new Circle();
+shape.Draw();  // Output: Drawing a circle.
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔐 Why Use Interfaces?</h2>
+      <ul>
+        <li>To support multiple inheritance</li>
+        <li>To define a common set of behaviors</li>
+        <li>To enable polymorphism</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Interface names usually start with <code>I</code> (like <code>IShape</code>)</li>
+        <li>Use interfaces when you want different classes to follow the same behavior</li>
+        <li>You can implement multiple interfaces in one class</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an interface <code>IVehicle</code> with methods <code>Start()</code> and <code>Stop()</code></li>
+        <li>Implement it in <code>Car</code> and <code>Bike</code> classes</li>
+        <li>Create objects and call methods using the interface</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous</a>
+      <a href="inter10.html">Next → Abstract Classes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

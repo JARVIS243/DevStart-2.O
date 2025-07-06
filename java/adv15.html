@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Exception Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 15 – Exception Handling</h1>
+    <p>Manage errors and exceptions in your Java programs safely</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚠️ What are Exceptions?</h2>
+      <p>
+        Exceptions are runtime errors that disrupt normal program flow.  
+        Java provides mechanisms to catch and handle these errors gracefully.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 try-catch-finally</h2>
+      <pre><code class="language-java">
+try {
+    int a = 10 / 0;  // ArithmeticException
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero!");
+} finally {
+    System.out.println("This block always executes");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📚 Exception Types</h2>
+      <ul>
+        <li><strong>Checked Exceptions:</strong> Must be handled or declared (e.g., IOException)</li>
+        <li><strong>Unchecked Exceptions:</strong> Runtime exceptions (e.g., NullPointerException)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 throw and throws</h2>
+      <pre><code class="language-java">
+public void checkAge(int age) throws Exception {
+    if (age < 18) {
+        throw new Exception("Not allowed");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write code to handle <code>ArrayIndexOutOfBoundsException</code></li>
+        <li>Create a method that throws your own custom exception</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Use <code>try-catch</code> blocks to handle exceptions</li>
+        <li><code>finally</code> block executes always</li>
+        <li>Use <code>throw</code> to create exceptions, <code>throws</code> to declare them</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv14.html">← Previous: Networking Basics</a>
+      <a href="adv16.html">Next → Multithreading</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

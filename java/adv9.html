@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Collections Framework</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 9 – Collections Framework</h1>
+    <p>Handle and manipulate groups of data efficiently using Java collections</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is the Collections Framework?</h2>
+      <p>
+        Java Collections Framework provides classes and interfaces to store and manage groups of data like lists, sets, maps, and queues.  
+        It makes data handling efficient, organized, and dynamic.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧺 Major Interfaces</h2>
+      <ul>
+        <li><code>List</code> – ordered collection (e.g., <code>ArrayList</code>, <code>LinkedList</code>)</li>
+        <li><code>Set</code> – unique elements (e.g., <code>HashSet</code>, <code>TreeSet</code>)</li>
+        <li><code>Map</code> – key-value pairs (e.g., <code>HashMap</code>, <code>TreeMap</code>)</li>
+        <li><code>Queue</code> – FIFO structure (e.g., <code>PriorityQueue</code>)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Example: ArrayList</h2>
+      <pre><code class="language-java">
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Useful Methods</h2>
+      <ul>
+        <li><code>add()</code> – insert item</li>
+        <li><code>remove()</code> – remove item</li>
+        <li><code>contains()</code> – check if element exists</li>
+        <li><code>size()</code> – get number of elements</li>
+        <li><code>clear()</code> – remove all elements</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>HashMap</code> with student names and marks</li>
+        <li>Loop through the map and print each pair</li>
+        <li>Remove an entry and reprint</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Collections help you manage groups of objects</li>
+        <li><code>List</code> = ordered, <code>Set</code> = unique, <code>Map</code> = key-value</li>
+        <li>Use classes like <code>ArrayList</code>, <code>HashMap</code>, <code>HashSet</code> for real-world use</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous: Synchronization</a>
+      <a href="adv10.html">Next → Generics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

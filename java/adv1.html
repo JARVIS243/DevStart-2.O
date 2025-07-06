@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Exception Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 1 – Exception Handling</h1>
+    <p>Catch and handle runtime errors using try-catch blocks</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>💥 What is an Exception?</h2>
+      <p>
+        An exception is an event that disrupts the normal flow of a program.  
+        For example: dividing by zero, accessing invalid array index, file not found, etc.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧯 Why Use Exception Handling?</h2>
+      <ul>
+        <li>To prevent program crash</li>
+        <li>To show user-friendly error messages</li>
+        <li>To handle unexpected conditions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Example: try-catch</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int a = 10 / 0;  // division by zero
+            System.out.println(a);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero!");
+        }
+
+        System.out.println("Program continues...");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚨 Common Exception Types</h2>
+      <ul>
+        <li><code>ArithmeticException</code> – divide by 0</li>
+        <li><code>ArrayIndexOutOfBoundsException</code></li>
+        <li><code>NullPointerException</code></li>
+        <li><code>FileNotFoundException</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write code to divide two numbers, catch division by 0</li>
+        <li>Access an invalid array index and handle it</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>try</code> – code that may throw an exception</li>
+        <li><code>catch</code> – handles the exception</li>
+        <li>Prevent crashes and keep your app stable</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../intermediate/inter10.html">← Previous: Packages</a>
+      <a href="adv2.html">Next → Multiple Catch Blocks</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

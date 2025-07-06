@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 9: Advanced Collections</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 9: Advanced Collections</h1>
+    <p>Explore powerful collections like Dictionary, HashSet, and Queue</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧺 Dictionary&lt;TKey, TValue&gt;</h2>
+      <p>Stores key-value pairs for fast lookup.</p>
+      <pre><code class="language-csharp">
+Dictionary&lt;string, int&gt; scores = new Dictionary&lt;string, int&gt;();
+scores["Aju"] = 95;
+scores["Dev"] = 88;
+
+Console.WriteLine(scores["Aju"]); // 95
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Queue&lt;T&gt;</h2>
+      <p>First-In-First-Out (FIFO) structure.</p>
+      <pre><code class="language-csharp">
+Queue&lt;string&gt; tasks = new Queue&lt;string&gt;();
+tasks.Enqueue("Task1");
+tasks.Enqueue("Task2");
+
+Console.WriteLine(tasks.Dequeue()); // Task1
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚫 HashSet&lt;T&gt;</h2>
+      <p>Stores unique elements only (no duplicates).</p>
+      <pre><code class="language-csharp">
+HashSet&lt;int&gt; ids = new HashSet&lt;int&gt;();
+ids.Add(101);
+ids.Add(102);
+ids.Add(101); // Ignored
+
+Console.WriteLine(ids.Count); // 2
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li><code>Dictionary</code> is fast for lookups using keys</li>
+        <li><code>Queue</code> is ideal for task processing or lines</li>
+        <li><code>HashSet</code> is perfect for uniqueness and set operations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a dictionary of usernames and passwords</li>
+        <li>Use a queue to simulate a print queue</li>
+        <li>Use a hashset to collect unique numbers from a list</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous</a>
+      <a href="adv10.html">Next → File I/O with Streams</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Static Keyword</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 6 – Static Keyword</h1>
+    <p>Use class-level variables and methods without creating objects</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📘 What is <code>static</code>?</h2>
+      <p>
+        The <code>static</code> keyword is used to create variables and methods that belong to the class, rather than to specific objects.  
+        It allows shared values across all instances.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔧 Static Variable Example</h2>
+      <pre><code class="language-java">
+public class Student {
+    static String school = "DevStart High";
+
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+
+    void show() {
+        System.out.println(name + " studies at " + school);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Aju");
+        Student s2 = new Student("Ravi");
+
+        s1.show();
+        s2.show();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚙️ Static Method</h2>
+      <pre><code class="language-java">
+public class Utils {
+    static void greet() {
+        System.out.println("Welcome to DevStart!");
+    }
+
+    public static void main(String[] args) {
+        Utils.greet();  // No need to create object
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Key Points</h2>
+      <ul>
+        <li><code>static</code> variables are shared across all objects</li>
+        <li><code>static</code> methods can be called without creating objects</li>
+        <li><code>static</code> blocks run once when class is loaded</li>
+        <li><code>static</code> methods can’t access non-static members directly</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>MathTools</code> with static method <code>square()</code></li>
+        <li>Use it in main without creating an object</li>
+        <li>Make a static variable <code>appName = "DevStart Java"</code> and access it</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Static</strong> = shared and class-level</li>
+        <li>Use <strong>static methods</strong> when no object-specific data is needed</li>
+        <li>Helps save memory and organize utility code</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous: Access Modifiers</a>
+      <a href="inter7.html">Next → Encapsulation</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

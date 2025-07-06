@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 5: Inheritance</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 5: Inheritance</h1>
+    <p>Reuse code by inheriting properties and methods from a base class</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🌳 What is Inheritance?</h2>
+      <p>Inheritance allows a class to acquire members (properties and methods) from another class.</p>
+      <ul>
+        <li><strong>Base class</strong>: The parent class (general)</li>
+        <li><strong>Derived class</strong>: The child class (specific)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Syntax</h2>
+      <pre><code class="language-csharp">
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("This animal eats food.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog barks.");
+    }
+}
+
+// Usage
+Dog d = new Dog();
+d.Eat();   // Inherited from Animal
+d.Bark();  // Defined in Dog
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Use inheritance to avoid code duplication</li>
+        <li><code>:</code> symbol is used to inherit from a class</li>
+        <li>The derived class can use public and protected members from the base class</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Vehicle</code> with method <code>Start()</code></li>
+        <li>Inherit a class <code>Car</code> from <code>Vehicle</code></li>
+        <li>Inside <code>Car</code>, create a method <code>Drive()</code> and call both from main</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous</a>
+      <a href="inter6.html">Next → Method Overriding</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

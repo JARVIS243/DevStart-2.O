@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 7: Arrays and Strings</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 7: Arrays and Strings</h1>
+    <p>Learn how to store and work with multiple values in C#</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Arrays</h2>
+      <p>An array stores multiple values of the same type.</p>
+      <pre><code class="language-csharp">
+int[] numbers = { 10, 20, 30, 40 };
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    Console.WriteLine(numbers[i]);
+}
+      </code></pre>
+      <ul>
+        <li><code>[]</code> indicates an array</li>
+        <li><code>.Length</code> returns number of elements</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧵 Strings</h2>
+      <p>Strings are sequences of characters. Common methods:</p>
+      <pre><code class="language-csharp">
+string name = "DevStart";
+
+Console.WriteLine(name.Length);       // 8
+Console.WriteLine(name.ToUpper());    // DEVSTART
+Console.WriteLine(name.ToLower());    // devstart
+Console.WriteLine(name.Contains("Start")); // true
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 foreach Loop (for Arrays)</h2>
+      <pre><code class="language-csharp">
+string[] langs = { "C#", "Java", "Python" };
+
+foreach (string lang in langs)
+{
+    Console.WriteLine("I like " + lang);
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Skills</h2>
+      <ul>
+        <li>Arrays are useful for handling groups of data</li>
+        <li>Strings behave like arrays of characters</li>
+        <li><code>foreach</code> simplifies iteration</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an array of 5 numbers and print their sum</li>
+        <li>Take a user’s name and print each letter using a loop</li>
+        <li>Store 3 subjects in an array and print them in reverse</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic6.html">← Previous</a>
+      <a href="basic8.html">Next → Methods and Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

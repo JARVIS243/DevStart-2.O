@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS – Advanced 6: Grid Item Placement</title>
+  <link rel="stylesheet" href="../style-v2.css">
+  <style>
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .grid-layout div {
+      background: #333;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .wide {
+      grid-column: span 2;
+      background: #ff5722;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 6: Grid Item Placement</h1>
+    <p>Control how individual grid items behave</p>
+  </header>
+
+  <main class="lesson-content">
+    <div class="grid-layout">
+      <div>1</div>
+      <div class="wide">2 (spans 2 cols)</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Try <code>grid-row</code></li>
+        <li>Use <code>grid-area</code> for custom placement</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous</a>
+      <a href="adv7.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

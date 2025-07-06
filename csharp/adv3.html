@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 3: Delegates</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 3: Delegates</h1>
+    <p>Understand and use delegates to point to methods</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧭 What is a Delegate?</h2>
+      <p>A delegate is a type that holds a reference to a method. It's like a function pointer.</p>
+      <p>Delegates help you pass methods as arguments and are useful in event handling, callbacks, etc.</p>
+    </section>
+
+    <section>
+      <h2>📄 Delegate Example</h2>
+      <pre><code class="language-csharp">
+using System;
+
+delegate void GreetDelegate(string name);
+
+class Program
+{
+    static void SayHello(string name)
+    {
+        Console.WriteLine("Hello " + name);
+    }
+
+    static void Main()
+    {
+        GreetDelegate greet = SayHello;
+        greet("DevStart Learner");  // Output: Hello DevStart Learner
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Why Use Delegates?</h2>
+      <ul>
+        <li>To call methods dynamically</li>
+        <li>To implement callbacks</li>
+        <li>To write flexible and reusable code</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Delegate signature must match the method it points to</li>
+        <li>You can use multiple methods with one delegate (multicast)</li>
+        <li>Useful with events and LINQ</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a delegate <code>MathOperation</code> that takes two integers</li>
+        <li>Point it to <code>Add</code>, <code>Subtract</code>, and <code>Multiply</code> methods</li>
+        <li>Call the delegate with different methods</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous</a>
+      <a href="adv4.html">Next → Events</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

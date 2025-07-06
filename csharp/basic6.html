@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 6: Loops</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 6: Loops</h1>
+    <p>Repeat tasks using loops in C# – for, while, do-while</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 Why Loops?</h2>
+      <p>Loops allow you to repeat a block of code multiple times until a condition is met.</p>
+    </section>
+
+    <section>
+      <h2>🔹 for Loop</h2>
+      <pre><code class="language-csharp">
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine("Count: " + i);
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔸 while Loop</h2>
+      <pre><code class="language-csharp">
+int x = 1;
+while (x <= 3)
+{
+    Console.WriteLine("While Loop: " + x);
+    x++;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 do-while Loop</h2>
+      <pre><code class="language-csharp">
+int y = 1;
+do
+{
+    Console.WriteLine("Do-While Loop: " + y);
+    y++;
+} while (y <= 2);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Use <code>for</code> when you know how many times to loop</li>
+        <li><code>while</code> checks before running; <code>do-while</code> checks after</li>
+        <li>Be careful to avoid infinite loops!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Print numbers from 1 to 10 using a for loop</li>
+        <li>Use a while loop to print "Hello" 5 times</li>
+        <li>Use do-while to ask a user password until it's correct</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous</a>
+      <a href="basic7.html">Next → Arrays and Strings</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

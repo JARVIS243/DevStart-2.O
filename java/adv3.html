@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Finally Block</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 3 – Finally Block</h1>
+    <p>Ensure cleanup code runs even if an exception occurs</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 What is the <code>finally</code> Block?</h2>
+      <p>
+        The <code>finally</code> block in Java always executes after <code>try</code> and <code>catch</code> blocks,  
+        regardless of whether an exception was thrown or not.  
+        It's useful for cleanup code like closing files or releasing resources.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Example</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block always runs!");
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ When is it used?</h2>
+      <ul>
+        <li>Releasing database connections</li>
+        <li>Closing files or input/output streams</li>
+        <li>Freeing up system resources</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Key Points</h2>
+      <ul>
+        <li><code>finally</code> is optional but recommended for cleanup</li>
+        <li>It runs even if no exception occurs</li>
+        <li>Also runs if an exception is not caught</li>
+        <li>Even executes if a <code>return</code> is used inside <code>try</code> or <code>catch</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a program that opens a file using <code>FileReader</code></li>
+        <li>Use <code>try-catch</code> to read the file</li>
+        <li>Use <code>finally</code> to close the file (even if an error occurs)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>finally</code> = guaranteed execution</li>
+        <li>Used for cleanup and resource management</li>
+        <li>Helps make your code safer and more predictable</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous: Multiple Catch Blocks</a>
+      <a href="adv4.html">Next → Throw and Throws</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Inheritance</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 2 – Inheritance</h1>
+    <p>Reuse properties and behaviors of one class in another</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧬 What is Inheritance?</h2>
+      <p>
+        Inheritance allows one class (child) to inherit properties and methods from another class (parent).  
+        This promotes code reuse and organizes logic better.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔧 Basic Example</h2>
+      <pre><code class="language-java">
+class Animal {
+    void sound() {
+        System.out.println("Animals make sounds");
+    }
+}
+
+// Dog inherits from Animal
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound(); // inherited
+        d.bark();  // own method
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Types of Inheritance</h2>
+      <ul>
+        <li>Single Inheritance (one parent → one child)</li>
+        <li>Multilevel Inheritance (class A → B → C)</li>
+        <li>Hierarchical Inheritance (one parent → many children)</li>
+        <li><strong>Note:</strong> Java does not support multiple inheritance with classes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Vehicle</code> class with method <code>move()</code></li>
+        <li>Create a <code>Car</code> class that inherits <code>Vehicle</code></li>
+        <li>Add a method <code>fuelType()</code> in <code>Car</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>extends</code> is used to inherit from another class</li>
+        <li>Child class gets access to parent's methods and variables</li>
+        <li>Encourages reuse and organization</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous: Constructors</a>
+      <a href="inter3.html">Next → Method Overloading</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

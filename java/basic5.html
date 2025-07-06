@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – If-Else Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Basic Lesson 5 – If-Else Statements</h1>
+    <p>Make decisions in your program using conditions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 What is If-Else?</h2>
+      <p>
+        If-else allows your program to make decisions based on conditions.  
+        It helps you control which block of code should run.
+      </p>
+    </section>
+
+    <section>
+      <h2>✅ Syntax</h2>
+      <pre><code class="language-java">
+if (condition) {
+    // Code runs if condition is true
+} else {
+    // Code runs if condition is false
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Example: Check Pass or Fail</h2>
+      <pre><code class="language-java">
+import java.util.Scanner;
+
+public class PassCheck {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your mark: ");
+        int mark = input.nextInt();
+
+        if (mark >= 50) {
+            System.out.println("✅ You passed!");
+        } else {
+            System.out.println("❌ You failed.");
+        }
+
+        input.close();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Else-If Ladder</h2>
+      <pre><code class="language-java">
+int score = 85;
+
+if (score >= 90) {
+    System.out.println("Grade A");
+} else if (score >= 75) {
+    System.out.println("Grade B");
+} else if (score >= 60) {
+    System.out.println("Grade C");
+} else {
+    System.out.println("Fail");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for their age</li>
+        <li>Print if they are eligible to vote (18+)</li>
+        <li>Use else-if to show different age group messages</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>if:</strong> runs code if condition is true</li>
+        <li><strong>else:</strong> runs if condition is false</li>
+        <li><strong>else-if:</strong> checks multiple conditions in order</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous: Operators</a>
+      <a href="basic6.html">Next → Switch Statements</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

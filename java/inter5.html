@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Access Modifiers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 5 – Access Modifiers</h1>
+    <p>Control visibility of classes, variables, and methods</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔐 What Are Access Modifiers?</h2>
+      <p>
+        Access modifiers in Java control where a class or member (variable/method) can be accessed from.
+      </p>
+    </section>
+
+    <section>
+      <h2>📦 Types of Access Modifiers</h2>
+      <table>
+        <tr>
+          <th>Modifier</th>
+          <th>Description</th>
+          <th>Access Scope</th>
+        </tr>
+        <tr>
+          <td><code>public</code></td>
+          <td>Accessible everywhere</td>
+          <td>Any class</td>
+        </tr>
+        <tr>
+          <td><code>private</code></td>
+          <td>Accessible only within the same class</td>
+          <td>Only inside declared class</td>
+        </tr>
+        <tr>
+          <td><code>protected</code></td>
+          <td>Accessible in the same package and subclasses</td>
+          <td>Same package + subclass</td>
+        </tr>
+        <tr>
+          <td><em>(default)</em></td>
+          <td>No modifier → package-private</td>
+          <td>Same package only</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🧠 Example</h2>
+      <pre><code class="language-java">
+public class Person {
+    public String name = "Aju";
+    private int age = 20;
+    protected String city = "Kochi";
+
+    public void showName() {
+        System.out.println("Name: " + name);
+    }
+
+    private void showAge() {
+        System.out.println("Age: " + age);
+    }
+
+    protected void showCity() {
+        System.out.println("City: " + city);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>💡 Key Notes</h2>
+      <ul>
+        <li><strong>Use private</strong> for internal details like passwords, age, etc.</li>
+        <li><strong>public</strong> for anything meant to be accessed from anywhere</li>
+        <li><strong>protected</strong> helps when using inheritance</li>
+        <li>No modifier = accessible only in the same package</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>BankAccount</code> class</li>
+        <li>Make balance <code>private</code>, and provide public methods <code>deposit()</code> and <code>getBalance()</code></li>
+        <li>Try accessing balance directly (should fail)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Access modifiers</strong> help manage security and structure</li>
+        <li><strong>private</strong> = most restricted, <strong>public</strong> = fully open</li>
+        <li>Use wisely to protect data and code</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous: Method Overriding</a>
+      <a href="inter6.html">Next → Static Keyword</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

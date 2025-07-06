@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 3: Input and Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 3: Input and Output</h1>
+    <p>Learn how to read from the user and display information</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📥 Input</h2>
+      <p>Use <code>Console.ReadLine()</code> to take user input.</p>
+      <pre><code class="language-csharp">
+Console.Write("Enter your city: ");
+string city = Console.ReadLine();
+Console.WriteLine("You live in " + city);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📤 Output</h2>
+      <p>Use <code>Console.WriteLine()</code> and <code>Console.Write()</code> to print values.</p>
+      <pre><code class="language-csharp">
+Console.Write("Name: ");
+string name = Console.ReadLine();
+
+Console.WriteLine("Welcome, " + name + "!");
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Converting Input Types</h2>
+      <p>All input is read as <code>string</code>. Convert it to numbers using parsing methods:</p>
+      <pre><code class="language-csharp">
+Console.Write("Enter your age: ");
+int age = int.Parse(Console.ReadLine());
+Console.WriteLine("Next year you will be " + (age + 1));
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Boost</h2>
+      <ul>
+        <li>Input + processing + output = program structure</li>
+        <li>Always validate and convert user input carefully</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for name, age, and favorite language</li>
+        <li>Display a custom message using all three</li>
+        <li>Convert age and show age in 5 years</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous</a>
+      <a href="basic4.html">Next → Operators in C#</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

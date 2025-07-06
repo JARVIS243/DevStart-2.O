@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 4: Events</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 4: Events</h1>
+    <p>Trigger methods in response to actions using events</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔔 What is an Event?</h2>
+      <p>An event is a way for a class to notify other classes when something happens. It uses delegates internally.</p>
+    </section>
+
+    <section>
+      <h2>📄 Event Example</h2>
+      <pre><code class="language-csharp">
+using System;
+
+class Alarm
+{
+    public delegate void AlarmHandler();
+    public event AlarmHandler OnRing;
+
+    public void Ring()
+    {
+        Console.WriteLine("Alarm is ringing...");
+        OnRing?.Invoke();
+    }
+}
+
+class Listener
+{
+    public void HandleAlarm()
+    {
+        Console.WriteLine("Listener: Alarm received!");
+    }
+}
+
+// Usage
+class Program
+{
+    static void Main()
+    {
+        Alarm alarm = new Alarm();
+        Listener listener = new Listener();
+
+        alarm.OnRing += listener.HandleAlarm;
+
+        alarm.Ring();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Events are built on top of delegates</li>
+        <li>Use <code>event</code> keyword to declare</li>
+        <li><code>Invoke()</code> triggers the event</li>
+        <li><code>+=</code> adds a subscriber, <code>-=</code> removes it</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an event <code>OnDownloadComplete</code></li>
+        <li>Subscribe a method that prints “Download finished”</li>
+        <li>Call the event inside a <code>Download()</code> method</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous</a>
+      <a href="adv5.html">Next → LINQ Basics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

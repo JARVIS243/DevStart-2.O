@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Multithreading</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 6 – Multithreading</h1>
+    <p>Run multiple tasks simultaneously using threads</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🚀 What is Multithreading?</h2>
+      <p>
+        Multithreading is a Java feature that allows the concurrent execution of two or more threads (lightweight processes).  
+        It's useful for performing multiple tasks at the same time (e.g., animation, downloading, calculations).
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Creating a Thread (2 Ways)</h2>
+
+      <h3>1. By Extending Thread Class</h3>
+      <pre><code class="language-java">
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t = new MyThread();
+        t.start();  // starts the thread
+    }
+}
+      </code></pre>
+
+      <h3>2. By Implementing Runnable Interface</h3>
+      <pre><code class="language-java">
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Runnable thread running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread t = new Thread(new MyRunnable());
+        t.start();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⏳ Thread Methods</h2>
+      <ul>
+        <li><code>start()</code> – begins execution</li>
+        <li><code>run()</code> – contains the code to execute</li>
+        <li><code>sleep(ms)</code> – pauses for milliseconds</li>
+        <li><code>join()</code> – waits for another thread to finish</li>
+        <li><code>isAlive()</code> – checks if thread is active</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create two threads: one prints numbers, one prints letters</li>
+        <li>Run both simultaneously</li>
+        <li>Try using <code>sleep()</code> to control timing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Multithreading = running multiple tasks at once</li>
+        <li>Two main ways: extend <code>Thread</code> or implement <code>Runnable</code></li>
+        <li>Use <code>start()</code> to begin thread execution</li>
+        <li>Use <code>sleep()</code>, <code>join()</code> for control</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous: Custom Exceptions</a>
+      <a href="adv7.html">Next → Thread Lifecycle</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

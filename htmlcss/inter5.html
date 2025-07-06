@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS – Intermediate 5: Media Queries</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    body {
+      background: lightblue;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background: lightcoral;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Intermediate 5: Media Queries</h1>
+    <p>Make your website responsive for all screen sizes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📱 What is a Media Query?</h2>
+      <p>It allows CSS to adapt to screen sizes.</p>
+
+      <pre><code class="language-css">
+@media (max-width: 600px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Change the background on smaller screens</li>
+        <li>Try hiding a box on mobile</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous</a>
+      <a href="inter6.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

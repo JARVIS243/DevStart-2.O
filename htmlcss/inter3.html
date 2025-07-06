@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS – Intermediate 3: Grid Layout</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .grid-item {
+      background: lightgreen;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Intermediate 3: Grid Layout</h1>
+    <p>Create layouts using CSS Grid</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📐 Grid Example</h2>
+      <pre><code class="language-html">
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+</div>
+      </code></pre>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a 3x2 grid</li>
+        <li>Adjust gap and try different <code>grid-template-columns</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous</a>
+      <a href="inter4.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

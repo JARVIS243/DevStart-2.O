@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 4: Operators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 4: Operators</h1>
+    <p>Perform calculations and comparisons using operators in C#</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>➕ Arithmetic Operators</h2>
+      <pre><code class="language-csharp">
+int a = 10;
+int b = 3;
+
+Console.WriteLine(a + b);  // 13
+Console.WriteLine(a - b);  // 7
+Console.WriteLine(a * b);  // 30
+Console.WriteLine(a / b);  // 3
+Console.WriteLine(a % b);  // 1 (modulus)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Assignment Operators</h2>
+      <pre><code class="language-csharp">
+int x = 5;
+x += 3;  // same as x = x + 3
+Console.WriteLine(x); // 8
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Comparison Operators</h2>
+      <pre><code class="language-csharp">
+int a = 5, b = 10;
+
+Console.WriteLine(a == b);  // false
+Console.WriteLine(a != b);  // true
+Console.WriteLine(a > b);   // false
+Console.WriteLine(a < b);   // true
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚙️ Logical Operators</h2>
+      <pre><code class="language-csharp">
+bool isStudent = true;
+bool isLoggedIn = false;
+
+Console.WriteLine(isStudent && isLoggedIn); // false
+Console.WriteLine(isStudent || isLoggedIn); // true
+Console.WriteLine(!isStudent);              // false
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Practice</h2>
+      <ul>
+        <li>Operators help you perform calculations and make decisions</li>
+        <li>Use comparison + logical operators in conditional logic</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write a program to calculate area of a rectangle</li>
+        <li>Take two numbers from user and compare them</li>
+        <li>Test logical AND/OR conditions with boolean values</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic3.html">← Previous</a>
+      <a href="basic5.html">Next → Conditions (if, else, switch)</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

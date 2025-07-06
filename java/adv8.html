@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Synchronization</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 8 – Synchronization</h1>
+    <p>Prevent multiple threads from accessing the same resource at the same time</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔒 What is Synchronization?</h2>
+      <p>
+        Synchronization ensures that only one thread can access a shared resource (like a method or variable) at a time.  
+        It prevents data inconsistency caused by concurrent thread execution.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Problem Example (Without Synchronization)</h2>
+      <pre><code class="language-java">
+class Counter {
+    int count = 0;
+
+    void increment() {
+        count++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Counter c = new Counter();
+
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) c.increment();
+        });
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) c.increment();
+        });
+
+        t1.start();
+        t2.start();
+
+        try {
+            t1.join(); t2.join();
+        } catch (InterruptedException e) {}
+
+        System.out.println("Count: " + c.count);
+    }
+}
+      </code></pre>
+      <p><strong>Output:</strong> May not be 2000 due to race condition</p>
+    </section>
+
+    <section>
+      <h2>✅ Solution: Synchronized Method</h2>
+      <pre><code class="language-java">
+class Counter {
+    int count = 0;
+
+    synchronized void increment() {
+        count++;
+    }
+}
+      </code></pre>
+      <p><strong>Now the output will always be 2000</strong></p>
+    </section>
+
+    <section>
+      <h2>🔄 Synchronized Block</h2>
+      <p>You can also synchronize just part of the method:</p>
+      <pre><code class="language-java">
+synchronized(this) {
+    // critical section
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Synchronization prevents thread interference and memory inconsistency</li>
+        <li>Use <code>synchronized</code> keyword for methods or blocks</li>
+        <li>Ensures thread-safe operations on shared resources</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write a <code>BankAccount</code> class with <code>deposit()</code> and <code>withdraw()</code> methods</li>
+        <li>Use multiple threads to access the account</li>
+        <li>Add synchronization to avoid incorrect balance</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous: Thread Lifecycle</a>
+      <a href="adv9.html">Next → Java Collections Framework</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

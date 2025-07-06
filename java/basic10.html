@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – OOP Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Basic Lesson 10 – Intro to Object-Oriented Programming</h1>
+    <p>Understand the basics of classes and objects in Java</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎯 What is OOP?</h2>
+      <p>
+        Object-Oriented Programming (OOP) is a style of programming where we structure code using <strong>classes</strong> and <strong>objects</strong>.
+      </p>
+      <ul>
+        <li><strong>Class</strong>: Blueprint/template (e.g. Car)</li>
+        <li><strong>Object</strong>: Real entity created from class (e.g. myCar)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧱 Defining a Class</h2>
+      <pre><code class="language-java">
+public class Student {
+    String name;
+    int age;
+
+    void greet() {
+        System.out.println("Hello, my name is " + name);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Creating an Object</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.name = "Aju";
+        s1.age = 18;
+        s1.greet();
+    }
+}
+      </code></pre>
+      <p>
+        This will print: <br />
+        <code>Hello, my name is Aju</code>
+      </p>
+    </section>
+
+    <section>
+      <h2>💡 Why Use OOP?</h2>
+      <ul>
+        <li>Organizes code better</li>
+        <li>Reusability (using classes again)</li>
+        <li>Makes large programs easier to manage</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Car</code> class with brand, model, and year</li>
+        <li>Create 2 car objects and print their details</li>
+        <li>Add a method that prints “Engine started!”</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>OOP is based on <strong>classes</strong> and <strong>objects</strong></li>
+        <li>Class = template, Object = real entity</li>
+        <li>Use <code>new</code> keyword to create objects</li>
+        <li>OOP helps with modularity and reusability</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic9.html">← Previous: Strings</a>
+      <a href="../java/inter1.html">Next → Intermediate: Constructors</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

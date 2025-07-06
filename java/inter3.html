@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Method Overloading</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 3 – Method Overloading</h1>
+    <p>Use the same method name with different parameters</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📘 What is Method Overloading?</h2>
+      <p>
+        Method Overloading means defining multiple methods with the same name but different parameters.  
+        Java decides which version to run based on arguments.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧠 Example</h2>
+      <pre><code class="language-java">
+public class Calculator {
+    // add(int, int)
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // add(double, double)
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    // add(int, int, int)
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(2, 3));         // 5
+        System.out.println(c.add(2.5, 4.5));     // 7.0
+        System.out.println(c.add(1, 2, 3));      // 6
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Rules for Overloading</h2>
+      <ul>
+        <li>Method name must be the same</li>
+        <li>Parameter count or type must differ</li>
+        <li>Return type alone is not enough to overload</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Printer</code> class</li>
+        <li>Add methods <code>print(String)</code> and <code>print(int)</code></li>
+        <li>Add one more: <code>print(String, int)</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Method Overloading</strong> = same name, different parameters</li>
+        <li>Improves readability and reusability</li>
+        <li>Java chooses the correct version during compile-time</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous: Inheritance</a>
+      <a href="inter4.html">Next → Method Overriding</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

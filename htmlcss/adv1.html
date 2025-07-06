@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS – Advanced 1: CSS Animations</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: tomato;
+      animation: moveBox 2s infinite alternate;
+    }
+
+    @keyframes moveBox {
+      from { transform: translateX(0); }
+      to { transform: translateX(200px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 1: CSS Animations</h1>
+    <p>Animate elements using <code>@keyframes</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>▶️ Example</h2>
+      <div class="box"></div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Change direction or speed of the animation</li>
+        <li>Animate background color or size</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter10.html">← Previous</a>
+      <a href="adv2.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

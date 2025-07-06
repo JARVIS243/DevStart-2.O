@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Thread Lifecycle</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 7 – Thread Lifecycle</h1>
+    <p>Understand the stages a thread goes through from start to end</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 What is the Thread Lifecycle?</h2>
+      <p>
+        A thread in Java goes through multiple states from its creation to termination.  
+        Understanding these states helps manage thread behavior effectively.
+      </p>
+    </section>
+
+    <section>
+      <h2>🌀 Thread States</h2>
+      <ol>
+        <li><strong>New:</strong> Thread object is created but not started</li>
+        <li><strong>Runnable:</strong> Thread is ready to run (after <code>start()</code>)</li>
+        <li><strong>Running:</strong> Thread is executing</li>
+        <li><strong>Blocked/Waiting:</strong> Thread is waiting for a resource or another thread</li>
+        <li><strong>Terminated:</strong> Thread finishes or is stopped</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>📘 Example</h2>
+      <pre><code class="language-java">
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t = new MyThread();
+        System.out.println("State: " + t.getState());  // NEW
+        t.start();
+        System.out.println("State: " + t.getState());  // RUNNABLE
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Thread Methods Related to Lifecycle</h2>
+      <ul>
+        <li><code>start()</code> – moves from NEW → RUNNABLE</li>
+        <li><code>run()</code> – enters RUNNING</li>
+        <li><code>sleep()</code> – enters TIMED_WAITING</li>
+        <li><code>join()</code> – causes current thread to wait</li>
+        <li><code>getState()</code> – returns current state</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Threads have a clear lifecycle: New → Runnable → Running → Waiting → Terminated</li>
+        <li>Use <code>getState()</code> to monitor threads</li>
+        <li>Thread management helps build stable concurrent apps</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a thread and use <code>getState()</code> to print its state before and after <code>start()</code></li>
+        <li>Use <code>sleep()</code> and observe state</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous: Multithreading</a>
+      <a href="adv8.html">Next → Synchronization</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

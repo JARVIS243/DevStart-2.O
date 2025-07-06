@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 8: Methods and Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 8: Methods and Functions</h1>
+    <p>Organize your code using reusable blocks called methods (functions)</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧩 What is a Method?</h2>
+      <p>A method is a reusable block of code that performs a task.</p>
+    </section>
+
+    <section>
+      <h2>📌 Defining a Method</h2>
+      <pre><code class="language-csharp">
+void GreetUser()
+{
+    Console.WriteLine("Welcome to DevStart!");
+}
+      </code></pre>
+      <p><code>void</code> means it doesn't return any value.</p>
+    </section>
+
+    <section>
+      <h2>📞 Calling a Method</h2>
+      <pre><code class="language-csharp">
+GreetUser();  // Output: Welcome to DevStart!
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📥 Method with Parameters</h2>
+      <pre><code class="language-csharp">
+void SayHello(string name)
+{
+    Console.WriteLine("Hello, " + name);
+}
+
+// Call:
+SayHello("Aju");
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Method with Return</h2>
+      <pre><code class="language-csharp">
+int Add(int a, int b)
+{
+    return a + b;
+}
+
+int result = Add(3, 4);
+Console.WriteLine("Sum: " + result);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Use methods to organize and reuse logic</li>
+        <li>Always match parameter types when calling</li>
+        <li>Use return values when you need results from a method</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a method to print a user's full name</li>
+        <li>Write a method that returns the square of a number</li>
+        <li>Try a method with 2 string parameters: name and language</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic7.html">← Previous</a>
+      <a href="basic9.html">Next → Error Handling in C#</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

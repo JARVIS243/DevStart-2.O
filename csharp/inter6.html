@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 6: Method Overriding</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 6: Method Overriding</h1>
+    <p>Override base class behavior in the derived class using <code>virtual</code> and <code>override</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 What is Method Overriding?</h2>
+      <p>It allows a derived class to provide a specific implementation of a method that is already defined in the base class.</p>
+    </section>
+
+    <section>
+      <h2>📄 Example</h2>
+      <pre><code class="language-csharp">
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some generic animal sound");
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Dog barks");
+    }
+}
+
+// Usage
+Animal a = new Animal();
+a.MakeSound();  // Output: Some generic animal sound
+
+Dog d = new Dog();
+d.MakeSound();  // Output: Dog barks
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Base method must be marked with <code>virtual</code></li>
+        <li>Derived class method must use <code>override</code></li>
+        <li>Helps achieve polymorphism</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Shape</code> class with virtual method <code>Draw()</code></li>
+        <li>Inherit <code>Circle</code> and <code>Square</code> classes and override <code>Draw()</code></li>
+        <li>Create objects and call their <code>Draw()</code> methods</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous</a>
+      <a href="inter7.html">Next → Properties</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

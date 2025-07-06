@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 9: Error Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 9: Error Handling</h1>
+    <p>Catch and manage runtime errors using try-catch blocks</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🚫 Why Error Handling?</h2>
+      <p>Errors may occur during program execution. Handling them prevents crashes and improves user experience.</p>
+    </section>
+
+    <section>
+      <h2>🧯 try-catch Block</h2>
+      <pre><code class="language-csharp">
+try
+{
+    Console.Write("Enter a number: ");
+    int num = int.Parse(Console.ReadLine());
+    Console.WriteLine("Number is: " + num);
+}
+catch (FormatException)
+{
+    Console.WriteLine("Please enter a valid number.");
+}
+      </code></pre>
+      <p><strong>Note:</strong> <code>int.Parse()</code> throws an error if input isn't a number.</p>
+    </section>
+
+    <section>
+      <h2>✅ finally Block (Optional)</h2>
+      <pre><code class="language-csharp">
+try
+{
+    // Code that might throw an error
+}
+catch
+{
+    // Handle the error
+}
+finally
+{
+    Console.WriteLine("This always runs.");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Reminder</h2>
+      <ul>
+        <li>Use try-catch around risky code like user input</li>
+        <li>Catch specific exceptions (e.g., FormatException)</li>
+        <li><code>finally</code> is useful for cleanup tasks</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Try dividing two numbers and catch divide-by-zero errors</li>
+        <li>Try reading a file that doesn’t exist</li>
+        <li>Use <code>finally</code> to print "End of program"</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic8.html">← Previous</a>
+      <a href="basic10.html">Next → Simple Project in C#</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

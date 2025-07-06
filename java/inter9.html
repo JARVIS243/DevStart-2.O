@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Interfaces</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 9 – Interfaces</h1>
+    <p>Define abstract behavior contracts that classes must follow</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔌 What is an Interface?</h2>
+      <p>
+        An <strong>interface</strong> in Java is a completely abstract class used to define a set of methods that must be implemented by a class.  
+        It helps in achieving full abstraction and multiple inheritance.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Syntax Example</h2>
+      <pre><code class="language-java">
+interface Animal {
+    void makeSound();  // implicitly public and abstract
+}
+
+class Dog implements Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Usage</h2>
+      <pre><code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.makeSound();  // Output: Dog barks
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🛠️ Key Rules</h2>
+      <ul>
+        <li>Use <code>interface</code> keyword</li>
+        <li>All methods are <strong>abstract</strong> by default</li>
+        <li>Use <code>implements</code> keyword in class</li>
+        <li>A class can implement multiple interfaces</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📦 Multiple Interfaces</h2>
+      <pre><code class="language-java">
+interface Printable {
+    void print();
+}
+
+interface Showable {
+    void show();
+}
+
+class Demo implements Printable, Showable {
+    public void print() {
+        System.out.println("Printing...");
+    }
+
+    public void show() {
+        System.out.println("Showing...");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an interface <code>Playable</code> with method <code>play()</code></li>
+        <li>Implement it in <code>Guitar</code> and <code>Piano</code> classes</li>
+        <li>Call their <code>play()</code> methods</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Interface</strong> defines a contract that must be fulfilled</li>
+        <li>All methods are public and abstract by default</li>
+        <li>Supports multiple inheritance</li>
+        <li>Use <code>implements</code> to bind interface with class</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous: Abstract Classes</a>
+      <a href="inter10.html">Next → Packages in Java</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

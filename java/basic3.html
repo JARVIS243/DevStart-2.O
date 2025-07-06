@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – User Input & Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Basic Lesson 3 – User Input & Output</h1>
+    <p>Read user input and display output using Scanner</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📥 Getting Input from User</h2>
+      <p>
+        Java uses the <code>Scanner</code> class to read user input from the keyboard.
+        First, import it from <code>java.util</code> package.
+      </p>
+    </section>
+
+    <section>
+      <h2>✍️ Example: Take Name and Age from User</h2>
+      <pre><code class="language-java">
+import java.util.Scanner;
+
+public class UserInput {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        System.out.println("Welcome, " + name + "! You are " + age + " years old.");
+
+        input.close();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 Input Methods</h2>
+      <ul>
+        <li><code>nextLine()</code> – Reads a whole line (text)</li>
+        <li><code>nextInt()</code> – Reads an integer</li>
+        <li><code>nextDouble()</code> – Reads a decimal</li>
+        <li><code>nextBoolean()</code> – true/false input</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for name, subject, and marks</li>
+        <li>Print a message like: “Aju scored 95 in Maths.”</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Use <code>Scanner</code> to read user input</li>
+        <li>Import it with <code>import java.util.Scanner;</code></li>
+        <li>Always close scanner using <code>input.close();</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous: Variables & Data Types</a>
+      <a href="basic4.html">Next → Operators</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

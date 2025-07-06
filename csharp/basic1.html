@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 1: Introduction & Hello World</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 1: Introduction & Hello World</h1>
+    <p>Get started with C# programming and write your first program!</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>👋 What is C#?</h2>
+      <p>C# (pronounced "C-Sharp") is a modern, object-oriented programming language developed by Microsoft. It's used for building desktop apps, games (Unity), and enterprise software.</p>
+    </section>
+
+    <section>
+      <h2>🛠 Setting Up</h2>
+      <ul>
+        <li>Install <strong>Visual Studio</strong> or <strong>Visual Studio Code</strong></li>
+        <li>Install the .NET SDK from <a href="https://dotnet.microsoft.com" target="_blank">dotnet.microsoft.com</a></li>
+        <li>To run C# code: open terminal and type <code>dotnet new console</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>✅ Your First Program</h2>
+      <pre><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, DevStart!");
+    }
+}
+      </code></pre>
+      <p>This prints: <code>Hello, DevStart!</code></p>
+    </section>
+
+    <section>
+      <h2>🧠 Logic First</h2>
+      <p>Even though this is a simple program, it shows structure:</p>
+      <ul>
+        <li><code>using System;</code> – includes input/output features</li>
+        <li><code>Main</code> – starting point of the program</li>
+        <li><code>Console.WriteLine</code> – prints to screen</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Change the message and print your name</li>
+        <li>Add another <code>Console.WriteLine()</code> line below</li>
+        <li>Explore what happens if you remove <code>;</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../index.html">🏠 Back to Index</a>
+      <a href="basic2.html">Next → Variables & Data Types</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

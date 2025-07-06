@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Final Keyword</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 7 – Final Keyword</h1>
+    <p>Restrict modification of variables, methods, and classes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔒 What is <code>final</code>?</h2>
+      <p>
+        The <code>final</code> keyword is used to restrict the user from changing something.  
+        It can be applied to:
+      </p>
+      <ul>
+        <li><strong>Variables</strong>: Value cannot be changed</li>
+        <li><strong>Methods</strong>: Cannot be overridden</li>
+        <li><strong>Classes</strong>: Cannot be inherited</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Final Variable</h2>
+      <pre><code class="language-java">
+public class Example {
+    final int number = 10;
+
+    void show() {
+        // number = 20; // ❌ Error: can't change final variable
+        System.out.println("Number is " + number);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🛑 Final Method</h2>
+      <pre><code class="language-java">
+class A {
+    final void show() {
+        System.out.println("This cannot be overridden");
+    }
+}
+
+class B extends A {
+    // void show() { } // ❌ Error
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚫 Final Class</h2>
+      <pre><code class="language-java">
+final class Car {
+    void start() {
+        System.out.println("Car starts");
+    }
+}
+
+// class SportCar extends Car { } // ❌ Error: cannot inherit final class
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>final</code> variable and try changing it</li>
+        <li>Create a <code>final</code> method in a parent class and try to override it</li>
+        <li>Create a <code>final</code> class and try to extend it</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>final</code> variable → constant value</li>
+        <li><code>final</code> method → cannot override</li>
+        <li><code>final</code> class → cannot be inherited</li>
+        <li>Useful for securing code structure</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous: Static Keyword</a>
+      <a href="inter8.html">Next → Abstract Classes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

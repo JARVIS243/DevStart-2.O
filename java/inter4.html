@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Method Overriding</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Intermediate Lesson 4 – Method Overriding</h1>
+    <p>Redefine a method of the parent class in the child class</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 What is Method Overriding?</h2>
+      <p>
+        Method Overriding means providing a new version of a method from the parent class inside the child class.  
+        It lets you change or extend the behavior of inherited methods.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Example</h2>
+      <pre><code class="language-java">
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.sound();  // Output: Dog barks
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Key Points</h2>
+      <ul>
+        <li>Method name, return type, and parameters must match exactly</li>
+        <li>Use <code>@Override</code> annotation to indicate overriding</li>
+        <li>Overriding happens in <strong>runtime</strong> (dynamic binding)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Vehicle</code> class with method <code>start()</code></li>
+        <li>Override <code>start()</code> in a <code>Bike</code> class</li>
+        <li>Create objects of both and call <code>start()</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔄 Overloading vs Overriding</h2>
+      <ul>
+        <li><strong>Overloading</strong>: Same class, same method name, different parameters</li>
+        <li><strong>Overriding</strong>: Parent-child classes, same method signature</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Overriding</strong> lets a subclass modify parent class behavior</li>
+        <li>Helps achieve runtime polymorphism</li>
+        <li>Must match method name, return type, and parameters exactly</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous: Method Overloading</a>
+      <a href="inter5.html">Next → Access Modifiers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

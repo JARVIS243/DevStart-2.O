@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 3: Access Modifiers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 3: Access Modifiers</h1>
+    <p>Control the visibility of class members using access modifiers</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔐 What Are Access Modifiers?</h2>
+      <p>Access modifiers define how visible a class or its members are to other parts of the program.</p>
+    </section>
+
+    <section>
+      <h2>📦 Common Modifiers</h2>
+      <ul>
+        <li><strong>public</strong> – accessible from anywhere</li>
+        <li><strong>private</strong> – accessible only within the same class</li>
+        <li><strong>protected</strong> – accessible within the same class and derived classes</li>
+        <li><strong>internal</strong> – accessible within the same project</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔍 Example</h2>
+      <pre><code class="language-csharp">
+class Person
+{
+    public string Name;        // Can be accessed from anywhere
+    private int age;           // Can be accessed only inside Person
+
+    public void SetAge(int a)
+    {
+        age = a;
+    }
+
+    public void ShowInfo()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {age}");
+    }
+}
+      </code></pre>
+      <p><strong>Note:</strong> We use <code>SetAge()</code> to assign a private field safely.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Always protect internal details using <code>private</code></li>
+        <li>Use <code>public</code> only when access from outside is needed</li>
+        <li>Encapsulation = hiding internal data and exposing only necessary parts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>BankAccount</code> with a private balance</li>
+        <li>Add methods to deposit, withdraw, and display balance</li>
+        <li>Use public methods to interact with private data</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous</a>
+      <a href="inter4.html">Next → Static Members</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS – Advanced 7: Flexbox vs Grid</title>
+  <link rel="stylesheet" href="../style-v2.css">
+  <style>
+    .flexbox {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .flexbox div,
+    .gridbox div {
+      background: #3f51b5;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      flex: 1;
+    }
+
+    .gridbox {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 7: Flexbox vs Grid</h1>
+    <p>Understand when to use Flexbox or Grid</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔧 Flexbox</h2>
+      <div class="flexbox">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+      </div>
+
+      <h2>🔧 Grid</h2>
+      <div class="gridbox">
+        <div>Item A</div>
+        <div>Item B</div>
+        <div>Item C</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Use Flexbox for 1D layouts</li>
+        <li>Use Grid for 2D layouts</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous</a>
+      <a href="adv8.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

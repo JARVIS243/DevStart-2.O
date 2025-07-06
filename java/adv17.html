@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – JavaFX Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 17 – JavaFX Basics</h1>
+    <p>Build modern GUI applications in Java</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎨 What is JavaFX?</h2>
+      <p>
+        JavaFX is a modern GUI toolkit for Java, used to create desktop applications with rich user interfaces.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Basic JavaFX Application</h2>
+      <pre><code class="language-java">
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        Button btn = new Button("Click Me");
+        btn.setOnAction(e -> System.out.println("Button clicked!"));
+
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+
+        Scene scene = new Scene(root, 300, 200);
+        primaryStage.setTitle("JavaFX Demo");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔧 Key JavaFX Components</h2>
+      <ul>
+        <li><code>Stage</code> – main window</li>
+        <li><code>Scene</code> – container for all content</li>
+        <li><code>Controls</code> – buttons, text fields, labels, etc.</li>
+        <li><code>Layouts</code> – organize controls (VBox, HBox, GridPane)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Add a label that changes text on button click</li>
+        <li>Create a VBox with multiple buttons</li>
+        <li>Experiment with different layouts</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv16.html">← Previous: Multithreading</a>
+      <a href="../index.html">🏠 Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

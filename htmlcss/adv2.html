@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS – Advanced 2: CSS Transforms</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .transform-box {
+      width: 120px;
+      height: 120px;
+      background: royalblue;
+      margin: 30px auto;
+      transition: transform 0.5s ease;
+    }
+
+    .transform-box:hover {
+      transform: rotate(15deg) scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS – Advanced 2: CSS Transforms</h1>
+    <p>Use <code>transform</code> to rotate, scale, or move elements</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 Hover to See</h2>
+      <div class="transform-box"></div>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Use <code>translateX()</code> or <code>rotateY()</code></li>
+        <li>Try chaining multiple transforms</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous</a>
+      <a href="adv3.html">Next →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn HTML & CSS the Logic-First Way</p>
+  </footer>
+</body>
+</html>

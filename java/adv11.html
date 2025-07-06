@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Lambda Expressions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Advanced Lesson 11 – Lambda Expressions</h1>
+    <p>Write cleaner and more concise code using functional programming</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚡ What is a Lambda Expression?</h2>
+      <p>
+        A lambda expression is a short block of code that takes in parameters and returns a value.  
+        It's used primarily to implement functional interfaces in a more concise way.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Syntax</h2>
+      <pre><code class="language-java">
+(parameters) -> { body }
+      </code></pre>
+
+      <p>Example:</p>
+      <pre><code class="language-java">
+(a, b) -> a + b
+() -> System.out.println("Hello World")
+name -> name.length()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Functional Interface</h2>
+      <pre><code class="language-java">
+@FunctionalInterface
+interface MyFunction {
+    void greet();
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyFunction f = () -> System.out.println("Hello from Lambda!");
+        f.greet();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Built-in Functional Interfaces (java.util.function)</h2>
+      <ul>
+        <li><code>Consumer&lt;T&gt;</code> – takes input, returns nothing</li>
+        <li><code>Supplier&lt;T&gt;</code> – takes nothing, returns value</li>
+        <li><code>Function&lt;T, R&gt;</code> – takes input and returns output</li>
+        <li><code>Predicate&lt;T&gt;</code> – takes input and returns boolean</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Example: Using Predicate</h2>
+      <pre><code class="language-java">
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        Predicate&lt;String&gt; isLong = str -> str.length() > 5;
+        System.out.println(isLong.test("DevStart"));  // true
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Lambda = concise way to implement a method</li>
+        <li>Only works with functional interfaces (single method)</li>
+        <li>Makes code shorter and more readable</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a lambda that multiplies two numbers</li>
+        <li>Use <code>Consumer</code> to print uppercase strings</li>
+        <li>Use <code>Function</code> to return the square of a number</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv10.html">← Previous: Generics</a>
+      <a href="adv12.html">Next → Streams API</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

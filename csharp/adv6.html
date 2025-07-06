@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Advanced 6: Generics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Advanced 6: Generics</h1>
+    <p>Write flexible and type-safe code using generics</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What Are Generics?</h2>
+      <p><strong>Generics</strong> allow you to define classes, methods, and interfaces with a placeholder for data types.</p>
+      <p>This helps you avoid code duplication and increases type safety.</p>
+    </section>
+
+    <section>
+      <h2>📄 Generic Method Example</h2>
+      <pre><code class="language-csharp">
+class Utilities
+{
+    public void PrintItem&lt;T&gt;(T item)
+    {
+        Console.WriteLine("Item: " + item);
+    }
+}
+
+// Usage
+Utilities util = new Utilities();
+util.PrintItem&lt;int&gt;(100);         // Output: Item: 100
+util.PrintItem&lt;string&gt;("DevStart"); // Output: Item: DevStart
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📄 Generic Class Example</h2>
+      <pre><code class="language-csharp">
+class Box&lt;T&gt;
+{
+    public T Value;
+}
+
+// Usage
+Box&lt;int&gt; intBox = new Box&lt;int&gt;();
+intBox.Value = 42;
+
+Box&lt;string&gt; strBox = new Box&lt;string&gt;();
+strBox.Value = "Hello";
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Generics use placeholder types like <code>&lt;T&gt;</code></li>
+        <li>They increase code reuse and reduce errors</li>
+        <li>Used in collections: <code>List&lt;T&gt;</code>, <code>Dictionary&lt;TKey, TValue&gt;</code>, etc.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a generic class <code>Pair&lt;T1, T2&gt;</code> that stores two values</li>
+        <li>Create and print a <code>Pair&lt;int, string&gt;</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous</a>
+      <a href="adv7.html">Next → Threading</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

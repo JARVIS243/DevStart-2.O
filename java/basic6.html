@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java – Switch Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Java: Basic Lesson 6 – Switch Statements</h1>
+    <p>Use switch to handle multiple conditions more clearly</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 Why Use Switch?</h2>
+      <p>
+        A <code>switch</code> is useful when you have many <code>if-else</code> checks based on one variable.  
+        It improves readability when checking fixed values like numbers, days, menu options, etc.
+      </p>
+    </section>
+
+    <section>
+      <h2>✅ Basic Syntax</h2>
+      <pre><code class="language-java">
+switch (variable) {
+    case value1:
+        // Code
+        break;
+    case value2:
+        // Code
+        break;
+    default:
+        // Code if no case matches
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Example: Day of the Week</h2>
+      <pre><code class="language-java">
+import java.util.Scanner;
+
+public class Weekday {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter day number (1-7): ");
+        int day = input.nextInt();
+
+        switch (day) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            case 5:
+                System.out.println("Thursday");
+                break;
+            case 6:
+                System.out.println("Friday");
+                break;
+            case 7:
+                System.out.println("Saturday");
+                break;
+            default:
+                System.out.println("Invalid day number");
+        }
+
+        input.close();
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Important Notes</h2>
+      <ul>
+        <li><strong>break</strong> stops the code from falling into next case</li>
+        <li><strong>default</strong> is optional but good to include</li>
+        <li>Switch works best with <code>int</code>, <code>char</code>, <code>String</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Make a calculator using switch (options: +, -, *, /)</li>
+        <li>Ask user to enter two numbers and an operator</li>
+        <li>Use switch to display result</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Switch is used for fixed-value decisions</li>
+        <li>Each <code>case</code> must end with <code>break</code></li>
+        <li><code>default</code> runs when no case matches</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous: If-Else Statements</a>
+      <a href="basic7.html">Next → Loops in Java</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Java the Logic-First Way</p>
+  </footer>
+</body>
+</html>

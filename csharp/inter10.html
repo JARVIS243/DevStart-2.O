@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Intermediate 10: Abstract Classes</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Intermediate 10: Abstract Classes</h1>
+    <p>Learn how to define base behavior using abstract classes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📌 What is an Abstract Class?</h2>
+      <p>An <strong>abstract class</strong> cannot be instantiated.</p>
+      <p>It can have both abstract (unimplemented) and non-abstract (implemented) methods.</p>
+    </section>
+
+    <section>
+      <h2>📄 Syntax Example</h2>
+      <pre><code class="language-csharp">
+abstract class Animal
+{
+    public abstract void MakeSound(); // No body
+
+    public void Sleep()
+    {
+        Console.WriteLine("Sleeping...");
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Dog barks.");
+    }
+}
+
+// Usage
+Dog d = new Dog();
+d.MakeSound();  // Output: Dog barks.
+d.Sleep();      // Output: Sleeping...
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚠️ Why Use It?</h2>
+      <ul>
+        <li>To create a base class with some shared behavior</li>
+        <li>To force derived classes to implement specific methods</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tip</h2>
+      <ul>
+        <li>Use abstract when some behavior must be implemented by derived classes</li>
+        <li>Abstract classes support fields and constructors (unlike interfaces)</li>
+        <li>You can mix abstract and regular methods inside it</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an abstract class <code>Vehicle</code> with abstract method <code>Drive()</code></li>
+        <li>Add regular method <code>Refuel()</code></li>
+        <li>Inherit <code>Car</code> class and implement <code>Drive()</code></li>
+        <li>Create and use a <code>Car</code> object</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous</a>
+      <a href="adv1.html">Next → Advanced Topics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>

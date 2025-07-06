@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C# – Basic 5: Conditional Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C# – Basic 5: Conditional Statements</h1>
+    <p>Make decisions in your program using if, else, and switch</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>❓ Why Conditions?</h2>
+      <p>Conditions allow your program to choose what to do based on values and logic.</p>
+    </section>
+
+    <section>
+      <h2>🔹 if / else if / else</h2>
+      <pre><code class="language-csharp">
+int number = 10;
+
+if (number > 0)
+{
+    Console.WriteLine("Positive");
+}
+else if (number < 0)
+{
+    Console.WriteLine("Negative");
+}
+else
+{
+    Console.WriteLine("Zero");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔸 switch Statement</h2>
+      <pre><code class="language-csharp">
+int day = 2;
+
+switch (day)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    default:
+        Console.WriteLine("Another day");
+        break;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Insight</h2>
+      <ul>
+        <li><code>if</code> is great for range-based logic</li>
+        <li><code>switch</code> is better for exact value choices</li>
+        <li>Always close with <code>else</code> or <code>default</code> if needed</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for a number and print whether it’s positive, negative, or zero</li>
+        <li>Ask for a number 1–7 and use switch to print weekday</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous</a>
+      <a href="basic6.html">Next → Loops in C#</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C# the Logic-First Way</p>
+  </footer>
+</body>
+</html>
