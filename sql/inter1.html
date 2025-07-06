@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 1: AND / OR</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 1: AND / OR</h1>
+    <p>Use multiple conditions to filter data</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 Example</h2>
+      <pre><code class="language-sql">
+SELECT * FROM Students
+WHERE age > 16 AND grade = 'A';
+      </code></pre>
+      <p>Returns students older than 16 with grade A.</p>
+
+      <pre><code class="language-sql">
+SELECT * FROM Students
+WHERE grade = 'A' OR grade = 'B';
+      </code></pre>
+      <p>Returns students with grade A or B.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Find students older than 15 and with grade B</li>
+        <li>Find students with grade A or younger than 17</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic10.html">← Previous</a>
+      <a href="inter2.html">Next → IN, BETWEEN, LIKE</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

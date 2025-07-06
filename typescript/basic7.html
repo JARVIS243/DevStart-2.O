@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../style-v2.css" />
+<head></head>
+<body>
+  <header><h1>TypeScript – Basic 7: Union & Literal Types</h1></header>
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 Union Type</h2>
+      <pre><code class="language-ts">
+let value: string | number;
+value = "Hello";
+value = 123;
+      </code></pre>
+
+      <h2>🔒 Literal Type</h2>
+      <pre><code class="language-ts">
+let direction: "up" | "down";
+direction = "up"; // ✅
+direction = "down"; // ✅
+// direction = "left"; // ❌ Error
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic6.html">← Previous</a>
+      <a href="basic8.html">Next → Type Inference</a>
+    </div>
+  </main>
+  <footer><p>DevStart 2.0</p></footer>
+</body>
+</html>

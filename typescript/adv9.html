@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 9: TypeScript with Frameworks</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 9: Using TypeScript with React</h1>
+    <p>Learn how TypeScript improves safety and structure in React apps</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚛️ Functional Component with Props</h2>
+      <pre><code class="language-tsx">
+type Props = {
+  name: string;
+  age?: number;
+};
+
+function Greeting({ name, age }: Props) {
+  return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+}
+      </code></pre>
+      <p><strong>Note:</strong> Use <code>.tsx</code> for React components with TypeScript.</p>
+    </section>
+
+    <section>
+      <h2>🧩 useState with Type</h2>
+      <pre><code class="language-tsx">
+import { useState } from "react";
+
+const [count, setCount] = useState&lt;number&gt;(0);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📋 useRef with DOM</h2>
+      <pre><code class="language-tsx">
+import { useRef } from "react";
+
+const inputRef = useRef&lt;HTMLInputElement&gt;(null);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a <code>Button</code> component with typed props</li>
+        <li>Use <code>useState</code> with a boolean value</li>
+        <li>Use <code>useRef</code> to focus an input field</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Setup Tips</h2>
+      <ul>
+        <li>Install: <code>npx create-react-app my-app --template typescript</code></li>
+        <li>Make sure all React components use <code>.tsx</code> extension</li>
+        <li>Use VS Code for intellisense and linting</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous</a>
+      <a href="adv10.html">Next → Build, Performance, Best Practices</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

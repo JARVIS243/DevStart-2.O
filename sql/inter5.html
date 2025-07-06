@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 5: Aliases (AS)</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 5: Aliases</h1>
+    <p>Rename columns or tables for better readability</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📝 Column Aliases</h2>
+      <pre><code class="language-sql">
+SELECT name AS student_name, grade AS result
+FROM Students;
+      </code></pre>
+      <p><code>AS</code> gives a new temporary name to columns.</p>
+
+      <h2>🧾 Table Aliases</h2>
+      <pre><code class="language-sql">
+SELECT s.name FROM Students AS s;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Display student name as "Full Name"</li>
+        <li>Alias the table to "std" and select age</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous</a>
+      <a href="inter6.html">Next → JOINs</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Basic 8: DELETE</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Basic 8: DELETE Statement</h1>
+    <p>Remove data from your database</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🗑️ Syntax</h2>
+      <pre><code class="language-sql">
+DELETE FROM Students
+WHERE id = 2;
+      </code></pre>
+      <p>This will delete the student with ID = 2.</p>
+    </section>
+
+    <section>
+      <h2>⚠️ Warning!</h2>
+      <p>If you forget the <code>WHERE</code> clause, all rows will be deleted!</p>
+
+      <pre><code class="language-sql">
+-- Deletes ALL records
+DELETE FROM Students;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Delete one student by ID</li>
+        <li>Delete all students with grade 'F'</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic7.html">← Previous</a>
+      <a href="basic9.html">Next → ORDER BY</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

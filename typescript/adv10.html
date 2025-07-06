@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 10: Build, Performance & Best Practices</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 10: Build, Performance & Best Practices</h1>
+    <p>Ensure scalable, fast, and maintainable TypeScript projects</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚙️ tsconfig.json Essentials</h2>
+      <p>Configure your TypeScript project using <code>tsconfig.json</code></p>
+      <pre><code class="language-json">
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Performance Tips</h2>
+      <ul>
+        <li>Enable <code>incremental</code> in tsconfig for faster builds</li>
+        <li>Split types into multiple files/modules</li>
+        <li>Use <code>exclude</code> and <code>include</code> wisely in tsconfig</li>
+        <li>Use only necessary strict checks (like <code>strictNullChecks</code>)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>✅ Best Practices</h2>
+      <ul>
+        <li>Use interfaces for object shapes and type aliases for primitives/unions</li>
+        <li>Always type your function parameters and return values</li>
+        <li>Avoid <code>any</code> unless absolutely necessary</li>
+        <li>Use type inference smartly – don’t overtype obvious cases</li>
+        <li>Keep types and logic separate (organize folders)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔧 Linting & Formatting</h2>
+      <ul>
+        <li>Use ESLint with TypeScript plugin</li>
+        <li>Use Prettier for code formatting</li>
+        <li>Enforce consistent style and types</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Initialize a TS project with strict mode</li>
+        <li>Try <code>tsc --watch</code> for fast dev cycles</li>
+        <li>Add ESLint + Prettier to your setup</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv9.html">← Previous</a>
+      <a href="../index.html">🏠 Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

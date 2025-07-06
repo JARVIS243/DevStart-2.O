@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 8: RIGHT JOIN</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 8: RIGHT JOIN</h1>
+    <p>Include all records from the right table and matched rows from the left</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📘 Syntax</h2>
+      <pre><code class="language-sql">
+SELECT Students.name, Marks.subject
+FROM Students
+RIGHT JOIN Marks ON Students.id = Marks.student_id;
+      </code></pre>
+      <p>Returns all marks entries, even if no student matches.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>List all subjects and the student who took them (if any)</li>
+        <li>Show subjects without student records</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous</a>
+      <a href="inter9.html">Next → FULL OUTER JOIN</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 3: GROUP BY & HAVING</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 3: GROUP BY & HAVING</h1>
+    <p>Group rows and filter groups</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📊 GROUP BY</h2>
+      <pre><code class="language-sql">
+SELECT grade, COUNT(*) AS total
+FROM Students
+GROUP BY grade;
+      </code></pre>
+      <p>Groups all students by grade and counts how many are in each grade.</p>
+
+      <h2>🧾 HAVING</h2>
+      <pre><code class="language-sql">
+SELECT grade, COUNT(*) AS total
+FROM Students
+GROUP BY grade
+HAVING COUNT(*) > 1;
+      </code></pre>
+      <p>Filters groups that have more than 1 student.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Group by age and count how many students per age</li>
+        <li>Show only groups with more than 2 students</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous</a>
+      <a href="inter4.html">Next → Aggregate Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

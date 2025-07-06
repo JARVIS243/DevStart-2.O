@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 4: Aggregate Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 4: Aggregate Functions</h1>
+    <p>Perform calculations on column values</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 Common Aggregates</h2>
+      <pre><code class="language-sql">
+SELECT COUNT(*) FROM Students;
+SELECT AVG(age) FROM Students;
+SELECT MIN(age) FROM Students;
+SELECT MAX(age) FROM Students;
+SELECT SUM(age) FROM Students;
+      </code></pre>
+      <p>Use COUNT, AVG, MIN, MAX, and SUM for summary calculations.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Find total number of students</li>
+        <li>Get average age of all students</li>
+        <li>Find youngest and oldest student</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous</a>
+      <a href="inter5.html">Next → Aliases & AS</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

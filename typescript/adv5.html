@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 5: Custom Type Guards</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 5: Custom Type Guards</h1>
+    <p>Safely narrow down types at runtime using custom logic</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 What is a Type Guard?</h2>
+      <p>A type guard is a function that checks and narrows a variable's type.</p>
+
+      <pre><code class="language-ts">
+function isString(value: unknown): value is string {
+  return typeof value === "string";
+}
+
+function printLength(value: unknown) {
+  if (isString(value)) {
+    console.log("Length:", value.length);
+  } else {
+    console.log("Not a string.");
+  }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔎 Guarding Custom Types</h2>
+      <pre><code class="language-ts">
+type Dog = { bark: () => void };
+type Cat = { meow: () => void };
+
+function isDog(pet: Dog | Cat): pet is Dog {
+  return (pet as Dog).bark !== undefined;
+}
+
+const myPet: Dog | Cat = { bark: () => console.log("Woof!") };
+
+if (isDog(myPet)) {
+  myPet.bark();
+} else {
+  myPet.meow();
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a union type with two shapes (e.g., Circle, Square)</li>
+        <li>Write a type guard for each shape</li>
+        <li>Use the guard inside a function to safely call shape-specific methods</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous</a>
+      <a href="adv6.html">Next → Decorators</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 2: Indexes</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 2: Indexes</h1>
+    <p>Speed up query performance with indexes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚡ Syntax</h2>
+      <pre><code class="language-sql">
+CREATE INDEX idx_name
+ON Students (name);
+      </code></pre>
+      <p>This creates an index on the <code>name</code> column of the Students table.</p>
+    </section>
+
+    <section>
+      <h2>📌 Notes</h2>
+      <ul>
+        <li>Indexes improve SELECT query speed</li>
+        <li>Can slow down INSERT/UPDATE/DELETE slightly</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create index on grade column</li>
+        <li>Test performance with and without index (optional)</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous</a>
+      <a href="adv3.html">Next → Transactions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Basic 3: Create Table</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Basic 3: Creating Tables</h1>
+    <p>Design and create tables to store data in your database</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📐 SQL Table Example</h2>
+      <pre><code class="language-sql">
+CREATE TABLE Students (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER,
+  grade TEXT
+);
+      </code></pre>
+
+      <p>This creates a table called <strong>Students</strong> with four columns.</p>
+    </section>
+
+    <section>
+      <h2>✅ Column Types</h2>
+      <ul>
+        <li><code>INTEGER</code> – whole numbers</li>
+        <li><code>TEXT</code> – strings/characters</li>
+        <li><code>PRIMARY KEY</code> – unique ID</li>
+        <li><code>NOT NULL</code> – field must have a value</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a table <code>Books</code> with columns: id, title, author, year</li>
+        <li>Try <code>DROP TABLE</code> to remove it</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous</a>
+      <a href="basic4.html">Next → Inserting Data</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

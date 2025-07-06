@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 7: Interfaces & Inheritance</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 7: Advanced Interfaces & Inheritance</h1>
+    <p>Extend interfaces and combine types for powerful object structures</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧩 Interface Inheritance</h2>
+      <p>Interfaces can extend other interfaces to create complex hierarchies.</p>
+
+      <pre><code class="language-ts">
+interface Animal {
+  name: string;
+}
+
+interface Dog extends Animal {
+  bark(): void;
+}
+
+const myDog: Dog = {
+  name: "Tommy",
+  bark() {
+    console.log("Woof!");
+  }
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔗 Multiple Interface Inheritance</h2>
+      <pre><code class="language-ts">
+interface Flyer {
+  fly(): void;
+}
+
+interface Swimmer {
+  swim(): void;
+}
+
+interface Duck extends Flyer, Swimmer {}
+
+const duck: Duck = {
+  fly() {
+    console.log("Flying...");
+  },
+  swim() {
+    console.log("Swimming...");
+  }
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 Interface Merging</h2>
+      <p>TypeScript automatically merges interfaces with the same name.</p>
+
+      <pre><code class="language-ts">
+interface Person {
+  name: string;
+}
+
+interface Person {
+  age: number;
+}
+
+const p: Person = { name: "Aju", age: 22 };
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an <code>Employee</code> interface that extends <code>Person</code></li>
+        <li>Make an object that satisfies the <code>Employee</code> interface</li>
+        <li>Use interface merging to add more properties to <code>Employee</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous</a>
+      <a href="adv8.html">Next → Advanced Generics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

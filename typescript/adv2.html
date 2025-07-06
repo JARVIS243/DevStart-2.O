@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 2: Mapped Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 2: Mapped Types</h1>
+    <p>Transform and generate new types dynamically using keys of other types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 What Are Mapped Types?</h2>
+      <p>Mapped types let you create new types by looping over keys of an existing type.</p>
+
+      <pre><code class="language-ts">
+type Person = {
+  name: string;
+  age: number;
+};
+
+// Make all fields optional
+type OptionalPerson = {
+  [K in keyof Person]?: Person[K];
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔒 Make All Fields Readonly</h2>
+      <pre><code class="language-ts">
+type ReadonlyPerson = {
+  [K in keyof Person]: Readonly&lt;Person[K]&gt;;
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔧 Use with Utility Types</h2>
+      <p>Mapped types are used behind the scenes in utility types like:</p>
+      <ul>
+        <li><code>Partial&lt;T&gt;</code></li>
+        <li><code>Readonly&lt;T&gt;</code></li>
+        <li><code>Pick&lt;T, K&gt;</code></li>
+        <li><code>Record&lt;K, T&gt;</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Define a type <code>Student</code> with 2–3 fields</li>
+        <li>Create <code>OptionalStudent</code> using a mapped type</li>
+        <li>Create <code>ReadonlyStudent</code> the same way</li>
+        <li>Compare with <code>Partial&lt;Student&gt;</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous</a>
+      <a href="adv3.html">Next → Conditional Types</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

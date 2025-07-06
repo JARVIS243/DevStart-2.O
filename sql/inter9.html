@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 9: FULL OUTER JOIN</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 9: FULL OUTER JOIN</h1>
+    <p>Returns all records when there is a match in either left or right table</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 Syntax</h2>
+      <pre><code class="language-sql">
+SELECT Students.name, Marks.subject
+FROM Students
+FULL OUTER JOIN Marks ON Students.id = Marks.student_id;
+      </code></pre>
+      <p>Includes all students and all subjects, even if there's no match.</p>
+      <p><strong>Note:</strong> FULL OUTER JOIN may not be supported in some SQL engines like MySQL.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Show all students and their subjects (including unmatched)</li>
+        <li>Identify rows with missing match on either side</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous</a>
+      <a href="inter10.html">Next → Subqueries</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

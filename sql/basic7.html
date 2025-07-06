@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Basic 7: UPDATE</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Basic 7: UPDATE</h1>
+    <p>Change values in an existing record</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>✏️ Syntax</h2>
+      <pre><code class="language-sql">
+UPDATE Students
+SET grade = 'A+'
+WHERE id = 1;
+      </code></pre>
+      <p>This changes the grade of student with ID 1 to A+.</p>
+    </section>
+
+    <section>
+      <h2>⚠️ Be Careful!</h2>
+      <p>If you omit the <code>WHERE</code> clause, all rows will be updated!</p>
+
+      <pre><code class="language-sql">
+-- Dangerous!
+UPDATE Students SET grade = 'F';
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Update the name of a specific student</li>
+        <li>Change grades for students with grade = 'B'</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic6.html">← Previous</a>
+      <a href="basic8.html">Next → DELETE</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

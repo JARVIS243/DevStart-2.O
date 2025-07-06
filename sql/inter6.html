@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 6: JOIN</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 6: JOIN</h1>
+    <p>Combine data from multiple tables</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 INNER JOIN</h2>
+      <pre><code class="language-sql">
+SELECT Students.name, Marks.subject, Marks.score
+FROM Students
+INNER JOIN Marks ON Students.id = Marks.student_id;
+      </code></pre>
+      <p>INNER JOIN returns records with matching values in both tables.</p>
+
+      <h2>📘 Tables</h2>
+      <ul>
+        <li><strong>Students</strong>: id, name</li>
+        <li><strong>Marks</strong>: student_id, subject, score</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>List each student's score in Math</li>
+        <li>Use aliases for shorter table names</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous</a>
+      <a href="inter7.html">Next → LEFT JOIN</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

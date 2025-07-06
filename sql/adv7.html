@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 7: Backup & Restore</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 7: Backup & Restore</h1>
+    <p>Protect your database by saving and restoring data</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>💾 Backup (MySQL CLI)</h2>
+      <pre><code class="language-bash">
+mysqldump -u root -p devstart_db > backup.sql
+      </code></pre>
+
+      <h2>📂 Restore</h2>
+      <pre><code class="language-bash">
+mysql -u root -p devstart_db < backup.sql
+      </code></pre>
+      <p>Use these commands to manually save and reload database content.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Backup your current DB using <code>mysqldump</code></li>
+        <li>Delete DB and restore it from backup</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous</a>
+      <a href="adv8.html">Next → Performance Tuning</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

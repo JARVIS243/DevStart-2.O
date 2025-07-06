@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 4: Utility Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 4: Utility Types</h1>
+    <p>Use built-in utility types to manipulate and transform existing types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔧 Common Utility Types</h2>
+
+      <ul>
+        <li><code>Partial&lt;T&gt;</code> – Makes all properties optional</li>
+        <li><code>Required&lt;T&gt;</code> – Makes all properties required</li>
+        <li><code>Readonly&lt;T&gt;</code> – Makes all properties readonly</li>
+        <li><code>Pick&lt;T, K&gt;</code> – Pick specific properties from a type</li>
+        <li><code>Omit&lt;T, K&gt;</code> – Remove specific properties from a type</li>
+        <li><code>Record&lt;K, T&gt;</code> – Creates a type with keys of K and values of T</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Example</h2>
+      <pre><code class="language-ts">
+type Person = {
+  name: string;
+  age: number;
+  email?: string;
+};
+
+type PartialPerson = Partial&lt;Person&gt;;
+type ReadonlyPerson = Readonly&lt;Person&gt;;
+type NameOnly = Pick&lt;Person, "name"&gt;;
+type WithoutEmail = Omit&lt;Person, "email"&gt;;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a type <code>Student</code> with 3 properties</li>
+        <li>Make a <code>ReadonlyStudent</code> using <code>Readonly</code></li>
+        <li>Use <code>Omit</code> to exclude one property</li>
+        <li>Use <code>Record&lt;string, number&gt;</code> to create a marks object</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous</a>
+      <a href="adv5.html">Next → Custom Type Guards</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

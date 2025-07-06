@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 1: Advanced Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 1: Advanced Types</h1>
+    <p>Dive deeper into powerful built-in TypeScript features</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔑 keyof</h2>
+      <p>Used to get all keys of a type as a union of string literals.</p>
+
+      <pre><code class="language-ts">
+type Person = {
+  name: string;
+  age: number;
+};
+
+type PersonKeys = keyof Person; // "name" | "age"
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 typeof (for types)</h2>
+      <p>Use <code>typeof</code> to create types from existing variables.</p>
+
+      <pre><code class="language-ts">
+const user = {
+  username: "aju",
+  loggedIn: true
+};
+
+type UserType = typeof user;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 ReturnType</h2>
+      <p>Get the return type of a function.</p>
+
+      <pre><code class="language-ts">
+function greet() {
+  return "Hello";
+}
+
+type GreetReturn = ReturnType&lt;typeof greet&gt;; // string
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Combine All</h2>
+      <pre><code class="language-ts">
+function getUser(id: number) {
+  return { id, name: "Aju", active: true };
+}
+
+type User = ReturnType&lt;typeof getUser&gt;;
+type UserKeys = keyof User; // "id" | "name" | "active"
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an object and use <code>typeof</code> to generate a type</li>
+        <li>Use <code>keyof</code> on that type to get property keys</li>
+        <li>Define a function and use <code>ReturnType</code> to extract its return type</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../typescript-intermediate/inter10.html">← Previous</a>
+      <a href="adv2.html">Next → Mapped Types</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../style-v2.css" />
+<head></head>
+<body>
+  <header><h1>TypeScript – Basic 9: Type Assertions</h1></header>
+  <main class="lesson-content">
+    <section>
+      <p>Type assertions tell TypeScript about the actual type you're sure of.</p>
+      <pre><code class="language-ts">
+let someValue: any = "DevStart";
+let strLength: number = (someValue as string).length;
+
+console.log(strLength); // 8
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic8.html">← Previous</a>
+      <a href="basic10.html">Next → Null, Undefined, Optional</a>
+    </div>
+  </main>
+  <footer><p>DevStart 2.0</p></footer>
+</body>
+</html>

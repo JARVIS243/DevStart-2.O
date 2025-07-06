@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 6: Decorators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 6: Decorators</h1>
+    <p>Use decorators to add behavior to classes and methods at runtime</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚙️ What Are Decorators?</h2>
+      <p>Decorators are functions that modify classes, properties, or methods.</p>
+      <p>They require <code>"experimentalDecorators": true</code> in <code>tsconfig.json</code>.</p>
+    </section>
+
+    <section>
+      <h2>🎯 Class Decorator Example</h2>
+      <pre><code class="language-ts">
+function Logger(constructor: Function) {
+  console.log("Class created:", constructor.name);
+}
+
+@Logger
+class Person {
+  constructor(public name: string) {}
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🛠 Method Decorator Example</h2>
+      <pre><code class="language-ts">
+function LogMethod(
+  target: any,
+  propertyKey: string,
+  descriptor: PropertyDescriptor
+) {
+  const original = descriptor.value;
+  descriptor.value = function (...args: any[]) {
+    console.log(`Calling ${propertyKey} with`, args);
+    return original.apply(this, args);
+  };
+}
+
+class Calculator {
+  @LogMethod
+  add(a: number, b: number) {
+    return a + b;
+  }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class and add a class decorator</li>
+        <li>Create a method and log the call using a method decorator</li>
+        <li>Enable decorators in <code>tsconfig.json</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous</a>
+      <a href="adv7.html">Next → Advanced Interfaces</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

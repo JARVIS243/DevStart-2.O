@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeScript – Intermediate 6: Type Narrowing</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 6: Type Narrowing</h1>
+    <p>Make your code smarter by checking the type before using a value</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 What is Type Narrowing?</h2>
+      <p>When you use conditional checks like <code>typeof</code> or <code>in</code>, TypeScript narrows down the possible types.</p>
+
+      <pre><code class="language-ts">
+function printId(id: number | string) {
+  if (typeof id === "string") {
+    console.log("ID in lowercase:", id.toLowerCase());
+  } else {
+    console.log("ID doubled:", id * 2);
+  }
+}
+printId("AJU"); // ID in lowercase: aju
+printId(7);     // ID doubled: 14
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🏷️ Using <code>in</code> Operator</h2>
+      <pre><code class="language-ts">
+type Admin = {
+  name: string;
+  role: string;
+};
+
+type User = {
+  name: string;
+  email: string;
+};
+
+function showDetails(person: Admin | User) {
+  if ("role" in person) {
+    console.log("Admin Role:", person.role);
+  } else {
+    console.log("User Email:", person.email);
+  }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a function <code>logValue</code> that takes a <code>string | number</code></li>
+        <li>Use <code>typeof</code> to log different messages for each type</li>
+        <li>Use the <code>in</code> operator to differentiate between two object types</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous</a>
+      <a href="inter7.html">Next → Intersection & Unknown Types</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

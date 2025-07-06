@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 3: Conditional Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 3: Conditional Types</h1>
+    <p>Build flexible types using conditional logic in type definitions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🤔 What Are Conditional Types?</h2>
+      <p>Conditional types let you define types based on a condition.</p>
+
+      <pre><code class="language-ts">
+type IsString<T> = T extends string ? "yes" : "no";
+
+type A = IsString&lt;string&gt;;  // "yes"
+type B = IsString&lt;number&gt;;  // "no"
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔗 Distributive Conditional Types</h2>
+      <p>When used with union types, conditional types are applied to each part.</p>
+
+      <pre><code class="language-ts">
+type ToArray<T> = T extends any ? T[] : never;
+
+type StrArr = ToArray&lt;string&gt;;    // string[]
+type UnionArr = ToArray&lt;string | number&gt;; // string[] | number[]
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a type <code>IsBoolean&lt;T&gt;</code> that returns "yes" if <code>T</code> is boolean</li>
+        <li>Test it with <code>boolean</code>, <code>string</code>, and <code>boolean | string</code></li>
+        <li>Create a <code>WrapInPromise&lt;T&gt;</code> that returns <code>Promise&lt;T&gt;</code> only if <code>T</code> is not already a Promise</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous</a>
+      <a href="adv4.html">Next → Utility Types</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

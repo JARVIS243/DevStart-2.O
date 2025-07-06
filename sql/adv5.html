@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 5: Triggers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 5: Triggers</h1>
+    <p>Automatically run SQL code after events</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2⚙️ Example (AFTER INSERT)</h2>
+      <pre><code class="language-sql">
+CREATE TRIGGER log_insert
+AFTER INSERT ON Students
+FOR EACH ROW
+INSERT INTO Logs(message)
+VALUES('A new student was added.');
+      </code></pre>
+      <p>Automatically logs activity when new data is inserted.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create trigger for updates on student grade</li>
+        <li>Create trigger to log deletions</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous</a>
+      <a href="adv6.html">Next → User Permissions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

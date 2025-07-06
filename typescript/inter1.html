@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Intermediate 1: Classes and Objects</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 1: Classes and Objects</h1>
+    <p>Learn how to define and use classes to build object-oriented programs</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🏫 What is a Class?</h2>
+      <p>A class is a blueprint for creating objects with properties and methods.</p>
+
+      <pre><code class="language-ts">
+class Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet(): void {
+    console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+  }
+}
+
+let p1 = new Person("Aju", 21);
+p1.greet(); // Hi, I'm Aju and I'm 21 years old.
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class called <code>Car</code> with brand and model.</li>
+        <li>Add a method to display full info.</li>
+        <li>Create an object and call the method.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../typescript/basic10.html">← Previous: Null, Undefined, Optional</a>
+      <a href="inter2.html">Next → Inheritance and Access Modifiers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

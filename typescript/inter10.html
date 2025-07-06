@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Intermediate 10: tsconfig and Compilation</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 10: tsconfig and Compilation</h1>
+    <p>Learn how to set up TypeScript projects using <code>tsconfig.json</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🛠️ Creating tsconfig.json</h2>
+      <p>Initialize a TypeScript project using:</p>
+      <pre><code class="language-bash">tsc --init</code></pre>
+      <p>This generates a <code>tsconfig.json</code> file to configure how TS compiles.</p>
+    </section>
+
+    <section>
+      <h2>🔧 Common tsconfig Options</h2>
+      <pre><code class="language-json">
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
+      </code></pre>
+
+      <ul>
+        <li><code>target</code> – JavaScript version to compile to</li>
+        <li><code>module</code> – module system (e.g., commonjs)</li>
+        <li><code>strict</code> – enable strict type checking</li>
+        <li><code>outDir</code> – where compiled files go</li>
+        <li><code>rootDir</code> – source folder for TS files</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📁 Folder Structure</h2>
+      <pre>
+project/
+├── src/
+│   └── index.ts
+├── dist/
+├── tsconfig.json
+      </pre>
+      <p>Compile using:</p>
+      <pre><code class="language-bash">tsc</code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Initialize a new TypeScript project with <code>tsc --init</code></li>
+        <li>Create a <code>src/index.ts</code> file</li>
+        <li>Configure <code>tsconfig.json</code> to use <code>outDir</code> and <code>rootDir</code></li>
+        <li>Compile and run the JS output</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous</a>
+      <a href="adv1.html">Next → Advanced Topics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

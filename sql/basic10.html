@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Basic 10: LIMIT & DISTINCT</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Basic 10: LIMIT & DISTINCT</h1>
+    <p>Control the number of rows returned and remove duplicates</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔢 LIMIT</h2>
+      <pre><code class="language-sql">
+SELECT * FROM Students
+LIMIT 5;
+      </code></pre>
+      <p>Returns only the first 5 rows.</p>
+    </section>
+
+    <section>
+      <h2>🎯 DISTINCT</h2>
+      <pre><code class="language-sql">
+SELECT DISTINCT grade FROM Students;
+      </code></pre>
+      <p>Returns only unique grade values.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>List top 3 oldest students</li>
+        <li>Find all distinct names in your table</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic9.html">← Previous</a>
+      <a href="inter1.html">Next → Intermediate SQL</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

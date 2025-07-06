@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 6: User Permissions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 6: User Permissions</h1>
+    <p>Control what different users can do</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>👤 Create User</h2>
+      <pre><code class="language-sql">
+CREATE USER 'devuser'@'localhost' IDENTIFIED BY 'password123';
+      </code></pre>
+
+      <h2>🔐 Grant Permissions</h2>
+      <pre><code class="language-sql">
+GRANT SELECT, INSERT ON Students TO 'devuser'@'localhost';
+      </code></pre>
+
+      <h2>🚫 Revoke</h2>
+      <pre><code class="language-sql">
+REVOKE INSERT ON Students FROM 'devuser'@'localhost';
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a read-only user</li>
+        <li>Revoke DELETE permission from admin user</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous</a>
+      <a href="adv7.html">Next → Backup & Restore</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

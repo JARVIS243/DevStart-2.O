@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Intermediate 5: Modules and Namespaces</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 5: Modules and Namespaces</h1>
+    <p>Organize code into reusable files using modules and group logic using namespaces</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Modules</h2>
+      <p>Modules allow you to split your code into separate files. You export things from one file and import them in another.</p>
+
+      <pre><code class="language-ts">
+// mathUtils.ts
+export function add(a: number, b: number): number {
+  return a + b;
+}
+
+// main.ts
+import { add } from "./mathUtils";
+console.log(add(5, 3)); // 8
+      </code></pre>
+
+      <p>Make sure to compile with module support: <code>tsc --module commonjs main.ts</code></p>
+    </section>
+
+    <section>
+      <h2>📂 Namespaces</h2>
+      <p>Namespaces group related logic in the same file using the <code>namespace</code> keyword.</p>
+
+      <pre><code class="language-ts">
+namespace Utils {
+  export function greet(name: string): void {
+    console.log(`Hello, ${name}`);
+  }
+}
+
+Utils.greet("Aju"); // Hello, Aju
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a file <code>converter.ts</code> with a function to convert km to miles</li>
+        <li>Import and use it in <code>main.ts</code></li>
+        <li>Create a namespace called <code>MathTools</code> with multiply and divide functions</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous</a>
+      <a href="inter6.html">Next → Type Narrowing</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

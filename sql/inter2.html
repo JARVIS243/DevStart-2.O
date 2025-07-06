@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 2: IN, BETWEEN, LIKE</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 2: IN, BETWEEN, LIKE</h1>
+    <p>Use pattern matching and set/interval filtering</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 IN</h2>
+      <pre><code class="language-sql">
+SELECT * FROM Students
+WHERE grade IN ('A', 'B');
+      </code></pre>
+
+      <h2>🔢 BETWEEN</h2>
+      <pre><code class="language-sql">
+SELECT * FROM Students
+WHERE age BETWEEN 15 AND 17;
+      </code></pre>
+
+      <h2>🔡 LIKE</h2>
+      <pre><code class="language-sql">
+SELECT * FROM Students
+WHERE name LIKE 'J%';
+      </code></pre>
+      <p><code>%</code> means wildcard. 'J%' = starts with J</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>List students with grade C or D using IN</li>
+        <li>Find students aged 14 to 18 using BETWEEN</li>
+        <li>Find names ending with “n” using LIKE</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous</a>
+      <a href="inter3.html">Next → GROUP BY & HAVING</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

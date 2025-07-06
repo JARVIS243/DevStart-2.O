@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Advanced 8: Advanced Generics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Advanced 8: Advanced Generics</h1>
+    <p>Use constraints, defaults, and multiple generic parameters</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 Generics Recap</h2>
+      <p>Generics let you write flexible and reusable code.</p>
+
+      <pre><code class="language-ts">
+function identity<T>(value: T): T {
+  return value;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔒 Constraints</h2>
+      <p>Limit what types can be passed using <code>extends</code>.</p>
+
+      <pre><code class="language-ts">
+function getLength<T extends { length: number }>(item: T): number {
+  return item.length;
+}
+
+getLength("hello"); // ✅
+getLength([1, 2, 3]); // ✅
+// getLength(123); ❌ Error
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🌐 Default Generic Types</h2>
+      <pre><code class="language-ts">
+type ApiResponse<T = string> = {
+  data: T;
+  status: number;
+};
+
+const res: ApiResponse = {
+  data: "Success",
+  status: 200
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔗 Multiple Type Parameters</h2>
+      <pre><code class="language-ts">
+function pair<K, V>(key: K, value: V): [K, V] {
+  return [key, value];
+}
+
+const result = pair("id", 123); // ["id", 123]
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a generic function with a constraint</li>
+        <li>Use default types for a generic type</li>
+        <li>Make a type or function that uses two generic parameters</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous</a>
+      <a href="adv9.html">Next → TypeScript in Frameworks</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Advanced</p>
+  </footer>
+</body>
+</html>

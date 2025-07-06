@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeScript – Intermediate 8: Optional Chaining & Nullish Coalescing</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 8: Optional Chaining & Nullish Coalescing</h1>
+    <p>Write safer code when working with possibly null or undefined values</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 Optional Chaining <code>?.</code></h2>
+      <p>Access deeply nested properties safely without crashing your code.</p>
+
+      <pre><code class="language-ts">
+type User = {
+  name: string;
+  address?: {
+    city?: string;
+  };
+};
+
+const user1: User = {
+  name: "Aju",
+  address: {
+    city: "Kochi"
+  }
+};
+
+const user2: User = {
+  name: "Nila"
+};
+
+console.log(user1.address?.city); // Kochi
+console.log(user2.address?.city); // undefined (safe)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🌀 Nullish Coalescing <code>??</code></h2>
+      <p>Use a default value when the left side is <code>null</code> or <code>undefined</code>.</p>
+
+      <pre><code class="language-ts">
+let input: string | null = null;
+let result = input ?? "Default value";
+console.log(result); // Default value
+
+let count = 0;
+let finalCount = count ?? 100;
+console.log(finalCount); // 0 (not null/undefined)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Access a nested object using <code>?.</code> and avoid crashing when property is missing</li>
+        <li>Use <code>??</code> to provide fallback values for user inputs</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous</a>
+      <a href="inter9.html">Next → DOM Manipulation with TypeScript</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript – Intermediate 4: Generics</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 4: Generics</h1>
+    <p>Write reusable and flexible components with generics</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What Are Generics?</h2>
+      <p>Generics let you write functions, classes, or interfaces that work with any data type.</p>
+
+      <pre><code class="language-ts">
+// Generic function
+function identity<T>(value: T): T {
+  return value;
+}
+
+console.log(identity<string>("Aju")); // Aju
+console.log(identity<number>(101));   // 101
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📚 Generic with Arrays</h2>
+      <pre><code class="language-ts">
+function logItems<T>(items: T[]): void {
+  items.forEach(item => console.log(item));
+}
+
+logItems<string>(["apple", "banana", "cherry"]);
+logItems<number>([10, 20, 30]);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a generic function <code>wrapInArray</code> that returns <code>[value]</code></li>
+        <li>Use it with strings, numbers, and booleans</li>
+        <li>Log the output</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous</a>
+      <a href="inter5.html">Next → Modules and Namespaces</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

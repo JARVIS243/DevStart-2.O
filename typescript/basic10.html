@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../style-v2.css" />
+<head></head>
+<body>
+  <header><h1>TypeScript – Basic 10: Null, Undefined, Optional</h1></header>
+  <main class="lesson-content">
+    <section>
+      <pre><code class="language-ts">
+let x: number | null = null;
+let y: undefined = undefined;
+
+function greet(name?: string) {
+  console.log("Hello", name ?? "Guest");
+}
+
+greet();       // Hello Guest
+greet("Aju");  // Hello Aju
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic9.html">← Previous</a>
+      <a href="../typescript/inter1.html">Next → Intermediate Lessons</a>
+    </div>
+  </main>
+  <footer><p>DevStart 2.0</p></footer>
+</body>
+</html>

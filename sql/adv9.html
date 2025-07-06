@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 9: JSON in SQL</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 9: JSON in SQL</h1>
+    <p>Store and query JSON data in SQL</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Example (MySQL)</h2>
+      <pre><code class="language-sql">
+CREATE TABLE Users (
+  id INT,
+  data JSON
+);
+
+INSERT INTO Users VALUES (1, '{"name": "Alice", "age": 22}');
+      </code></pre>
+
+      <h2>🔍 Query JSON Field</h2>
+      <pre><code class="language-sql">
+SELECT data->>'$.name' AS name FROM Users;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a JSON column for user profile</li>
+        <li>Query specific fields inside the JSON</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous</a>
+      <a href="adv10.html">Next → Common Interview Questions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

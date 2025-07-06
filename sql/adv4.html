@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 4: Stored Procedures</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 4: Stored Procedures</h1>
+    <p>Save reusable SQL code on the database</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Example (MySQL)</h2>
+      <pre><code class="language-sql">
+DELIMITER //
+CREATE PROCEDURE GetAllStudents()
+BEGIN
+  SELECT * FROM Students;
+END //
+DELIMITER ;
+      </code></pre>
+
+      <h2>▶️ Run It</h2>
+      <pre><code class="language-sql">
+CALL GetAllStudents();
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create procedure to return students with grade A</li>
+        <li>Create one to insert new student</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous</a>
+      <a href="adv5.html">Next → Triggers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

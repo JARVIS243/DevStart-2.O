@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeScript – Intermediate 7: Intersection & Unknown Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 7: Intersection & Unknown Types</h1>
+    <p>Combine multiple types and use safe handling with unknown types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>➕ Intersection Types</h2>
+      <p>Use <code>&</code> to combine two or more types into one.</p>
+
+      <pre><code class="language-ts">
+type Engineer = {
+  name: string;
+  skills: string[];
+};
+
+type Manager = {
+  department: string;
+};
+
+type Lead = Engineer & Manager;
+
+const teamLead: Lead = {
+  name: "Aju",
+  skills: ["TS", "React"],
+  department: "Development"
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>❔ Unknown Type</h2>
+      <p><code>unknown</code> is safer than <code>any</code> because you must check the type before using it.</p>
+
+      <pre><code class="language-ts">
+function handleValue(value: unknown) {
+  if (typeof value === "string") {
+    console.log("String:", value.toUpperCase());
+  } else if (typeof value === "number") {
+    console.log("Number squared:", value * value);
+  } else {
+    console.log("Unknown type");
+  }
+}
+
+handleValue("hello");
+handleValue(4);
+handleValue(true);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create two types: <code>Person</code> and <code>Employee</code></li>
+        <li>Combine them into <code>Staff</code> using <code>&</code></li>
+        <li>Write a function that handles <code>unknown</code> input and checks its type</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous</a>
+      <a href="inter8.html">Next → Optional Chaining & Nullish Coalescing</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>
+	

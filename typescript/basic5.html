@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../style-v2.css" />
+<head>...</head>
+<body>
+  <header>
+    <h1>TypeScript – Basic 5: Functions</h1>
+    <p>Learn to define and call functions with typed parameters</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📘 Function Example</h2>
+      <pre><code class="language-ts">
+function greet(name: string): string {
+  return `Hello, ${name}`;
+}
+console.log(greet("Aju"));
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧮 Default and Optional Parameters</h2>
+      <pre><code class="language-ts">
+function add(a: number, b: number = 10): number {
+  return a + b;
+}
+console.log(add(5)); // 15
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous</a>
+      <a href="basic6.html">Next → Type Aliases & Interfaces</a>
+    </div>
+  </main>
+  <footer><p>DevStart 2.0</p></footer>
+</body>
+</html>

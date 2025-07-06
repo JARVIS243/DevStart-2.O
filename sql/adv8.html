@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 8: Performance Tuning</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 8: Performance Tuning</h1>
+    <p>Optimize queries and database structure for speed</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🚀 Tips</h2>
+      <ul>
+        <li>Use <code>EXPLAIN</code> to analyze queries</li>
+        <li>Index frequently queried columns</li>
+        <li>Avoid <code>SELECT *</code>, fetch only needed columns</li>
+        <li>Normalize tables properly</li>
+      </ul>
+
+      <h2>📊 Analyze a Query</h2>
+      <pre><code class="language-sql">
+EXPLAIN SELECT name FROM Students WHERE grade = 'A';
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Test query with and without index</li>
+        <li>Compare performance with <code>EXPLAIN</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous</a>
+      <a href="adv9.html">Next → JSON in SQL</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

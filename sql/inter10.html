@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 10: Subqueries</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 10: Subqueries</h1>
+    <p>Use queries inside other queries</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 Example</h2>
+      <pre><code class="language-sql">
+SELECT name FROM Students
+WHERE age = (
+  SELECT MAX(age) FROM Students
+);
+      </code></pre>
+      <p>This returns the student with the highest age.</p>
+    </section>
+
+    <section>
+      <h2>💡 When to Use</h2>
+      <ul>
+        <li>Compare values with aggregates (MIN, MAX, AVG)</li>
+        <li>Filter using another query</li>
+        <li>Build dynamic results</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Find student with the lowest grade using a subquery</li>
+        <li>List students older than average age</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous</a>
+      <a href="adv1.html">Next → Advanced SQL</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

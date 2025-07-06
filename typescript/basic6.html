@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeScript – Basic 6: Type Aliases & Interfaces</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Basic 6: Type Aliases & Interfaces</h1>
+    <p>Define your own types using alias and interface.</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>✏️ Type Alias</h2>
+      <pre><code class="language-ts">
+type User = {
+  name: string;
+  age: number;
+};
+
+let user1: User = { name: "Aju", age: 22 };
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 Interface</h2>
+      <pre><code class="language-ts">
+interface Student {
+  id: number;
+  enrolled: boolean;
+}
+
+let s1: Student = { id: 1, enrolled: true };
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous</a>
+      <a href="basic7.html">Next → Union & Literal Types</a>
+    </div>
+  </main>
+
+  <footer><p>DevStart 2.0</p></footer>
+</body>
+</html>

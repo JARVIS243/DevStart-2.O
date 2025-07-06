@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Intermediate 9: DOM Manipulation</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 9: DOM Manipulation</h1>
+    <p>Access and manipulate HTML elements safely using TypeScript</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🌐 Access DOM Elements</h2>
+      <p>TypeScript adds type safety when selecting and using DOM elements.</p>
+
+      <pre><code class="language-ts">
+// HTML:
+// &lt;input id="username" type="text"&gt;
+// &lt;button id="btn"&gt;Click&lt;/button&gt;
+
+const input = document.getElementById("username") as HTMLInputElement;
+const btn = document.getElementById("btn") as HTMLButtonElement;
+
+btn.addEventListener("click", () => {
+  alert("Hello " + input.value);
+});
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Type Assertions</h2>
+      <p>Use <code>as HTMLInputElement</code> to tell TS the exact element type.</p>
+
+      <pre><code class="language-ts">
+const title = document.querySelector("h1") as HTMLHeadingElement;
+title.style.color = "blue";
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an input and a button</li>
+        <li>On button click, log the input text</li>
+        <li>Change the text color of an element</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous</a>
+      <a href="inter10.html">Next → tsconfig and Compilation</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

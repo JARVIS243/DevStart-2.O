@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Intermediate 3: Interfaces with Classes</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 3: Interfaces with Classes</h1>
+    <p>Use interfaces to define a contract for your classes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📄 Interface in Class</h2>
+      <p>A class can implement an interface to follow a specific structure.</p>
+
+      <pre><code class="language-ts">
+interface Printable {
+  print(): void;
+}
+
+class Invoice implements Printable {
+  constructor(private amount: number) {}
+
+  print(): void {
+    console.log(`Invoice amount: ₹${this.amount}`);
+  }
+}
+
+const bill = new Invoice(2500);
+bill.print(); // Invoice amount: ₹2500
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>👥 Multiple Interfaces</h2>
+      <pre><code class="language-ts">
+interface Printable {
+  print(): void;
+}
+
+interface Savable {
+  save(): void;
+}
+
+class Report implements Printable, Savable {
+  print() {
+    console.log("Printing Report...");
+  }
+
+  save() {
+    console.log("Saving Report...");
+  }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an interface <code>Playable</code> with method <code>play()</code></li>
+        <li>Implement it in a class <code>Game</code></li>
+        <li>Print “Game started” in the <code>play()</code> method</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous</a>
+      <a href="inter4.html">Next → Generics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

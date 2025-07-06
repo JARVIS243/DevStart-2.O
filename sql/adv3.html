@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 3: Transactions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 3: Transactions</h1>
+    <p>Group multiple SQL commands into a single unit</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 Syntax</h2>
+      <pre><code class="language-sql">
+BEGIN;
+
+UPDATE Accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE Accounts SET balance = balance + 100 WHERE id = 2;
+
+COMMIT;
+      </code></pre>
+      <p>Use <code>ROLLBACK</code> to undo changes if something goes wrong.</p>
+    </section>
+
+    <section>
+      <h2>📌 Notes</h2>
+      <ul>
+        <li><strong>BEGIN</strong>: Start transaction</li>
+        <li><strong>COMMIT</strong>: Save changes</li>
+        <li><strong>ROLLBACK</strong>: Cancel transaction</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Transfer amount between two accounts</li>
+        <li>Use ROLLBACK to cancel the transfer</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous</a>
+      <a href="adv4.html">Next → Stored Procedures</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Advanced 1: Views</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Advanced 1: Views</h1>
+    <p>Save a query as a virtual table</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧱 Creating a View</h2>
+      <pre><code class="language-sql">
+CREATE VIEW TopStudents AS
+SELECT name, grade FROM Students
+WHERE grade = 'A';
+      </code></pre>
+
+      <h2>🔍 Using a View</h2>
+      <pre><code class="language-sql">
+SELECT * FROM TopStudents;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a view for students with grade B or above</li>
+        <li>Query the view to list names only</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../inter/inter10.html">← Previous</a>
+      <a href="adv2.html">Next → Indexes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>

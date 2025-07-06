@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeScript – Intermediate 2: Inheritance and Access Modifiers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>TypeScript – Intermediate 2: Inheritance and Access Modifiers</h1>
+    <p>Build class hierarchies and protect data using public, private, and protected</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📘 Inheritance</h2>
+      <p>Use <code>extends</code> to create a subclass from a base class.</p>
+
+      <pre><code class="language-ts">
+class Animal {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  move(): void {
+    console.log(`${this.name} moves.`);
+  }
+}
+
+class Dog extends Animal {
+  bark(): void {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog("Tommy");
+dog.move(); // Tommy moves.
+dog.bark(); // Tommy barks.
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔐 Access Modifiers</h2>
+      <p>Control who can access properties and methods:</p>
+      <ul>
+        <li><code>public</code> – accessible everywhere (default)</li>
+        <li><code>private</code> – accessible only inside the class</li>
+        <li><code>protected</code> – accessible in class and subclasses</li>
+      </ul>
+
+      <pre><code class="language-ts">
+class BankAccount {
+  public name: string;
+  private balance: number;
+
+  constructor(name: string, balance: number) {
+    this.name = name;
+    this.balance = balance;
+  }
+
+  getBalance(): number {
+    return this.balance;
+  }
+}
+
+const acc = new BankAccount("Aju", 5000);
+console.log(acc.name); // Aju
+// console.log(acc.balance); // ❌ Error: private
+console.log(acc.getBalance()); // 5000
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a base class <code>Vehicle</code> with brand and method <code>drive()</code></li>
+        <li>Create a subclass <code>Bike</code> with method <code>ringBell()</code></li>
+        <li>Use private balance in a class and return it using a method</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous</a>
+      <a href="inter3.html">Next → Interfaces with Classes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – TypeScript Intermediate</p>
+  </footer>
+</body>
+</html>

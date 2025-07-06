@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL – Intermediate 7: LEFT JOIN</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>SQL – Intermediate 7: LEFT JOIN</h1>
+    <p>Include all records from the left table and matched rows from the right</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧲 Syntax</h2>
+      <pre><code class="language-sql">
+SELECT Students.name, Marks.subject
+FROM Students
+LEFT JOIN Marks ON Students.id = Marks.student_id;
+      </code></pre>
+      <p>Returns all students, even if they don’t have matching marks.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Find all students and their subjects (if any)</li>
+        <li>Highlight students with no subjects assigned</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous</a>
+      <a href="inter8.html">Next → RIGHT JOIN</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn SQL the Logic-First Way</p>
+  </footer>
+</body>
+</html>
