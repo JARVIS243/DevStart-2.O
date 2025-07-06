@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 4: Generics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 4: Generics</h1>
+    <p>Write flexible, reusable code using generic types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 Why Generics?</h2>
+      <p>Generics allow you to write code that works with different types without rewriting it.</p>
+
+      <pre><code class="language-kotlin">
+class Box<T>(val item: T) {
+    fun get(): T = item
+}
+
+fun main() {
+    val intBox = Box(123)
+    val strBox = Box("DevStart")
+    
+    println(intBox.get())
+    println(strBox.get())
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li><code>&lt;T&gt;</code> is a placeholder for any type</li>
+        <li>You can specify multiple generic types like <code>&lt;K, V&gt;</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>PairHolder&lt;A, B&gt;</code></li>
+        <li>Use generics to return type-safe results</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous</a>
+      <a href="adv5.html">Next → Coroutines</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

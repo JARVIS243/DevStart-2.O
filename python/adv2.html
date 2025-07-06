@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Exception Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 2 – Exception Handling</h1>
+    <p>Handle errors gracefully and keep your program running smoothly</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚠️ What is an Exception?</h2>
+      <p>
+        Exceptions are errors that occur during program execution.  
+        If not handled, they can crash the program.
+      </p>
+    </section>
+
+    <section>
+      <h2>🛑 Common Example</h2>
+      <pre><code class="language-python">
+x = int(input("Enter a number: "))
+y = 10 / x
+print("Result:", y)
+      </code></pre>
+      <p>If <code>x = 0</code>, you’ll get a <strong>ZeroDivisionError</strong></p>
+    </section>
+
+    <section>
+      <h2>✅ Handling Errors with try-except</h2>
+      <pre><code class="language-python">
+try:
+    x = int(input("Enter a number: "))
+    y = 10 / x
+    print("Result:", y)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Multiple Exceptions</h2>
+      <pre><code class="language-python">
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except ValueError:
+    print("That's not a number!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📦 Using finally</h2>
+      <pre><code class="language-python">
+try:
+    f = open("data.txt")
+    print(f.read())
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    print("Done trying to open file.")
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>💡 Raise Custom Exceptions</h2>
+      <pre><code class="language-python">
+age = int(input("Enter your age: "))
+if age < 0:
+    raise ValueError("Age can't be negative")
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write a calculator that handles wrong input and division by zero</li>
+        <li>Try opening a file and handle if it doesn't exist</li>
+        <li>Raise an error if a number is out of a certain range</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>try-except</code> prevents crashes</li>
+        <li>Use specific exceptions like <code>ValueError</code>, <code>ZeroDivisionError</code></li>
+        <li><code>finally</code> runs no matter what</li>
+        <li><code>raise</code> throws your own error</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous: File Handling</a>
+      <a href="adv3.html">Next → Modules & Packages</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

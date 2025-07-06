@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌐 JavaScript Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 Daily JavaScript Questions</h1>
+  <p>Every day, get 5 logic-based JavaScript questions selected from 100!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is JavaScript used for?",
+      "What is the difference between var, let, and const?",
+      "What is hoisting in JavaScript?",
+      "What is a closure?",
+      "Explain event bubbling and event capturing.",
+      "What is the difference between == and ===?",
+      "What is the scope of a variable?",
+      "What are arrow functions?",
+      "What is the purpose of the 'this' keyword?",
+      "What is a callback function?",
+      "What is an anonymous function?",
+      "What is the difference between function declaration and expression?",
+      "What are template literals?",
+      "What is a promise in JavaScript?",
+      "What are async and await?",
+      "What is JSON and how is it used?",
+      "How do you parse JSON in JavaScript?",
+      "What is the DOM?",
+      "How do you manipulate DOM elements?",
+      "What is the difference between null and undefined?",
+      "What is NaN in JavaScript?",
+      "What are JavaScript data types?",
+      "What is type coercion?",
+      "How do you check if a variable is an array?",
+      "What is the difference between forEach and map?",
+      "What are the different types of loops in JavaScript?",
+      "How to prevent default behavior in an event?",
+      "What is event delegation?",
+      "How do you add and remove event listeners?",
+      "What is localStorage and sessionStorage?",
+      "What is the difference between innerText and innerHTML?",
+      "What are higher-order functions?",
+      "What is the spread operator?",
+      "What is the rest parameter?",
+      "What are destructuring assignments?",
+      "What is short-circuit evaluation?",
+      "What is debounce and throttle?",
+      "What is a pure function?",
+      "What is IIFE (Immediately Invoked Function Expression)?",
+      "How to create private variables in JS?",
+      "What are modules in JavaScript?",
+      "What is difference between default and named exports?",
+      "What is strict mode in JavaScript?",
+      "What are arrow function limitations?",
+      "What is the difference between synchronous and asynchronous?",
+      "What is setTimeout and setInterval?",
+      "What is a promise chain?",
+      "What are fetch and XMLHttpRequest?",
+      "What is the difference between GET and POST?",
+      "What is a shallow vs deep copy?",
+      "What is the difference between call, apply, and bind?",
+      "What are generators in JavaScript?",
+      "What is the use of Symbol?",
+      "What is the global object?",
+      "What is prototype in JavaScript?",
+      "What is prototypal inheritance?",
+      "What is the constructor function?",
+      "What is the difference between instanceof and typeof?",
+      "How do you detect browser or device in JavaScript?",
+      "What are truthy and falsy values?",
+      "What is the typeof operator?",
+      "How do you clone an object?",
+      "What is memoization?",
+      "What is recursion in JavaScript?",
+      "What are ES6 features?",
+      "What is the difference between map and object?",
+      "What is WeakMap and WeakSet?",
+      "What is object freezing?",
+      "What are symbols and why are they used?",
+      "What is BigInt in JavaScript?",
+      "What is optional chaining?",
+      "What is nullish coalescing operator?",
+      "What is the difference between slice and splice?",
+      "How do you flatten a nested array?",
+      "What is the use of array reduce?",
+      "What are template engines?",
+      "How to handle exceptions in JS?",
+      "What is try-catch-finally?",
+      "What are custom errors?",
+      "What is the event loop?",
+      "What is the call stack?",
+      "What is the job queue and microtasks?",
+      "What are web APIs?",
+      "What is CORS?",
+      "What is the same-origin policy?",
+      "What is service worker?",
+      "What is web socket?",
+      "How to secure JavaScript code?",
+      "What are cookies and how do they work?",
+      "What is lazy loading?",
+      "What is tree shaking?",
+      "What is dynamic import?",
+      "What is code splitting?",
+      "What are environment variables in JavaScript?",
+      "How do you debug JavaScript?",
+      "What are browser dev tools used for?",
+      "What is linting?",
+      "What is ESLint?",
+      "What are transpilers like Babel?",
+      "What is TypeScript and how is it different from JS?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Operators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Lesson 4 – Operators</h1>
+    <p>Perform calculations and comparisons in Python using operators</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>➕ What are Operators?</h2>
+      <p>
+        Operators are symbols used to perform actions like addition, subtraction, comparison, etc.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔢 Arithmetic Operators</h2>
+      <pre><code class="language-python">
+a = 10
+b = 3
+
+print(a + b)  # Addition → 13
+print(a - b)  # Subtraction → 7
+print(a * b)  # Multiplication → 30
+print(a / b)  # Division → 3.333...
+print(a // b) # Floor Division → 3
+print(a % b)  # Modulus (remainder) → 1
+print(a ** b) # Exponent → 1000
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚖️ Comparison Operators</h2>
+      <p>Used to compare two values. Returns <code>True</code> or <code>False</code>.</p>
+      <pre><code class="language-python">
+x = 5
+y = 10
+
+print(x == y)   # False
+print(x != y)   # True
+print(x > y)    # False
+print(x < y)    # True
+print(x >= y)   # False
+print(x <= y)   # True
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Assignment Operators</h2>
+      <p>Used to assign or update values in variables.</p>
+      <pre><code class="language-python">
+x = 5
+x += 2   # same as x = x + 2 → 7
+x *= 3   # x = x * 3 → 21
+x -= 1   # x = x - 1 → 20
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Logical Operators</h2>
+      <p>Used to combine multiple conditions.</p>
+      <pre><code class="language-python">
+age = 20
+
+print(age > 18 and age < 25)  # True
+print(age > 25 or age == 20)  # True
+print(not age == 18)          # True
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write a program to check if a number is even or odd using modulus <code>%</code></li>
+        <li>Compare two numbers and print which one is larger</li>
+        <li>Try using <code>and</code> / <code>or</code> / <code>not</code> with conditions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Arithmetic → <code>+ - * / // % **</code></li>
+        <li>Comparison → <code>== != > < >= <=</code></li>
+        <li>Logical → <code>and or not</code></li>
+        <li>Assignment → <code>= += -= *=</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic3.html">← Previous: Input & Output</a>
+      <a href="basic5.html">Next → Conditional Statements</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

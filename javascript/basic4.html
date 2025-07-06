@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Operators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Lesson 4 – Operators</h1>
+    <p>Use symbols to perform actions like math, comparison, and logic</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>➕ What are Operators?</h2>
+      <p>
+        Operators are special symbols that tell JavaScript to do something with values.  
+        Just like math symbols, they combine or compare values in your code.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔢 1. Arithmetic Operators</h2>
+      <p>Used for calculations:</p>
+      <pre><code>
+let a = 10, b = 3;
+
+console.log(a + b); // ➕ 13
+console.log(a - b); // ➖ 7
+console.log(a * b); // ✖️ 30
+console.log(a / b); // ➗ 3.33
+console.log(a % b); // ➗ remainder = 1
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🟰 2. Assignment Operators</h2>
+      <p>Used to assign values to variables:</p>
+      <pre><code>
+let x = 5;     // Assign
+x += 3;        // Same as x = x + 3 (now 8)
+x *= 2;        // x = x * 2 (now 16)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🤔 3. Comparison Operators</h2>
+      <p>Used to compare values (result is true or false):</p>
+      <pre><code>
+let a = 5, b = 8;
+
+console.log(a > b);    // false
+console.log(a < b);    // true
+console.log(a == b);   // false (equal in value)
+console.log(a != b);   // true (not equal)
+      </code></pre>
+      <p><strong>Note:</strong> <code>==</code> checks value only. <code>===</code> checks value and type.</p>
+    </section>
+
+    <section>
+      <h2>🔗 4. Logical Operators</h2>
+      <p>Used to combine conditions (booleans):</p>
+      <pre><code>
+let isAdult = true;
+let hasID = false;
+
+console.log(isAdult && hasID);  // AND – false
+console.log(isAdult || hasID);  // OR – true
+console.log(!isAdult);          // NOT – false
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Try <code>10 > 5 && 4 < 2</code></li>
+        <li>Create two variables and compare them using <code>==</code> and <code>===</code></li>
+        <li>Practice math using <code>%</code> (modulus) to find remainders</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: Difference Between <code>==</code> and <code>===</code></h2>
+      <pre><code>
+let a = "5";     // string
+let b = 5;       // number
+
+console.log(a == b);  // true (value same)
+console.log(a === b); // false (type is different)
+      </code></pre>
+      <p>Always prefer <code>===</code> to avoid confusion in larger programs.</p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic3.html">← Previous: Data Types</a>
+      <a href="basic5.html">Next → Input & Output</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

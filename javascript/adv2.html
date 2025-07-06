@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Arrays</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Advanced Lesson 2 – Arrays</h1>
+    <p>Store and manage multiple values in a single variable using arrays</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧺 What is an Array?</h2>
+      <p>
+        An array is a list that stores multiple values in one variable.  
+        You can access each item by its position (index).
+      </p>
+    </section>
+
+    <section>
+      <h2>📦 Creating an Array</h2>
+      <pre><code>
+let fruits = ["apple", "banana", "cherry"];
+console.log(fruits);  // ["apple", "banana", "cherry"]
+      </code></pre>
+      <p>
+        Values inside an array are called <strong>elements</strong>.  
+        They can be strings, numbers, booleans, or even other arrays!
+      </p>
+    </section>
+
+    <section>
+      <h2>🔍 Accessing Elements</h2>
+      <pre><code>
+console.log(fruits[0]); // "apple"
+console.log(fruits[1]); // "banana"
+      </code></pre>
+      <p>
+        Arrays start counting from 0. So the first element is <code>[0]</code>, second is <code>[1]</code>, etc.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔁 Looping Through an Array</h2>
+      <pre><code>
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+      </code></pre>
+      <p><code>fruits.length</code> gives the total number of items in the array.</p>
+    </section>
+
+    <section>
+      <h2>➕ Adding and Removing Items</h2>
+      <pre><code>
+fruits.push("mango");     // Add to end
+fruits.pop();             // Remove last
+fruits.unshift("kiwi");   // Add to start
+fruits.shift();           // Remove first
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Common Array Methods</h2>
+      <ul>
+        <li><code>push()</code> – add to end</li>
+        <li><code>pop()</code> – remove from end</li>
+        <li><code>unshift()</code> – add to start</li>
+        <li><code>shift()</code> – remove from start</li>
+        <li><code>length</code> – number of items</li>
+        <li><code>indexOf(value)</code> – find position</li>
+        <li><code>includes(value)</code> – check existence</li>
+      </ul>
+      <pre><code>
+console.log(fruits.includes("banana")); // true
+console.log(fruits.indexOf("cherry"));  // 2
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an array of your 3 favorite games</li>
+        <li>Add 2 more games using <code>push()</code></li>
+        <li>Print each game using a <code>for</code> loop</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: Array of Mixed Types</h2>
+      <p>Arrays can hold any data type:</p>
+      <pre><code>
+let mixed = [42, "hello", true, null];
+console.log(mixed[1]); // "hello"
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous: Functions</a>
+      <a href="../index.html">🏠 Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

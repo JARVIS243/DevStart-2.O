@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 8: Annotations</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 8: Annotations</h1>
+    <p>Metadata for your code</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📌 What are Annotations?</h2>
+      <p>Annotations provide metadata to the compiler or runtime. Used for configuration, code generation, or hints.</p>
+
+      <pre><code class="language-kotlin">
+@Target(AnnotationTarget.FUNCTION)
+annotation class LogExecution
+
+@LogExecution
+fun sayHello() {
+    println("Hello from DevStart!")
+}
+      </code></pre>
+
+      <p>Note: You'll need reflection or frameworks to act on annotations.</p>
+    </section>
+
+    <section>
+      <h2>✅ Common Annotations</h2>
+      <ul>
+        <li><code>@Deprecated</code> – Marks code as outdated</li>
+        <li><code>@JvmStatic</code>, <code>@JvmOverloads</code> – Interop with Java</li>
+        <li><code>@Serializable</code> – Marks class for serialization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Mark a function as <code>@Deprecated</code></li>
+        <li>Use a custom annotation with a class</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous</a>
+      <a href="adv9.html">Next → DSLs (Domain-Specific Languages)</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

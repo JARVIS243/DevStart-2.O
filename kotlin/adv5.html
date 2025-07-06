@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 5: Coroutines</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 5: Coroutines</h1>
+    <p>Write asynchronous code easily with coroutines</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⏳ Example</h2>
+      <pre><code class="language-kotlin">
+import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    launch {
+        delay(1000)
+        println("World!")
+    }
+    println("Hello")
+}
+      </code></pre>
+      <p>Output:</p>
+      <pre>Hello
+World!</pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li><code>launch</code> runs code concurrently</li>
+        <li><code>delay()</code> is non-blocking</li>
+        <li><code>runBlocking</code> starts a coroutine from main</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Run two <code>launch</code> blocks in parallel</li>
+        <li>Use <code>async</code> and <code>await()</code> for result</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous</a>
+      <a href="adv6.html">Next → Extension Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

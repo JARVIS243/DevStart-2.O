@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Input & Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Lesson 5 – Input & Output</h1>
+    <p>How to get input from users and show output to the screen or console</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔎 What is Input & Output?</h2>
+      <p>
+        In any program, you need to:
+        <br />
+        👉 Take input from the user  
+        👉 Show output to the user  
+        <br />
+        JavaScript provides easy ways to do both.
+      </p>
+    </section>
+
+    <section>
+      <h2>📥 Input Using <code>prompt()</code></h2>
+      <p>The <code>prompt()</code> function shows a text box to get user input:</p>
+      <pre><code>
+let name = prompt("What is your name?");
+console.log(name); // shows what user typed
+      </code></pre>
+      <p>
+        This creates a pop-up asking for input. The value entered is stored in the variable.
+      </p>
+    </section>
+
+    <section>
+      <h2>📤 Output Methods</h2>
+      <ul>
+        <li><code>alert()</code> – Show a pop-up message</li>
+        <li><code>console.log()</code> – Print to browser console (for developers)</li>
+        <li><code>document.write()</code> – Write directly to the webpage</li>
+      </ul>
+
+      <pre><code>
+alert("Hello, world!");
+console.log("This is from DevStart");
+document.write("Welcome to JavaScript!");
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Important Notes</h2>
+      <ul>
+        <li><code>prompt()</code> always returns a string</li>
+        <li>To do math, you may need to convert input to a number</li>
+      </ul>
+      <pre><code>
+let age = prompt("Enter your age:");
+let ageNumber = Number(age);  // convert string to number
+console.log(ageNumber + 1);   // adds 1
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for their name and greet them using <code>alert()</code></li>
+        <li>Ask for two numbers using <code>prompt()</code> and show their sum</li>
+        <li>Print the final result using <code>console.log()</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: Why Use Console?</h2>
+      <p>
+        The browser console is a powerful tool for testing and debugging.  
+        Right-click on any webpage → Inspect → Console tab
+      </p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous: Operators</a>
+      <a href="inter1.html">Next → Conditional Statements</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Advanced 3: Collections</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 3: Collections</h1>
+    <p>Work with lists, sets, and maps</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 Lists</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val nums = listOf(1, 2, 3, 4, 5)
+    println(nums[0]) // 1
+
+    val mutable = mutableListOf("A", "B")
+    mutable.add("C")
+    println(mutable)
+}
+      </code></pre>
+
+      <h2>🔢 Sets</h2>
+      <pre><code class="language-kotlin">
+val set = setOf(1, 2, 2, 3)
+println(set) // [1, 2, 3]
+      </code></pre>
+
+      <h2>🗺️ Maps</h2>
+      <pre><code class="language-kotlin">
+val map = mapOf("Aju" to 18, "Dev" to 21)
+println(map["Aju"]) // 18
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li><code>listOf</code>, <code>setOf</code>, <code>mapOf</code> = immutable</li>
+        <li><code>mutableListOf</code>, etc. = can be changed</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a list of names and print each using <code>forEach</code></li>
+        <li>Use a map to store language and year invented</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous</a>
+      <a href="adv4.html">Next → Generics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

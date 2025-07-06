@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Intermediate 3: Inheritance</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 3: Inheritance</h1>
+    <p>Reusing code using parent and child classes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Superclass and Subclass</h2>
+      <pre><code class="language-kotlin">
+open class Animal {
+    fun eat() {
+        println("Eating...")
+    }
+}
+
+class Dog : Animal() {
+    fun bark() {
+        println("Barking...")
+    }
+}
+
+fun main() {
+    val dog = Dog()
+    dog.eat() // Inherited
+    dog.bark()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>open</code> keyword to allow a class to be inherited</li>
+        <li><code>:</code> is used to inherit from a superclass</li>
+        <li>Subclass gets all accessible functions from parent</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Vehicle</code> and a subclass <code>Car</code></li>
+        <li>Let the parent have a method <code>move()</code> and the child add <code>drive()</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous</a>
+      <a href="inter4.html">Next → Overriding</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

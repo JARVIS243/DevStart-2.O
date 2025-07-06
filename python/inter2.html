@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Lists</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Intermediate Lesson 2 – Lists</h1>
+    <p>Store, access, and modify multiple values using lists</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a List?</h2>
+      <p>
+        A list is a collection of values stored in one variable.  
+        Lists are ordered, changeable, and allow duplicate values.
+      </p>
+      <pre><code class="language-python">
+fruits = ["apple", "banana", "mango"]
+print(fruits)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 Accessing List Items</h2>
+      <pre><code class="language-python">
+print(fruits[0])  # apple
+print(fruits[1])  # banana
+      </code></pre>
+      <p>Index starts from 0</p>
+    </section>
+
+    <section>
+      <h2>✏️ Modifying List Items</h2>
+      <pre><code class="language-python">
+fruits[1] = "orange"
+print(fruits)  # ['apple', 'orange', 'mango']
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📏 List Length</h2>
+      <pre><code class="language-python">
+print(len(fruits))  # 3
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>➕ Adding Items</h2>
+      <pre><code class="language-python">
+fruits.append("grape")        # Add to end
+fruits.insert(1, "kiwi")      # Insert at index 1
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>➖ Removing Items</h2>
+      <pre><code class="language-python">
+fruits.remove("apple")        # Remove by value
+fruits.pop()                  # Remove last item
+del fruits[0]                 # Delete by index
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Loop Through a List</h2>
+      <pre><code class="language-python">
+for fruit in fruits:
+    print(fruit)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 Other Useful List Methods</h2>
+      <pre><code class="language-python">
+fruits.sort()       # Sort alphabetically
+fruits.reverse()    # Reverse order
+fruits.clear()      # Remove all items
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a list of your 5 favorite movies</li>
+        <li>Print the 2nd and 4th movies</li>
+        <li>Replace the last movie with a new one</li>
+        <li>Loop through and print all movies</li>
+        <li>Sort the list in alphabetical order</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Lists are ordered, changeable, and indexed</li>
+        <li>Use <code>append()</code>, <code>insert()</code>, <code>remove()</code> to modify them</li>
+        <li>Loop using <code>for</code></li>
+        <li>Check size with <code>len()</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous: Loops</a>
+      <a href="inter3.html">Next → Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

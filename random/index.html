@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎲 Random Question Generator – DevStart 2.0</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .random-wrapper {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffffcc;
+      border-radius: 20px;
+      padding: 40px 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+      text-align: center;
+    }
+
+    .random-wrapper h1 {
+      font-size: 2.2rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .random-wrapper p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .question-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .question-grid a {
+      text-decoration: none;
+      background: linear-gradient(135deg, #ffffff, #e3f2ff);
+      color: #007bff;
+      padding: 18px 12px;
+      border-radius: 16px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .question-grid a:hover {
+      background: #007bff;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .random-wrapper {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="random-wrapper">
+    <h1>🎲 Random Question Generator</h1>
+    <p>Select a programming language to generate 10 logic-based questions.</p>
+
+    <div class="question-grid">
+      <a href="python.html">🐍 Python</a>
+      <a href="c.html">🔣 C</a>
+      <a href="cpp.html">💻 C++</a>
+      <a href="java.html">☕ Java</a>
+      <a href="javascript.html">🌐 JavaScript</a>
+      <a href="typescript.html">📘 TypeScript</a>
+      <a href="csharp.html">🎮 C#</a>
+      <a href="kotlin.html">📱 Kotlin</a>
+      <a href="sql.html">🧠 SQL</a>
+      <a href="htmlcss.html">🌍 HTML & CSS</a>
+    </div>
+  </div>
+
+</body>
+</html>

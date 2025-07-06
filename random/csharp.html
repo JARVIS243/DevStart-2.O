@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎮 C# Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Daily C# Questions</h1>
+  <p>Get 5 new logic-building C# questions daily from a pool of 100!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is C#?",
+      "What is the .NET Framework?",
+      "What is the difference between C# and Java?",
+      "What is a class in C#?",
+      "What is an object?",
+      "What is a constructor in C#?",
+      "What is method overloading?",
+      "What is method overriding?",
+      "What are access modifiers in C#?",
+      "What is inheritance in C#?",
+      "What is an interface?",
+      "What is the difference between abstract class and interface?",
+      "What is polymorphism?",
+      "What is encapsulation?",
+      "What is a static class?",
+      "What are properties in C#?",
+      "What is auto-implemented property?",
+      "What is a value type and reference type?",
+      "What is boxing and unboxing?",
+      "What is the difference between == and Equals()?",
+      "What is a nullable type?",
+      "What is a delegate in C#?",
+      "What is an event in C#?",
+      "What is lambda expression?",
+      "What is an anonymous method?",
+      "What is LINQ?",
+      "What is IEnumerable vs IQueryable?",
+      "What is the var keyword?",
+      "What is dynamic type?",
+      "What is the difference between const and readonly?",
+      "What is a static constructor?",
+      "What are extension methods?",
+      "What is a generic method?",
+      "What is a generic class?",
+      "What is a sealed class?",
+      "What is partial class?",
+      "What is a namespace?",
+      "What is exception handling in C#?",
+      "What is try-catch-finally?",
+      "What is the use of 'throw' keyword?",
+      "What are custom exceptions?",
+      "What is a thread?",
+      "What is multithreading?",
+      "What is async and await?",
+      "What is Task in C#?",
+      "What is deadlock and how to avoid it?",
+      "What is lock keyword?",
+      "What are value tuples?",
+      "What is the difference between String and StringBuilder?",
+      "What is the difference between ref and out keyword?",
+      "What is the difference between interface and abstract class?",
+      "What is the use of base keyword?",
+      "What is object initializer?",
+      "What is collection initializer?",
+      "What is a dictionary in C#?",
+      "What are HashSet and List?",
+      "What is foreach loop?",
+      "What are Indexers?",
+      "What is a destructor in C#?",
+      "What is garbage collection?",
+      "What is IDisposable?",
+      "What is the using statement?",
+      "What is File I/O in C#?",
+      "What is StreamReader and StreamWriter?",
+      "What are binary files?",
+      "What is serialization and deserialization?",
+      "What is JSON serialization in C#?",
+      "What is XML serialization?",
+      "What is Regex in C#?",
+      "What is dependency injection?",
+      "What is inversion of control (IoC)?",
+      "What is a singleton pattern?",
+      "What is the MVC pattern?",
+      "What is the MVVM pattern?",
+      "What is an async method?",
+      "What is a background worker?",
+      "What is the difference between Task and Thread?",
+      "What is the use of Stopwatch class?",
+      "What is reflection in C#?",
+      "What is dynamic keyword?",
+      "What is Assembly in .NET?",
+      "What is the difference between public, private, internal and protected?",
+      "What is a constructor chaining?",
+      "What is an indexer?",
+      "What is yield return?",
+      "What is a custom attribute?",
+      "What is enum in C#?",
+      "What is a flag enum?",
+      "What is the difference between is and as keyword?",
+      "What is pattern matching in C#?",
+      "What is switch expression?",
+      "What is nullable reference type?",
+      "What is record type in C#?",
+      "What is difference between record and class?",
+      "What are top-level statements?",
+      "What is the global using directive?",
+      "What is file-scoped namespace?",
+      "What is implicit usings?",
+      "What is .NET 6 minimal API?",
+      "How to run C# code online?",
+      "What are the data types in C#?",
+      "What is Console.ReadLine() and WriteLine()?",
+      "How to take array input from user?",
+      "What is a jagged array?",
+      "What is multidimensional array?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

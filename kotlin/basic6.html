@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 6: Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 6: Functions</h1>
+    <p>Group your code into reusable blocks using functions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Function?</h2>
+      <p>A function is a reusable block of code that performs a specific task.</p>
+
+      <pre><code class="language-kotlin">
+fun greet() {
+    println("Welcome to DevStart!")
+}
+
+fun main() {
+    greet()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 Function with Parameters</h2>
+      <pre><code class="language-kotlin">
+fun greetUser(name: String) {
+    println("Hello, $name!")
+}
+
+fun main() {
+    greetUser("Aju")
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Function with Return Value</h2>
+      <pre><code class="language-kotlin">
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    val sum = add(5, 3)
+    println("Sum is $sum")
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Functions help avoid repeating code</li>
+        <li>You can pass values (parameters) into functions</li>
+        <li>Use <code>: Type</code> to define the return type</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a function to find the square of a number</li>
+        <li>Create a function to check if a number is even</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous</a>
+      <a href="basic7.html">Next → Null Safety</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

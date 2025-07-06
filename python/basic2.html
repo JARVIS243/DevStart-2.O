@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Variables & Data Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Lesson 2 – Variables & Data Types</h1>
+    <p>Store and work with different kinds of information using variables</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Variable?</h2>
+      <p>
+        A variable is a name used to store data in memory.  
+        Think of it as a container that holds values.
+      </p>
+      <pre><code class="language-python">
+name = "Aju"
+age = 18
+      </code></pre>
+      <p>Now <code>name</code> holds a string, and <code>age</code> holds a number.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Variable Naming Rules</h2>
+      <ul>
+        <li>Use letters, numbers, and underscores (_)</li>
+        <li>Must start with a letter or underscore (not a number)</li>
+        <li>No spaces or special characters</li>
+        <li>Use lowercase_with_underscores for readability</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Examples</h2>
+      <pre><code class="language-python">
+username = "devstart"
+score = 95
+pi = 3.14
+is_student = True
+      </code></pre>
+      <p>Each variable stores a value of a specific data type.</p>
+    </section>
+
+    <section>
+      <h2>🔤 Data Types in Python</h2>
+      <ul>
+        <li><code>str</code> – Text (e.g. "Hello")</li>
+        <li><code>int</code> – Whole numbers (e.g. 10)</li>
+        <li><code>float</code> – Decimal numbers (e.g. 3.14)</li>
+        <li><code>bool</code> – True or False</li>
+      </ul>
+      <pre><code class="language-python">
+print(type("Hello"))   # str
+print(type(42))        # int
+print(type(3.5))       # float
+print(type(True))      # bool
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create variables for your name, age, and favorite number</li>
+        <li>Print their types using <code>type()</code></li>
+        <li>Try mixing <code>int</code> and <code>str</code> and see what happens</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚠️ Bonus: Strings + Numbers</h2>
+      <pre><code class="language-python">
+name = "Aju"
+age = 18
+print(name + age)   # ❌ Error: can't mix str and int
+print(name + str(age))  # ✅ Works
+      </code></pre>
+      <p>To join a number with a string, you must first convert it using <code>str()</code>.</p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic1.html">← Previous: Introduction</a>
+      <a href="basic3.html">Next → Input & Output</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

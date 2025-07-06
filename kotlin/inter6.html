@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Intermediate 6: Data Classes</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 6: Data Classes</h1>
+    <p>Simple classes that hold data</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Data Class?</h2>
+      <p>Data classes automatically generate useful functions like <code>toString()</code>, <code>equals()</code>, and <code>copy()</code>.</p>
+
+      <pre><code class="language-kotlin">
+data class User(val name: String, val age: Int)
+
+fun main() {
+    val u1 = User("Aju", 20)
+    val u2 = u1.copy(age = 21)
+    println(u1)
+    println(u2)
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li>Use <code>data</code> keyword</li>
+        <li>Must have at least one property in the primary constructor</li>
+        <li>Great for storing simple structured data</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a data class <code>Product</code> with <code>name</code> and <code>price</code></li>
+        <li>Create an object and print it</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous</a>
+      <a href="inter7.html">Next → Companion Objects</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

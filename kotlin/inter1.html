@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Intermediate 1: Classes & Objects</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 1: Classes & Objects</h1>
+    <p>Learn how to define your own data types using classes</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🏗️ What is a Class?</h2>
+      <p>A class is a blueprint for creating objects. Each object is an instance of a class.</p>
+
+      <pre><code class="language-kotlin">
+class Car {
+    var brand = "Tesla"
+    var year = 2024
+
+    fun drive() {
+        println("Driving $brand")
+    }
+}
+
+fun main() {
+    val myCar = Car()
+    println(myCar.brand)
+    myCar.drive()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>A class defines properties and behaviors</li>
+        <li>Use <code>val obj = ClassName()</code> to create an object</li>
+        <li>Use dot <code>(.)</code> to access properties/functions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Person</code> with <code>name</code> and <code>age</code></li>
+        <li>Add a function <code>introduce()</code> that prints details</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic10.html">← Previous</a>
+      <a href="inter2.html">Next → Constructors</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

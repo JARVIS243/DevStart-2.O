@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Loops</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Intermediate Lesson 1 – Loops</h1>
+    <p>Repeat tasks using <code>for</code> and <code>while</code> loops</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 Why Use Loops?</h2>
+      <p>
+        Loops let you repeat code without writing it multiple times.  
+        Great for automation, counting, processing lists, and logic building.
+      </p>
+    </section>
+
+    <section>
+      <h2>1️⃣ <code>for</code> Loop – Loop with a Range</h2>
+      <pre><code class="language-python">
+# Print numbers from 1 to 5
+for i in range(1, 6):
+    print(i)
+      </code></pre>
+      <p>
+        <code>range(start, stop)</code> creates numbers from start to stop-1.  
+        <code>i</code> changes in each loop.
+      </p>
+    </section>
+
+    <section>
+      <h2>2️⃣ <code>for</code> Loop – Looping Through a List</h2>
+      <pre><code class="language-python">
+fruits = ["apple", "banana", "mango"]
+
+for fruit in fruits:
+    print(fruit)
+      </code></pre>
+      <p>Each item in the list is printed one by one.</p>
+    </section>
+
+    <section>
+      <h2>3️⃣ <code>while</code> Loop – Loop Until a Condition is False</h2>
+      <pre><code class="language-python">
+count = 1
+
+while count <= 5:
+    print("Count is", count)
+    count += 1
+      </code></pre>
+      <p>Be careful with <code>while</code> – if the condition never becomes False, the loop runs forever.</p>
+    </section>
+
+    <section>
+      <h2>🔚 Breaking or Skipping Loops</h2>
+      <pre><code class="language-python">
+for i in range(1, 6):
+    if i == 3:
+        continue  # skips 3
+    if i == 5:
+        break     # stops loop
+    print(i)
+      </code></pre>
+      <p>
+        <code>continue</code> skips current turn<br>
+        <code>break</code> ends the loop early
+      </p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Print even numbers from 1 to 20</li>
+        <li>Print your name 5 times using a loop</li>
+        <li>Make a countdown from 10 to 1</li>
+        <li>Try a loop that asks for input until user types "exit"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>for</code> loop → known repetitions (e.g. range, list)</li>
+        <li><code>while</code> loop → unknown repetitions (e.g. input until valid)</li>
+        <li><code>break</code> → exit early</li>
+        <li><code>continue</code> → skip current iteration</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../python/basic5.html">← Previous: Conditions</a>
+      <a href="inter2.html">Next → Lists</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

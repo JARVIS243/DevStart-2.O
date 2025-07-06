@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Conditional Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Intermediate Lesson 1 – Conditionals</h1>
+    <p>Make decisions in your code using if, else, and else if</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 What is a Conditional Statement?</h2>
+      <p>
+        A conditional allows your program to make decisions.  
+        It checks if something is true and runs different code based on that.
+      </p>
+    </section>
+
+    <section>
+      <h2>✅ Syntax of <code>if</code></h2>
+      <pre><code>
+let age = 18;
+
+if (age >= 18) {
+  console.log("You can vote.");
+}
+      </code></pre>
+      <p>If the condition is true, the code inside the block runs.</p>
+    </section>
+
+    <section>
+      <h2>🛑 Add <code>else</code> for the opposite case</h2>
+      <pre><code>
+let age = 16;
+
+if (age >= 18) {
+  console.log("You can vote.");
+} else {
+  console.log("You are too young to vote.");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Use <code>else if</code> for multiple options</h2>
+      <pre><code>
+let marks = 70;
+
+if (marks >= 90) {
+  console.log("Grade: A");
+} else if (marks >= 75) {
+  console.log("Grade: B");
+} else if (marks >= 50) {
+  console.log("Grade: C");
+} else {
+  console.log("Fail");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚠️ Common Mistakes to Avoid</h2>
+      <ul>
+        <li>Always use <strong>curly braces</strong> <code>{ }</code> to group blocks</li>
+        <li>Use <code>==</code> to compare values, <code>=</code> is for assignment</li>
+        <li>Conditions must return <code>true</code> or <code>false</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for their age using <code>prompt()</code></li>
+        <li>Use <code>if-else</code> to print if they’re a minor or adult</li>
+        <li>Try checking if a number is even or odd using <code>%</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: Truthy and Falsy Values</h2>
+      <p>
+        Some values behave like true/false in conditions:
+      </p>
+      <pre><code>
+if ("hello") {
+  console.log("This will run");
+}
+
+if (0) {
+  console.log("This won't run");  // 0 is falsy
+}
+      </code></pre>
+      <p><strong>Falsy values:</strong> <code>0</code>, <code>""</code>, <code>null</code>, <code>undefined</code>, <code>false</code>, <code>NaN</code></p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous: Input & Output</a>
+      <a href="inter2.html">Next → Loops</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Modules & Packages</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 3 – Modules & Packages</h1>
+    <p>Break your code into organized, reusable pieces</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Module?</h2>
+      <p>
+        A module is a Python file (.py) that contains variables, functions, or classes.  
+        You can use it in other files using <code>import</code>.
+      </p>
+      <pre><code class="language-python">
+# math_utils.py
+def add(a, b):
+    return a + b
+      </code></pre>
+      <pre><code class="language-python">
+# main.py
+import math_utils
+print(math_utils.add(5, 3))  # Output: 8
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧮 Built-in Modules</h2>
+      <pre><code class="language-python">
+import math
+print(math.sqrt(25))  # 5.0
+
+import random
+print(random.randint(1, 10))  # random number between 1–10
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Importing Techniques</h2>
+      <pre><code class="language-python">
+from math import sqrt
+print(sqrt(16))  # 4.0
+
+import math as m
+print(m.pi)  # 3.14159...
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📁 What is a Package?</h2>
+      <p>
+        A package is a folder that contains multiple modules (Python files)  
+        and an optional <code>__init__.py</code> file to mark it as a package.
+      </p>
+      <pre><code>
+my_package/
+│
+├── __init__.py
+├── module1.py
+└── module2.py
+      </code></pre>
+      <pre><code class="language-python">
+from my_package import module1
+module1.function_name()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Reusability Example</h2>
+      <p>Create a module named <code>greet.py</code>:</p>
+      <pre><code class="language-python">
+def welcome(name):
+    print(f"Hello, {name}!")
+      </code></pre>
+      <p>Then use it in another file:</p>
+      <pre><code class="language-python">
+import greet
+greet.welcome("Aju")
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a module with basic math operations</li>
+        <li>Import and use it from a different file</li>
+        <li>Create a package with two modules (e.g., math & strings)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Module = single Python file</li>
+        <li>Package = folder with multiple modules</li>
+        <li>Use <code>import</code>, <code>from ... import</code>, and <code>as</code> to use them</li>
+        <li>Helps keep code clean, structured, and reusable</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous: Exception Handling</a>
+      <a href="adv4.html">Next → OOP (Classes & Objects)</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

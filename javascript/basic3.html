@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Data Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Lesson 3 – Data Types</h1>
+    <p>Understand the different types of values your program can handle</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Data Type?</h2>
+      <p>
+        Every value in JavaScript has a type — it tells the computer what kind of data it is.
+        Knowing the data type helps JavaScript decide how to use and process the value.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔢 Common Data Types</h2>
+      <ul>
+        <li><strong>String</strong>: Text — anything inside quotes</li>
+        <li><strong>Number</strong>: Any number (integer or decimal)</li>
+        <li><strong>Boolean</strong>: true or false (yes/no logic)</li>
+        <li><strong>Undefined</strong>: A variable declared but not assigned</li>
+        <li><strong>Null</strong>: Intentional empty value</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Examples</h2>
+      <pre><code>
+let name = "Aju";         // String
+let age = 18;             // Number
+let isStudent = true;     // Boolean
+let phone;                // Undefined
+let marks = null;         // Null
+      </code></pre>
+      <p>Each line uses a different data type. You’ll work with these types in every program.</p>
+    </section>
+
+    <section>
+      <h2>🎯 Checking Data Types</h2>
+      <pre><code>
+let name = "DevStart";
+console.log(typeof name);  // Output: string
+
+let age = 20;
+console.log(typeof age);   // Output: number
+      </code></pre>
+      <p>
+        Use <code>typeof</code> to check what type of data is inside a variable.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create variables for <code>email</code>, <code>height</code>, and <code>isLoggedIn</code></li>
+        <li>Use <code>console.log(typeof ...)</code> to check their types</li>
+        <li>Try changing values and see how the type stays the same or changes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: Dynamic Typing</h2>
+      <p>
+        JavaScript is <strong>dynamically typed</strong> – a variable’s type can change:
+      </p>
+      <pre><code>
+let data = "hello";  // string
+data = 42;           // now number
+console.log(typeof data); // number
+      </code></pre>
+      <p>This gives flexibility, but be careful to track your types!</p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous: Variables</a>
+      <a href="basic4.html">Next → Operators</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

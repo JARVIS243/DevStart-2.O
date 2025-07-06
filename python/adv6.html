@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Working with JSON</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 6 – Working with JSON</h1>
+    <p>Use JSON to store and exchange structured data in Python</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📄 What is JSON?</h2>
+      <p>
+        JSON (JavaScript Object Notation) is a lightweight format for storing and transporting data.  
+        It's used widely in web APIs and configuration files.
+      </p>
+    </section>
+
+    <section>
+      <h2>📥 Importing the <code>json</code> Module</h2>
+      <pre><code class="language-python">
+import json
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Converting Python → JSON (Serialization)</h2>
+      <pre><code class="language-python">
+data = {"name": "Aju", "age": 18, "language": "Python"}
+
+json_string = json.dumps(data)
+print(json_string)
+      </code></pre>
+      <p><strong>Output:</strong> <code>{"name": "Aju", "age": 18, "language": "Python"}</code></p>
+    </section>
+
+    <section>
+      <h2>🔄 Converting JSON → Python (Deserialization)</h2>
+      <pre><code class="language-python">
+json_data = '{"name": "Aju", "age": 18}'
+parsed = json.loads(json_data)
+print(parsed["name"])  # Aju
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📂 Working with JSON Files</h2>
+      <pre><code class="language-python">
+# Writing to a file
+data = {"name": "DevStart", "type": "Platform"}
+with open("data.json", "w") as file:
+    json.dump(data, file)
+
+# Reading from a file
+with open("data.json", "r") as file:
+    content = json.load(file)
+    print(content)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a list of students as dictionaries</li>
+        <li>Save it to a file in JSON format</li>
+        <li>Read the file and display all names</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>json.dumps()</code> – Python to JSON (string)</li>
+        <li><code>json.loads()</code> – JSON (string) to Python</li>
+        <li><code>json.dump()</code> – Save Python data to file</li>
+        <li><code>json.load()</code> – Load JSON from file</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous: Inheritance & Polymorphism</a>
+      <a href="adv7.html">Next → File Projects</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

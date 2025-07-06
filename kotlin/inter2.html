@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Intermediate 2: Constructors</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 2: Constructors</h1>
+    <p>Initialize object properties with constructors</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧱 Primary Constructor</h2>
+      <pre><code class="language-kotlin">
+class Student(val name: String, val age: Int) {
+    fun display() {
+        println("Name: $name, Age: $age")
+    }
+}
+
+fun main() {
+    val s1 = Student("Aju", 18)
+    s1.display()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧱 Secondary Constructor</h2>
+      <pre><code class="language-kotlin">
+class Book {
+    var title: String
+    var pages: Int
+
+    constructor(title: String, pages: Int) {
+        this.title = title
+        this.pages = pages
+    }
+
+    fun info() {
+        println("Book: $title, Pages: $pages")
+    }
+}
+
+fun main() {
+    val b1 = Book("DevStart Kotlin", 200)
+    b1.info()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>val/var</code> inside primary constructor to auto-create properties</li>
+        <li><code>this</code> refers to the current object's property</li>
+        <li>Prefer primary constructor unless you need overloads or logic</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Course</code> with <code>title</code> and <code>duration</code></li>
+        <li>Use primary constructor and print course details</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous</a>
+      <a href="inter3.html">Next → Inheritance</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

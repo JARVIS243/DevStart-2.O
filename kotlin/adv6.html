@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 6: Extension Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 6: Extension Functions</h1>
+    <p>Add new functions to existing classes without inheritance</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧩 Example</h2>
+      <pre><code class="language-kotlin">
+fun String.reverse(): String {
+    return this.reversed()
+}
+
+fun main() {
+    println("DevStart".reverse()) // Output: traStveD
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Why Use Extension Functions?</h2>
+      <ul>
+        <li>Cleaner syntax for common operations</li>
+        <li>Add behavior to standard types (like String, Int)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an extension function <code>Int.square()</code></li>
+        <li>Extend a custom class with a helper function</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous</a>
+      <a href="adv7.html">Next → Sealed Classes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

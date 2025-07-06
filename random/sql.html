@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🗄️ SQL Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗄️ Daily SQL Questions</h1>
+  <p>Practice 5 fresh SQL logic-building questions daily from a 100-question bank.</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is SQL?",
+      "What are the different types of SQL statements?",
+      "What is the difference between SQL and MySQL?",
+      "What is a primary key?",
+      "What is a foreign key?",
+      "What is a unique constraint?",
+      "What is a NULL value?",
+      "What is the difference between NULL and 0?",
+      "What is the SELECT statement?",
+      "How to retrieve all columns from a table?",
+      "How to use the WHERE clause?",
+      "How to use AND, OR in WHERE clause?",
+      "What is the LIKE operator?",
+      "What is BETWEEN operator?",
+      "What is IN operator?",
+      "What is the ORDER BY clause?",
+      "What is the GROUP BY clause?",
+      "What is HAVING clause?",
+      "What is the difference between WHERE and HAVING?",
+      "How to use aggregate functions in SQL?",
+      "What are COUNT(), SUM(), AVG(), MIN(), MAX()?",
+      "How to filter duplicate rows?",
+      "What is the DISTINCT keyword?",
+      "How to sort results in descending order?",
+      "How to limit the number of rows returned?",
+      "What are Joins in SQL?",
+      "Explain INNER JOIN.",
+      "Explain LEFT JOIN.",
+      "Explain RIGHT JOIN.",
+      "Explain FULL JOIN.",
+      "What is a CROSS JOIN?",
+      "What is a SELF JOIN?",
+      "What is a subquery?",
+      "What are correlated subqueries?",
+      "What is a view in SQL?",
+      "What are indexes in SQL?",
+      "What is normalization?",
+      "What is denormalization?",
+      "What are the different normal forms?",
+      "What is a transaction in SQL?",
+      "What are ACID properties?",
+      "What is the COMMIT command?",
+      "What is the ROLLBACK command?",
+      "What is SAVEPOINT?",
+      "What is the difference between DELETE and TRUNCATE?",
+      "What is the difference between DROP and DELETE?",
+      "What are constraints in SQL?",
+      "What is CHECK constraint?",
+      "What is DEFAULT constraint?",
+      "What is the use of NOT NULL?",
+      "How to create a table in SQL?",
+      "How to alter a table?",
+      "How to drop a table?",
+      "What is the INSERT INTO statement?",
+      "How to update data in a table?",
+      "How to delete data from a table?",
+      "What is the difference between CHAR and VARCHAR?",
+      "What is the difference between DATE and DATETIME?",
+      "What is the CASE statement?",
+      "How to rename a table?",
+      "What is a stored procedure?",
+      "What is a trigger in SQL?",
+      "What is a function in SQL?",
+      "What are the differences between procedures and functions?",
+      "What are cursors in SQL?",
+      "What is a temporary table?",
+      "What is a materialized view?",
+      "What is the UNION operator?",
+      "What is the difference between UNION and UNION ALL?",
+      "What are the set operations in SQL?",
+      "What is COALESCE function?",
+      "What is ISNULL function?",
+      "How to calculate running totals?",
+      "What is the RANK() function?",
+      "What is DENSE_RANK()?",
+      "What is ROW_NUMBER()?",
+      "What is a window function?",
+      "What is PARTITION BY in SQL?",
+      "How to fetch top 3 records per group?",
+      "What is EXISTS operator?",
+      "What is NOT EXISTS?",
+      "What is the difference between EXISTS and IN?",
+      "What is schema in SQL?",
+      "What is a database user and role?",
+      "What is GRANT and REVOKE?",
+      "What are privileges in SQL?",
+      "How to handle permissions in SQL?",
+      "What is the INFORMATION_SCHEMA?",
+      "What are system tables?",
+      "What is the difference between clustered and non-clustered index?",
+      "What is indexing and why is it important?",
+      "What is query optimization?",
+      "What is an execution plan?",
+      "What are common table expressions (CTEs)?",
+      "What is recursive CTE?",
+      "How to join more than two tables?",
+      "How to calculate percentage using SQL?",
+      "How to round numbers in SQL?",
+      "What is NVL and IFNULL?",
+      "What are SQL injections?",
+      "How to prevent SQL injection?",
+      "What is a surrogate key?",
+      "What is the difference between OLTP and OLAP?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

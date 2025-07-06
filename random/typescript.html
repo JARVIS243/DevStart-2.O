@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📘 TypeScript Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 Daily TypeScript Questions</h1>
+  <p>Challenge yourself with 5 new TypeScript questions daily from 100!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is TypeScript?",
+      "How is TypeScript different from JavaScript?",
+      "What are the benefits of using TypeScript?",
+      "How do you declare a variable in TypeScript?",
+      "What are the basic types in TypeScript?",
+      "What is type inference?",
+      "How do you declare an array in TypeScript?",
+      "What is a tuple in TypeScript?",
+      "What is an enum?",
+      "What is the 'any' type?",
+      "What is the 'unknown' type?",
+      "What is the 'never' type?",
+      "What is type assertion?",
+      "What are union types?",
+      "What are intersection types?",
+      "How do you create an interface?",
+      "How is an interface different from a type alias?",
+      "What is a literal type?",
+      "What is the 'as const' keyword?",
+      "What are function types?",
+      "How do you define optional parameters?",
+      "What are default parameters?",
+      "What is rest parameter syntax?",
+      "How to define return type of a function?",
+      "What is a void function?",
+      "What is a type alias?",
+      "How do you define custom types?",
+      "What are generics in TypeScript?",
+      "How do you use generics in a function?",
+      "What are constraints in generics?",
+      "How to extend an interface?",
+      "How to implement multiple interfaces?",
+      "What is 'readonly' in TypeScript?",
+      "How to use the 'keyof' operator?",
+      "What is the 'typeof' operator?",
+      "What is the 'in' operator?",
+      "What is 'typeof' vs 'instanceof'?",
+      "What is the use of conditional types?",
+      "What is mapped types?",
+      "What are template literal types?",
+      "What is type narrowing?",
+      "How to create a class in TypeScript?",
+      "What are access modifiers: public, private, protected?",
+      "What is constructor in TypeScript?",
+      "What is inheritance?",
+      "How to override a method?",
+      "What is static keyword?",
+      "What is abstract class?",
+      "What is interface vs abstract class?",
+      "What is method overloading?",
+      "How does TypeScript compile to JavaScript?",
+      "What is the tsconfig.json file?",
+      "How to enable strict mode?",
+      "What is the difference between ES5 and ES6 output?",
+      "How to install TypeScript?",
+      "What is tsc?",
+      "How to run a TypeScript file?",
+      "What is declaration file (.d.ts)?",
+      "What is ambient declaration?",
+      "What is @types?",
+      "What is type casting?",
+      "How to cast DOM elements?",
+      "What is type guard?",
+      "What are discriminated unions?",
+      "What is the never type used for?",
+      "What are utility types like Partial, Pick, Omit?",
+      "What is Record<K, T> type?",
+      "What is ReturnType utility?",
+      "What is Awaited<T> type?",
+      "What are conditional types?",
+      "What is infer keyword in TypeScript?",
+      "What is the difference between optional and undefined?",
+      "How to use enums in switch cases?",
+      "What are const enums?",
+      "What is the difference between interface and class?",
+      "Can a class implement multiple interfaces?",
+      "How to prevent object mutation?",
+      "What is a type predicate?",
+      "What is keyof typeof pattern?",
+      "What is index signature?",
+      "What is a module in TypeScript?",
+      "How to export and import modules?",
+      "What is a namespace?",
+      "How to merge namespaces?",
+      "What is declaration merging?",
+      "What is the use of module augmentation?",
+      "What are decorators?",
+      "What is experimentalDecorators?",
+      "What is metadata reflection?",
+      "What are mixins in TypeScript?",
+      "How to handle third-party JS libraries?",
+      "What is eslint for TypeScript?",
+      "How to enable linting in VSCode?",
+      "What is path alias in TypeScript?",
+      "What is the purpose of 'noImplicitAny'?",
+      "How to use 'strictNullChecks'?",
+      "What is type compatibility?",
+      "What is structural typing?",
+      "What is duck typing?",
+      "What is excess property checking?",
+      "What is the difference between object and Object?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

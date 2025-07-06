@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 7: Null Safety</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 7: Null Safety</h1>
+    <p>Prevent runtime crashes by handling null values safely</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>❓ What is Null?</h2>
+      <p><strong>null</strong> means "no value". Kotlin does not allow variables to be null by default to avoid crashes.</p>
+
+      <pre><code class="language-kotlin">
+// Safe way to allow null
+var name: String? = null
+
+fun main() {
+    name = "DevStart"
+    println(name?.length) // safe call
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔒 Safe Calls</h2>
+      <p>Use <code>?.</code> to safely access a property or function.</p>
+
+      <pre><code class="language-kotlin">
+val message: String? = "Hello"
+println(message?.length) // works safely
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Elvis Operator <code>?:</code></h2>
+      <pre><code class="language-kotlin">
+val username: String? = null
+val finalName = username ?: "Guest"
+println(finalName)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>‼️ Force Unwrap (Not Recommended)</h2>
+      <pre><code class="language-kotlin">
+val name: String? = "DevStart"
+println(name!!.length) // Crashes if name is null!
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>?.</code> to avoid null pointer exceptions</li>
+        <li>Use <code>?:</code> to set default values</li>
+        <li>Avoid using <code>!!</code> unless you're sure the value isn't null</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Declare a nullable string and print its length safely</li>
+        <li>Use Elvis operator to assign a default name</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic6.html">← Previous</a>
+      <a href="basic8.html">Next → Lists and Arrays</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

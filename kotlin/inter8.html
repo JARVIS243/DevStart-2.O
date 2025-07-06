@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Intermediate 8: Object Expression</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 8: Object Expression</h1>
+    <p>Use anonymous objects for quick implementations</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚡ Anonymous Object</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val obj = object {
+        val name = "DevStart"
+        fun greet() = "Hello $name"
+    }
+
+    println(obj.greet())
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 Object Expression for Interfaces</h2>
+      <pre><code class="language-kotlin">
+interface Clickable {
+    fun onClick()
+}
+
+fun main() {
+    val btn = object : Clickable {
+        override fun onClick() {
+            println("Button clicked!")
+        }
+    }
+
+    btn.onClick()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create an anonymous object with properties <code>title</code> and <code>author</code></li>
+        <li>Use an interface and implement it using object expression</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous</a>
+      <a href="inter9.html">Next → Interfaces</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

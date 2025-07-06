@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Variables</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Lesson 2 – Variables</h1>
+    <p>Store, update, and manage values using variables</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 What is a Variable?</h2>
+      <p>
+        A variable is a container that holds information (like numbers, text, etc.) that your program can use and update.
+        Just like boxes with labels, variables store values with names.
+      </p>
+    </section>
+
+    <section>
+      <h2>📦 Creating Variables</h2>
+      <pre><code>
+let name = "Aju";
+let age = 20;
+let isStudent = true;
+      </code></pre>
+      <p>
+        - <code>let</code> is used to declare a variable  
+        - <code>"Aju"</code> is a string (text)  
+        - <code>20</code> is a number  
+        - <code>true</code> is a boolean (yes/no)
+      </p>
+    </section>
+
+    <section>
+      <h2>🔁 Changing Variable Values</h2>
+      <pre><code>
+let score = 10;
+score = 15;  // value updated
+console.log(score);  // prints 15
+      </code></pre>
+      <p>You can update variables later in your program.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a variable called <code>city</code> and assign your hometown</li>
+        <li>Change its value to another city later</li>
+        <li>Print both values using <code>console.log()</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚠️ What About <code>var</code> and <code>const</code>?</h2>
+      <ul>
+        <li><code>var</code> is older, avoid using it now</li>
+        <li><code>let</code> is modern and safe for changing values</li>
+        <li><code>const</code> is used when the value shouldn't change</li>
+      </ul>
+
+      <pre><code>
+const pi = 3.14;
+pi = 3.14159;  // ❌ Error: const can't be changed
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📚 Bonus Tips</h2>
+      <ul>
+        <li>Variable names are case-sensitive (<code>Name</code> ≠ <code>name</code>)</li>
+        <li>Use clear names like <code>userAge</code>, <code>totalMarks</code></li>
+        <li>Don't use spaces or special characters</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic1.html">← Previous: Introduction</a>
+      <a href="basic3.html">Next → Data Types</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

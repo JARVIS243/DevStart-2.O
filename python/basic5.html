@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Conditional Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Lesson 5 – Conditional Statements</h1>
+    <p>Make decisions in code using if, elif, and else</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>❓ Why Use Conditions?</h2>
+      <p>
+        Conditions allow your program to make decisions and take different actions based on certain situations.
+      </p>
+    </section>
+
+    <section>
+      <h2>✅ Syntax of <code>if</code> Statement</h2>
+      <pre><code class="language-python">
+age = 18
+
+if age >= 18:
+    print("You are an adult")
+      </code></pre>
+      <p>
+        - The condition <code>age >= 18</code> is checked<br>
+        - If it’s <strong>True</strong>, the indented block is executed
+      </p>
+    </section>
+
+    <section>
+      <h2>🔀 <code>if...else</code></h2>
+      <pre><code class="language-python">
+marks = 45
+
+if marks >= 50:
+    print("Pass")
+else:
+    print("Fail")
+      </code></pre>
+      <p>If the <code>if</code> condition is False, the <code>else</code> block runs.</p>
+    </section>
+
+    <section>
+      <h2>📊 <code>if...elif...else</code> – Multiple Conditions</h2>
+      <pre><code class="language-python">
+score = 85
+
+if score >= 90:
+    print("Grade A")
+elif score >= 75:
+    print("Grade B")
+elif score >= 60:
+    print("Grade C")
+else:
+    print("Needs Improvement")
+      </code></pre>
+      <p>The first matching condition runs, others are skipped.</p>
+    </section>
+
+    <section>
+      <h2>⚠️ Indentation is Important</h2>
+      <p>Python uses spaces (usually 4) to define blocks of code. Don’t forget to indent properly!</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for their age, and check if they are eligible to vote (age ≥ 18)</li>
+        <li>Check if a number is positive, negative, or zero using <code>if/elif/else</code></li>
+        <li>Grade system: A (90+), B (75+), C (60+), D (below 60)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>if</code> runs a block if condition is True</li>
+        <li><code>else</code> runs if no conditions are True</li>
+        <li><code>elif</code> checks other possibilities</li>
+        <li>Indentation is required for blocks</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous: Operators</a>
+      <a href="../python/inter1.html">Next → Loops</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

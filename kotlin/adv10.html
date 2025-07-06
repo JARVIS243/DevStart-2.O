@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 10: Reflection</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 10: Reflection</h1>
+    <p>Inspect and manipulate code at runtime</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 What is Reflection?</h2>
+      <p>Reflection lets you examine and interact with classes, methods, and properties during runtime.</p>
+
+      <pre><code class="language-kotlin">
+import kotlin.reflect.full.memberProperties
+
+data class User(val name: String, val age: Int)
+
+fun main() {
+    val user = User("Aju", 20)
+    val kClass = user::class
+
+    for (prop in kClass.memberProperties) {
+        println("${prop.name} = ${prop.get(user)}")
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Uses</h2>
+      <ul>
+        <li>Frameworks (serialization, DI, testing)</li>
+        <li>Accessing annotations, types, values</li>
+        <li>Debugging and tooling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚠️ Note</h2>
+      <p>Reflection may slow performance. Use wisely!</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class and reflectively print its properties</li>
+        <li>Use reflection to read annotations on a method</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv9.html">← Previous</a>
+      <a href="../index.html">🏠 Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

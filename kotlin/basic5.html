@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 5: Loops</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 5: Loops</h1>
+    <p>Repeat tasks using <code>for</code> and <code>while</code> loops</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 for Loop</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    for (i in 1..5) {
+        println("Count: $i")
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 while Loop</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    var i = 1
+    while (i <= 5) {
+        println("While count: $i")
+        i++
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔃 Loop Over List</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val fruits = listOf("Apple", "Banana", "Cherry")
+
+    for (fruit in fruits) {
+        println(fruit)
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li><code>for</code> is best when you know how many times to loop</li>
+        <li><code>while</code> is useful when condition-based looping is needed</li>
+        <li>Use ranges <code>(1..5)</code> for cleaner loops</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Print even numbers from 1 to 20 using <code>for</code></li>
+        <li>Keep asking for a number until user enters 0 using <code>while</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous</a>
+      <a href="basic6.html">Next → Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

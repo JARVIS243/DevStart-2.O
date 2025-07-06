@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 2: Variables & Data Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 2: Variables & Data Types</h1>
+    <p>Learn how to declare variables and use different data types in Kotlin.</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Variable?</h2>
+      <p>A variable is used to store data like numbers, text, or true/false values.</p>
+      <p>Kotlin has two main ways to declare variables:</p>
+      <ul>
+        <li><code>val</code> – read-only (like a constant)</li>
+        <li><code>var</code> – mutable (can change)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Examples</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val name = "DevStart"
+    var age = 21
+
+    println("Name: $name")
+    println("Age: $age")
+
+    age = 22  // okay because 'age' is declared using var
+    // name = "Another" // ❌ Error! name is immutable (val)
+}
+      </code></pre>
+      <p>🖨️ Output:</p>
+      <pre><code>
+Name: DevStart
+Age: 21
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 Common Data Types</h2>
+      <ul>
+        <li><code>String</code> – text (e.g., "hello")</li>
+        <li><code>Int</code> – whole numbers (e.g., 42)</li>
+        <li><code>Double</code> – decimal numbers (e.g., 3.14)</li>
+        <li><code>Boolean</code> – true or false</li>
+        <li><code>Char</code> – single character (e.g., 'A')</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔎 Explicit Typing (Optional)</h2>
+      <pre><code class="language-kotlin">
+val language: String = "Kotlin"
+val year: Int = 2025
+      </code></pre>
+      <p>Kotlin can often infer types automatically, so writing the type is optional unless needed.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>val</code> whenever possible (better safety)</li>
+        <li>Use <code>var</code> only when the value needs to change</li>
+        <li>Try printing different types to get familiar</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Try This</h2>
+      <ul>
+        <li>Create a variable for your name, age, and a boolean for “are you a student?”</li>
+        <li>Print a message using all three</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic1.html">← Previous</a>
+      <a href="basic3.html">Next → Input & Output</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

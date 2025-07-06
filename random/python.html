@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐍 Daily Python Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐍 Daily Python Questions</h1>
+  <p>Each day you’ll get 5 new logic-based questions from a pool of 100!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is Python used for?",
+      "What is the difference between list and tuple?",
+      "Write a program to check if a number is prime.",
+      "How do you take user input in Python?",
+      "What is the use of the 'def' keyword?",
+      "Write a program to reverse a string.",
+      "What is a Python dictionary?",
+      "Explain the concept of recursion.",
+      "What is the purpose of indentation?",
+      "Difference between break and continue.",
+      "How to open a file in Python?",
+      "What is a lambda function?",
+      "Write a Fibonacci generator.",
+      "What is the range() function?",
+      "How do you handle exceptions?",
+      "What is the use of __init__ in class?",
+      "What are Python modules?",
+      "Write a loop to print even numbers.",
+      "What is list comprehension?",
+      "What is the 'with' statement?",
+      "Difference between == and is.",
+      "Explain mutable and immutable types.",
+      "What is a Python set?",
+      "How to sort a list in Python?",
+      "Write a program to check for palindrome.",
+      "How to merge two lists?",
+      "What is the use of pass statement?",
+      "What is None in Python?",
+      "How to comment multiple lines?",
+      "What is slicing?",
+      "Write a program to count vowels.",
+      "How to find length of a string?",
+      "What is a virtual environment?",
+      "What are Python packages?",
+      "Explain the use of map(), filter().",
+      "How do you create a class?",
+      "What is self in a class method?",
+      "What is isinstance() used for?",
+      "How do you convert string to int?",
+      "What is zip() used for?",
+      "What are *args and **kwargs?",
+      "What is recursion depth limit?",
+      "How to copy a list?",
+      "What is __str__ method?",
+      "Write a function to find factorial.",
+      "How to read JSON file?",
+      "What is list index out of range error?",
+      "What is a traceback in Python?",
+      "What are f-strings?",
+      "What is 'elif' used for?",
+      "How to define a constant?",
+      "How to exit a loop early?",
+      "Write a while loop to count 1 to 10.",
+      "How to install packages?",
+      "What is pip?",
+      "How to create a timer?",
+      "How to import only one function?",
+      "What is docstring?",
+      "Difference between local and global variable?",
+      "What is a constructor?",
+      "How to delete a dictionary key?",
+      "What is enumerate() used for?",
+      "What is __name__ == '__main__'?",
+      "What are decorators?",
+      "What is time.sleep()?",
+      "How to get current date and time?",
+      "What are Python comments?",
+      "What is the difference between list.append() and list.extend()?",
+      "How do you make a shallow copy?",
+      "How do you slice lists?",
+      "What is a generator function?",
+      "What is a memory leak?",
+      "What is the purpose of 'continue'?",
+      "What is yield keyword?",
+      "How to generate a random number?",
+      "How do you check if a key exists in a dictionary?",
+      "What are the Python data types?",
+      "Explain try, except, finally block.",
+      "What is the purpose of globals()?",
+      "How do you install external modules?",
+      "What is a boolean in Python?",
+      "What is int(), float(), str() used for?",
+      "How do you remove an element from a list?",
+      "How do you convert a list to a set?",
+      "How do you reverse a list in place?",
+      "How do you join a list into a string?",
+      "What are nested loops?",
+      "What are Python reserved keywords?",
+      "What is object-oriented programming?",
+      "How do you raise a custom error?",
+      "What are abstract classes?",
+      "What is inheritance?",
+      "What is polymorphism?",
+      "What is a static method?",
+      "What are the principles of OOP?",
+      "What is the use of isinstance()?",
+      "What is operator overloading?",
+      "What is a metaclass?",
+      "How do you define private variables?",
+      "How to use list.pop()?",
+      "How do you unpack tuples?",
+      "What is the scope of a variable?",
+      "What is a callback function?",
+      "What is sys.argv?",
+      "What is difference between 'is' and '=='?"
+    ];
+
+    // Generate 5 questions based on today's date
+    function generateDailySet() {
+      const date = new Date().toDateString(); // e.g., "Sat Jul 06 2025"
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    // Auto generate on page load
+    generateDailySet();
+  </script>
+</body>
+</html>

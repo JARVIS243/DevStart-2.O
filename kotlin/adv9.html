@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 9: DSLs</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 9: DSLs (Domain-Specific Languages)</h1>
+    <p>Build custom mini-languages in Kotlin</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🛠️ What is a DSL?</h2>
+      <p>A DSL is a mini-language tailored for a specific task. Kotlin’s syntax and lambda features make DSLs easy to create.</p>
+
+      <pre><code class="language-kotlin">
+fun html(block: () -> Unit) {
+    println("&lt;html&gt;")
+    block()
+    println("&lt;/html&gt;")
+}
+
+fun body(block: () -> Unit) {
+    println("&lt;body&gt;")
+    block()
+    println("&lt;/body&gt;")
+}
+
+fun main() {
+    html {
+        body {
+            println("Hello from DSL!")
+        }
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Use Cases</h2>
+      <ul>
+        <li>HTML builders (like Kotlinx.html)</li>
+        <li>UI toolkits</li>
+        <li>Testing libraries</li>
+        <li>Gradle build scripts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create your own DSL for building a simple menu</li>
+        <li>Add nested blocks with custom functions</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous</a>
+      <a href="adv10.html">Next → Reflection</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

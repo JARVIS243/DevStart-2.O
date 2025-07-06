@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Advanced Lesson 1 – Functions</h1>
+    <p>Write reusable blocks of code using functions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 What is a Function?</h2>
+      <p>
+        A function is a block of code that performs a specific task.  
+        It can be reused, called multiple times, and helps break your program into smaller parts.
+      </p>
+    </section>
+
+    <section>
+      <h2>✍️ Declaring and Calling a Function</h2>
+      <pre><code>
+function greet() {
+  console.log("Hello, DevStart learner!");
+}
+
+greet(); // calling the function
+      </code></pre>
+      <p>
+        - <code>function</code> keyword is used to define a function  
+        - <code>greet()</code> is the function name  
+        - The code inside runs only when the function is called
+      </p>
+    </section>
+
+    <section>
+      <h2>📥 Functions with Parameters</h2>
+      <pre><code>
+function greetUser(name) {
+  console.log("Welcome, " + name + "!");
+}
+
+greetUser("Aju");
+greetUser("DevStart");
+      </code></pre>
+      <p>
+        - <code>name</code> is a parameter (input)  
+        - You can pass any value while calling the function
+      </p>
+    </section>
+
+    <section>
+      <h2>🔁 Functions That Return Values</h2>
+      <pre><code>
+function add(a, b) {
+  return a + b;
+}
+
+let result = add(5, 3);  // result = 8
+console.log(result);
+      </code></pre>
+      <p>
+        - <code>return</code> sends a value back to where the function was called  
+        - You can store the returned result in a variable
+      </p>
+    </section>
+
+    <section>
+      <h2>⚠️ Why Use Functions?</h2>
+      <ul>
+        <li>Reusability – write once, use many times</li>
+        <li>Organized code – divide large logic into steps</li>
+        <li>Improves readability – name describes purpose</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a function that multiplies 2 numbers</li>
+        <li>Make a function that returns if a number is even or odd</li>
+        <li>Write a function to greet a user by name</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: Function Expression</h2>
+      <p>You can also store a function in a variable:</p>
+      <pre><code>
+const square = function(num) {
+  return num * num;
+};
+
+console.log(square(4));  // 16
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous: Loops</a>
+      <a href="adv2.html">Next → Arrays</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

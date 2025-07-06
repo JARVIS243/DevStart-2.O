@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Intermediate Lesson 3 – Functions</h1>
+    <p>Create reusable blocks of logic using functions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 What is a Function?</h2>
+      <p>
+        A function is a block of code that performs a specific task.  
+        You define it once, and call (use) it anywhere in your program.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔧 Creating a Function</h2>
+      <pre><code class="language-python">
+def greet():
+    print("Hello, welcome to DevStart!")
+
+greet()  # calling the function
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧾 Function with Parameters</h2>
+      <pre><code class="language-python">
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Aju")
+greet("DevStart Student")
+      </code></pre>
+      <p><code>name</code> is a parameter – a value passed to the function</p>
+    </section>
+
+    <section>
+      <h2>🔙 Return Values</h2>
+      <pre><code class="language-python">
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("Sum is", result)
+      </code></pre>
+      <p><code>return</code> sends the result back to where it was called</p>
+    </section>
+
+    <section>
+      <h2>📚 Multiple Parameters</h2>
+      <pre><code class="language-python">
+def multiply(x, y):
+    return x * y
+
+print(multiply(4, 5))  # 20
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Why Use Functions?</h2>
+      <ul>
+        <li>Reusability – write once, use many times</li>
+        <li>Clean code – break down big problems into smaller steps</li>
+        <li>Debug easily – test each function separately</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a function that calculates area of a circle</li>
+        <li>Write a function to check if a number is even or odd</li>
+        <li>Create a function that takes 3 numbers and returns the largest</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>def function_name():</code> defines a function</li>
+        <li><code>parameters</code> pass input to functions</li>
+        <li><code>return</code> sends output back</li>
+        <li>Functions keep code organized and reusable</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous: Lists</a>
+      <a href="inter4.html">Next → Strings</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

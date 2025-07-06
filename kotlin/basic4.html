@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 4: Conditional Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 4: Conditional Statements</h1>
+    <p>Make decisions in your program using <code>if</code> and <code>when</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 if / else</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val score = 85
+
+    if (score >= 90) {
+        println("Excellent!")
+    } else if (score >= 70) {
+        println("Good Job!")
+    } else {
+        println("Keep Practicing!")
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔀 when Statement</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val day = 3
+
+    when (day) {
+        1 -> println("Monday")
+        2 -> println("Tuesday")
+        3 -> println("Wednesday")
+        else -> println("Unknown day")
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li><code>if</code> is great for checking ranges or comparisons</li>
+        <li><code>when</code> is like switch-case, used for exact matches</li>
+        <li>You can return values directly using <code>if</code> or <code>when</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for age and print if they're a minor or adult</li>
+        <li>Use <code>when</code> to map numbers to months</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic3.html">← Previous</a>
+      <a href="basic5.html">Next → Loops</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

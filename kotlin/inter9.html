@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Intermediate 9: Interfaces</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 9: Interfaces</h1>
+    <p>Define a contract of methods without implementation</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧩 What is an Interface?</h2>
+      <p>An interface defines methods but doesn't provide implementation (like a blueprint). Classes implement interfaces.</p>
+
+      <pre><code class="language-kotlin">
+interface Drawable {
+    fun draw()
+}
+
+class Circle : Drawable {
+    override fun draw() {
+        println("Drawing a circle")
+    }
+}
+
+fun main() {
+    val c = Circle()
+    c.draw()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li>Use <code>interface</code> keyword</li>
+        <li>Use <code>: InterfaceName</code> to implement</li>
+        <li>Must override all abstract methods</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create interface <code>Flyable</code> with method <code>fly()</code></li>
+        <li>Create class <code>Bird</code> that implements it</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous</a>
+      <a href="inter10.html">Next → Abstract Classes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Intermediate 7: Companion Objects</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 7: Companion Objects</h1>
+    <p>Static-like members using <code>companion object</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧲 Companion Object Example</h2>
+      <pre><code class="language-kotlin">
+class MathUtil {
+    companion object {
+        fun square(n: Int): Int {
+            return n * n
+        }
+    }
+}
+
+fun main() {
+    println(MathUtil.square(5)) // 25
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Why Companion Objects?</h2>
+      <ul>
+        <li>Allows calling functions without creating objects</li>
+        <li>Behaves like <code>static</code> in other languages</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Converter</code> with a companion method to convert km to miles</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous</a>
+      <a href="inter8.html">Next → Object Expression</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Intermediate 5: Visibility Modifiers</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 5: Visibility Modifiers</h1>
+    <p>Control where variables and functions can be accessed from</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔐 Visibility Levels</h2>
+      <ul>
+        <li><code>public</code> – visible everywhere (default)</li>
+        <li><code>private</code> – visible only inside the class or file</li>
+        <li><code>protected</code> – like private, but visible in subclasses</li>
+        <li><code>internal</code> – visible inside the same module</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔍 Example</h2>
+      <pre><code class="language-kotlin">
+class BankAccount {
+    private var balance = 0
+
+    fun deposit(amount: Int) {
+        balance += amount
+    }
+
+    fun showBalance() {
+        println("Balance: $balance")
+    }
+}
+
+fun main() {
+    val acc = BankAccount()
+    acc.deposit(100)
+    acc.showBalance()
+    // acc.balance = 500 // ❌ Error: balance is private
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>private</code> to protect sensitive data</li>
+        <li>Keep things <code>public</code> only if needed outside</li>
+        <li><code>protected</code> helps subclasses access without exposing outside</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Make a <code>User</code> class with <code>username</code> public and <code>password</code> private</li>
+        <li>Try accessing both from main and see what works</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous</a>
+      <a href="inter6.html">Next → Data Classes</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

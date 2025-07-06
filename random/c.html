@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎲 C Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔣 Daily C Questions</h1>
+  <p>Every day you get 5 new C programming logic questions from 100!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is the purpose of the main() function in C?",
+      "Explain the difference between printf and scanf.",
+      "Write a program to find the largest of three numbers.",
+      "What are data types in C?",
+      "How do you declare a variable in C?",
+      "What is the use of #include <stdio.h>?",
+      "Write a program to check if a number is even or odd.",
+      "What is the syntax for an if-else statement in C?",
+      "How do you write a loop that prints 1 to 10?",
+      "What is the difference between while and do-while?",
+      "How to declare and use arrays in C?",
+      "Write a program to reverse an array.",
+      "What is a pointer?",
+      "How do you declare a pointer?",
+      "Explain NULL pointer.",
+      "What is the difference between * and & in pointers?",
+      "Write a function that returns the sum of two integers.",
+      "What are functions in C?",
+      "What is the use of return statement?",
+      "How do you pass arguments to a function?",
+      "What is recursion? Write a factorial program.",
+      "Write a program to swap two numbers using a function.",
+      "What is a structure in C?",
+      "Difference between structure and array?",
+      "What are the storage classes in C?",
+      "What is a static variable?",
+      "What is the purpose of extern keyword?",
+      "What are global and local variables?",
+      "What is the size of int, float, char?",
+      "What is typecasting?",
+      "How to use switch-case in C?",
+      "What is the purpose of break and continue?",
+      "What is a loop counter?",
+      "How do you declare a 2D array?",
+      "Write a program to find sum of all array elements.",
+      "What is dynamic memory allocation?",
+      "How do malloc() and free() work?",
+      "What is a memory leak?",
+      "What are header files in C?",
+      "How to define and use macros?",
+      "Difference between macro and function?",
+      "What are bitwise operators?",
+      "Write a program to count digits of a number.",
+      "What is a file pointer?",
+      "How do you open and close a file in C?",
+      "What is the use of fopen, fclose, fprintf?",
+      "Write a program to copy one file to another.",
+      "How to read a file character by character?",
+      "What are command line arguments?",
+      "What is the use of argc and argv?",
+      "What is a preprocessor directive?",
+      "What is conditional compilation?",
+      "How do you comment in C?",
+      "Write a program to find factorial using recursion.",
+      "How to count vowels in a string?",
+      "What is a string in C?",
+      "How to take string input using gets()?",
+      "Difference between gets() and scanf()?",
+      "What is strlen(), strcpy(), strcat()?",
+      "How to compare two strings?",
+      "What is the difference between = and ==?",
+      "What is a segmentation fault?",
+      "What is the sizeof() operator?",
+      "Explain pass by value and pass by reference.",
+      "What is the difference between ++i and i++?",
+      "What is the precedence of operators?",
+      "What is a function prototype?",
+      "Write a C program to reverse a number.",
+      "How to use pointers with arrays?",
+      "What is a dangling pointer?",
+      "What are void pointers?",
+      "What is the purpose of const keyword?",
+      "What is enum in C?",
+      "What is a typedef in C?",
+      "How do you write a nested loop?",
+      "Write a program to print a triangle of stars.",
+      "What are logical operators in C?",
+      "How to initialize all array elements to 0?",
+      "How to count number of words in a string?",
+      "What are unions in C?",
+      "What is the difference between union and structure?",
+      "What is pointer arithmetic?",
+      "What is the purpose of getchar() and putchar()?",
+      "What is EOF in C?",
+      "Write a program to find the sum of digits.",
+      "What is recursion limit in C?",
+      "What is the purpose of return 0 in main()?",
+      "What are nested if statements?",
+      "What is the syntax of ternary operator?",
+      "What are escape sequences in C?",
+      "What is buffer overflow?",
+      "How to declare and call a recursive function?",
+      "What is stack and heap in memory?",
+      "Write a program to check for palindrome number.",
+      "How to pass array to a function?",
+      "What is segmentation fault and how to avoid it?",
+      "What are best practices in C?",
+      "What is reentrancy in functions?",
+      "What is volatile keyword?",
+      "How do you debug C programs?",
+      "Write a C program for simple calculator.",
+      "How do you compile and run C programs?",
+      "What is an infinite loop? Give example."
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

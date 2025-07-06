@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Input & Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Lesson 3 – Input & Output</h1>
+    <p>Learn how to take input from users and show output in Python</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📤 What is Output?</h2>
+      <p>
+        Output means showing information to the user.  
+        In Python, we use the <code>print()</code> function.
+      </p>
+      <pre><code class="language-python">
+print("Welcome to DevStart!")
+print(10 + 5)
+      </code></pre>
+      <p>This will display messages and results on the screen.</p>
+    </section>
+
+    <section>
+      <h2>📥 What is Input?</h2>
+      <p>
+        Input means getting data from the user using the <code>input()</code> function.
+      </p>
+      <pre><code class="language-python">
+name = input("Enter your name: ")
+print("Hello, " + name + "!")
+      </code></pre>
+      <p>
+        <code>input()</code> always returns a string. If you want a number, use <code>int()</code> or <code>float()</code>.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔢 Convert Input to Numbers</h2>
+      <pre><code class="language-python">
+age = input("Enter your age: ")
+print(age + 1)  # ❌ Error: str + int
+
+# Correct way:
+age = int(input("Enter your age: "))
+print(age + 1)  # ✅ Adds 1
+      </code></pre>
+      <p>
+        Use <code>int()</code> for whole numbers and <code>float()</code> for decimals.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for their favorite number</li>
+        <li>Convert it to <code>int</code> and add 10</li>
+        <li>Print the result using <code>print()</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Tip: Use <code>f-strings</code> for clean output</h2>
+      <pre><code class="language-python">
+name = input("Your name: ")
+age = int(input("Your age: "))
+
+print(f"Hi {name}, next year you’ll be {age + 1} years old!")
+      </code></pre>
+      <p>F-strings are a modern and easy way to format output.</p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous: Variables & Data Types</a>
+      <a href="basic4.html">Next → Operators</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

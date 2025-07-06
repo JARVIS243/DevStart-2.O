@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Strings</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Intermediate Lesson 4 – Strings</h1>
+    <p>Work with text using Python’s powerful string features</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔤 What is a String?</h2>
+      <p>
+        A string is a sequence of characters, used to store text data.
+      </p>
+      <pre><code class="language-python">
+name = "DevStart"
+message = 'Learn Python!'
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>➕ Joining Strings</h2>
+      <pre><code class="language-python">
+first = "Hello"
+second = "World"
+print(first + " " + second)  # Hello World
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📏 String Length</h2>
+      <pre><code class="language-python">
+text = "DevStart"
+print(len(text))  # 8
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Looping Through a String</h2>
+      <pre><code class="language-python">
+for letter in "Python":
+    print(letter)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Useful String Methods</h2>
+      <pre><code class="language-python">
+text = " Hello Python "
+
+print(text.lower())     # hello python
+print(text.upper())     # HELLO PYTHON
+print(text.strip())     # Removes spaces around
+print(text.replace("Python", "World"))  # Hello World
+print(text.split())     # ['Hello', 'Python']
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 More String Tricks</h2>
+      <pre><code class="language-python">
+name = "aju"
+print(name.capitalize())  # Aju
+print(name.startswith("a"))  # True
+print(name.endswith("u"))    # True
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 Accessing Characters</h2>
+      <pre><code class="language-python">
+text = "Python"
+print(text[0])     # P
+print(text[-1])    # n
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user to enter their name and greet them with capitalized name</li>
+        <li>Count the number of letters in a word</li>
+        <li>Replace one word in a sentence using <code>replace()</code></li>
+        <li>Check if a string starts or ends with a specific letter</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Strings store text – use quotes</li>
+        <li>Use <code>len()</code>, <code>lower()</code>, <code>strip()</code>, <code>replace()</code>, etc.</li>
+        <li>Strings are sequences – you can loop through or access by index</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous: Functions</a>
+      <a href="inter5.html">Next → Dictionaries</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

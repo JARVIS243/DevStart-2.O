@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>☕ Java Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>☕ Daily Java Questions</h1>
+  <p>Get 5 random Java logic questions every day from a 100-question bank!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is the JVM?",
+      "What is the difference between JDK, JRE and JVM?",
+      "What is a class in Java?",
+      "What is an object?",
+      "What is the main() method in Java?",
+      "What are access modifiers in Java?",
+      "Explain the concept of inheritance.",
+      "What is method overloading?",
+      "What is method overriding?",
+      "What is polymorphism?",
+      "What is abstraction?",
+      "What is encapsulation?",
+      "What is the difference between == and .equals()?",
+      "What is the use of 'final' keyword?",
+      "What is a constructor?",
+      "What is the default constructor?",
+      "What is a parameterized constructor?",
+      "What are static variables and methods?",
+      "What is the difference between static and non-static methods?",
+      "What is 'this' keyword?",
+      "What is super keyword?",
+      "What is the use of 'instanceof'?",
+      "What is the difference between abstract class and interface?",
+      "What is the difference between ArrayList and LinkedList?",
+      "What is the difference between HashMap and Hashtable?",
+      "What is the difference between Array and ArrayList?",
+      "What are wrapper classes in Java?",
+      "What is autoboxing and unboxing?",
+      "What are exceptions in Java?",
+      "What is the difference between checked and unchecked exceptions?",
+      "What is try-catch block?",
+      "What is finally block?",
+      "What is throw and throws?",
+      "What is custom exception?",
+      "What is multithreading in Java?",
+      "What is the difference between process and thread?",
+      "What is thread lifecycle?",
+      "What are synchronized methods?",
+      "What is volatile keyword?",
+      "What is deadlock?",
+      "What is garbage collection?",
+      "What is finalize() method?",
+      "What are packages in Java?",
+      "What is import statement?",
+      "What is the use of java.lang package?",
+      "What is Scanner class?",
+      "How to read input from user?",
+      "What is String class in Java?",
+      "What is the difference between String, StringBuilder, and StringBuffer?",
+      "What is immutability of String?",
+      "What is toString() method?",
+      "What is hashCode() used for?",
+      "What is equals() method?",
+      "What is an interface?",
+      "What is a lambda expression?",
+      "What is functional interface?",
+      "What are default and static methods in interfaces?",
+      "What is the Stream API?",
+      "What is filter() in streams?",
+      "What is map() in streams?",
+      "What is the difference between forEach and map?",
+      "What is Optional class?",
+      "What are nested and inner classes?",
+      "What is anonymous class?",
+      "What is the purpose of instanceof operator?",
+      "What is the difference between public, private, protected, and default?",
+      "How does inheritance work in Java?",
+      "What is the use of super keyword in constructor?",
+      "What is interface inheritance?",
+      "What is method signature?",
+      "What are annotations in Java?",
+      "What is @Override?",
+      "What is generic programming?",
+      "What is type erasure?",
+      "How to create generic class?",
+      "What is Collection interface?",
+      "What is Iterator and ListIterator?",
+      "How do you sort a list in Java?",
+      "What is Comparator and Comparable?",
+      "What is priority queue?",
+      "What is Set interface?",
+      "What is TreeSet vs HashSet?",
+      "What is HashMap internal working?",
+      "What is concurrency in Java?",
+      "What is ExecutorService?",
+      "What is Callable and Future?",
+      "What is CompletableFuture?",
+      "What is try-with-resources?",
+      "How to handle file in Java?",
+      "What is FileReader and FileWriter?",
+      "What is BufferedReader?",
+      "How to read a text file line by line?",
+      "What is the difference between Serializable and Externalizable?",
+      "What is transient keyword?",
+      "What is Java Reflection?",
+      "What is the purpose of Class.forName?",
+      "How to use annotations in custom way?",
+      "What is enum in Java?",
+      "What is var keyword?",
+      "What are Java records?",
+      "What is difference between Stack and Queue?",
+      "What is WeakHashMap?",
+      "What is JIT compiler?",
+      "What is method reference?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

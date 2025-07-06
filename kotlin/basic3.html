@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 3: Input & Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 3: Input & Output</h1>
+    <p>Learn how to get input from users and display output</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📥 Taking User Input</h2>
+      <p>Use <code>readLine()</code> to get user input from the console. It returns a <code>String?</code> (nullable string).</p>
+
+      <pre><code class="language-kotlin">
+fun main() {
+    print("Enter your name: ")
+    val name = readLine()
+    println("Hello, $name!")
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Converting Input Types</h2>
+      <p>Convert input from string to number types using methods like <code>toInt()</code> or <code>toDouble()</code>.</p>
+
+      <pre><code class="language-kotlin">
+fun main() {
+    print("Enter your age: ")
+    val ageInput = readLine()
+    val age = ageInput?.toIntOrNull() ?: 0
+    println("You are $age years old.")
+}
+      </code></pre>
+      <p>⚠️ Use safe calls and null checks to avoid crashes if the user enters invalid input.</p>
+    </section>
+
+    <section>
+      <h2>🖨️ Printing Output</h2>
+      <ul>
+        <li><code>print()</code> – prints without a newline</li>
+        <li><code>println()</code> – prints with a newline</li>
+      </ul>
+
+      <pre><code class="language-kotlin">
+fun main() {
+    print("Hello ")
+    println("World!")
+}
+      </code></pre>
+      <p>Output:</p>
+      <pre><code>Hello World!</code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Always check if input is null or invalid</li>
+        <li>Use <code>toIntOrNull()</code> instead of <code>toInt()</code> to avoid exceptions</li>
+        <li>Use string templates like <code>"Hello, $name"</code> for cleaner code</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for their name and favorite programming language</li>
+        <li>Print a sentence like: <code>Hello Aju, you like Kotlin!</code></li>
+        <li>Try entering numbers and adding them after converting</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous</a>
+      <a href="basic4.html">Next → Conditional Statements</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

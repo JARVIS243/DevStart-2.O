@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Intermediate 10: Abstract Classes</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 10: Abstract Classes</h1>
+    <p>Define base classes with optional or required behavior</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧱 What is an Abstract Class?</h2>
+      <p>An abstract class cannot be instantiated. It can have abstract (unimplemented) and concrete (implemented) methods.</p>
+
+      <pre><code class="language-kotlin">
+abstract class Animal {
+    abstract fun makeSound()
+    fun sleep() {
+        println("Sleeping...")
+    }
+}
+
+class Dog : Animal() {
+    override fun makeSound() {
+        println("Woof!")
+    }
+}
+
+fun main() {
+    val dog = Dog()
+    dog.makeSound()
+    dog.sleep()
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li>Use <code>abstract</code> keyword</li>
+        <li>Can contain both abstract and regular methods</li>
+        <li>Must override abstract methods in subclasses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create abstract class <code>Shape</code> with method <code>area()</code></li>
+        <li>Create class <code>Rectangle</code> that implements <code>area()</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous</a>
+      <a href="adv1.html">Next → Advanced</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

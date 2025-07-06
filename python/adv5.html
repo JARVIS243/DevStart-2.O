@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Inheritance & Polymorphism</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 5 – Inheritance & Polymorphism</h1>
+    <p>Build flexible, reusable code using object-oriented principles</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 What is Inheritance?</h2>
+      <p>
+        Inheritance allows one class (child) to use the properties and methods of another class (parent).  
+        This helps reduce code duplication and improve structure.
+      </p>
+    </section>
+
+    <section>
+      <h2>👪 Basic Inheritance Example</h2>
+      <pre><code class="language-python">
+class Animal:
+    def speak(self):
+        print("The animal makes a sound")
+
+class Dog(Animal):
+    def bark(self):
+        print("The dog barks")
+
+d = Dog()
+d.speak()  # Inherited
+d.bark()   # Own method
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Overriding Methods</h2>
+      <p>A child class can change (override) a method from the parent class.</p>
+      <pre><code class="language-python">
+class Animal:
+    def speak(self):
+        print("The animal speaks")
+
+class Cat(Animal):
+    def speak(self):
+        print("The cat meows")
+
+c = Cat()
+c.speak()  # Output: The cat meows
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>👨‍👦 Calling Parent Methods with <code>super()</code></h2>
+      <pre><code class="language-python">
+class Parent:
+    def show(self):
+        print("Parent show")
+
+class Child(Parent):
+    def show(self):
+        super().show()
+        print("Child show")
+
+obj = Child()
+obj.show()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 What is Polymorphism?</h2>
+      <p>
+        Polymorphism means "many forms". It allows different classes to define the same method name with different behavior.
+      </p>
+      <pre><code class="language-python">
+class Bird:
+    def sound(self):
+        print("Bird chirps")
+
+class Duck(Bird):
+    def sound(self):
+        print("Duck quacks")
+
+def make_sound(animal):
+    animal.sound()
+
+make_sound(Bird())
+make_sound(Duck())
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a base class <code>Vehicle</code> with a method <code>drive()</code></li>
+        <li>Create subclasses <code>Car</code> and <code>Bike</code> that override <code>drive()</code></li>
+        <li>Call the method using a function that accepts any vehicle</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><strong>Inheritance</strong> = reuse code from parent class</li>
+        <li><strong>Overriding</strong> = replace a parent method</li>
+        <li><strong>super()</strong> = call parent method</li>
+        <li><strong>Polymorphism</strong> = same method, different behavior</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous: Classes & Objects</a>
+      <a href="adv6.html">Next → Working with JSON</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

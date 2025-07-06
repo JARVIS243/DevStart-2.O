@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Popular Libraries</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 8 – Python Libraries Overview</h1>
+    <p>Explore the most widely used Python libraries for different fields</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What is a Library?</h2>
+      <p>
+        A library is a collection of pre-written Python code that helps you do complex tasks easily.  
+        You install them using <code>pip</code> and import them into your code.
+      </p>
+    </section>
+
+    <section>
+      <h2>🔢 NumPy – Numerical Python</h2>
+      <pre><code class="language-python">
+import numpy as np
+
+arr = np.array([1, 2, 3])
+print(arr.mean())  # Output: 2.0
+      </code></pre>
+      <p>✅ Used for arrays, matrices, scientific computing</p>
+    </section>
+
+    <section>
+      <h2>📊 pandas – Data Analysis</h2>
+      <pre><code class="language-python">
+import pandas as pd
+
+data = {"name": ["Aju", "Devi"], "age": [18, 21]}
+df = pd.DataFrame(data)
+print(df)
+      </code></pre>
+      <p>✅ Create tables, filter data, import CSV/Excel</p>
+    </section>
+
+    <section>
+      <h2>📈 matplotlib – Data Visualization</h2>
+      <pre><code class="language-python">
+import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.title("Line Graph")
+plt.show()
+      </code></pre>
+      <p>✅ Draw graphs and charts (line, bar, pie...)</p>
+    </section>
+
+    <section>
+      <h2>🧠 scikit-learn – Machine Learning</h2>
+      <pre><code class="language-python">
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+# Normally you'd fit it with data here
+      </code></pre>
+      <p>✅ Build ML models like regression, classification</p>
+    </section>
+
+    <section>
+      <h2>🌐 Flask – Web Development</h2>
+      <pre><code class="language-python">
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Welcome to DevStart!"
+
+app.run()
+      </code></pre>
+      <p>✅ Create simple backend websites and APIs</p>
+    </section>
+
+    <section>
+      <h2>🤖 more to explore...</h2>
+      <ul>
+        <li><strong>TensorFlow</strong> – Deep learning</li>
+        <li><strong>BeautifulSoup</strong> – Web scraping</li>
+        <li><strong>pygame</strong> – Game development</li>
+        <li><strong>OpenCV</strong> – Image processing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>pip install library-name</code> to install</li>
+        <li><code>import name</code> to use in code</li>
+        <li>Libraries = speed + simplicity for big tasks</li>
+        <li>Choose libraries based on your project field</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous: JSON File Project</a>
+      <a href="adv9.html">Next → Final Project Ideas</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

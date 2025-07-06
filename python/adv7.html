@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – JSON File Project</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 7 – JSON File Project</h1>
+    <p>Build a student record manager using JSON and file handling</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎯 Objective</h2>
+      <p>Create a CLI-based mini project to:</p>
+      <ul>
+        <li>Add new student records</li>
+        <li>View all records</li>
+        <li>Store data in <code>students.json</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📦 File: <code>student_manager.py</code></h2>
+      <pre><code class="language-python">
+import json
+import os
+
+filename = "students.json"
+
+# Load existing data
+def load_data():
+    if not os.path.exists(filename):
+        return []
+    with open(filename, "r") as file:
+        return json.load(file)
+
+# Save data to file
+def save_data(data):
+    with open(filename, "w") as file:
+        json.dump(data, file, indent=2)
+
+# Add a student
+def add_student():
+    name = input("Enter name: ")
+    age = input("Enter age: ")
+    course = input("Enter course: ")
+    students = load_data()
+    students.append({"name": name, "age": age, "course": course})
+    save_data(students)
+    print("Student added!")
+
+# View all students
+def view_students():
+    students = load_data()
+    if not students:
+        print("No student records found.")
+    for s in students:
+        print(f"{s['name']} ({s['age']} yrs) - {s['course']}")
+
+# Menu
+while True:
+    print("\n1. Add Student\n2. View Students\n3. Exit")
+    choice = input("Choose: ")
+    if choice == "1":
+        add_student()
+    elif choice == "2":
+        view_students()
+    elif choice == "3":
+        break
+    else:
+        print("Invalid choice!")
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Extend the project to delete a student by name</li>
+        <li>Add fields like grade, email, or ID</li>
+        <li>Sort students by age or name</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Used <code>json.load()</code> and <code>json.dump()</code> to read/write JSON files</li>
+        <li>Applied file handling in a practical project</li>
+        <li>Built a working CLI menu system</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous: Working with JSON</a>
+      <a href="adv8.html">Next → Python Libraries Overview</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

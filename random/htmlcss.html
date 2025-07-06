@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌐 HTML & CSS Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌐 Daily HTML & CSS Questions</h1>
+  <p>Sharpen your web foundation with 5 new logic-building questions daily!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What does HTML stand for?",
+      "What is the purpose of the <!DOCTYPE> declaration?",
+      "What is a semantic tag in HTML?",
+      "What is the difference between <div> and <span>?",
+      "What is the difference between id and class in HTML?",
+      "What is the use of <meta> tag?",
+      "How do you create a hyperlink in HTML?",
+      "What is the difference between <ul> and <ol>?",
+      "How do you insert an image in HTML?",
+      "What is alt attribute in images?",
+      "What are block-level vs inline elements?",
+      "What is the purpose of <form> tag?",
+      "How to make input fields required?",
+      "What is the use of placeholder attribute?",
+      "How do you create radio buttons?",
+      "How to create checkboxes in HTML?",
+      "What is the use of <fieldset> and <legend>?",
+      "What is the use of <label> tag?",
+      "What are global attributes in HTML?",
+      "What is the purpose of data-* attributes?",
+      "What is HTML5?",
+      "What are new semantic elements in HTML5?",
+      "How to embed audio and video in HTML?",
+      "What is the <canvas> tag used for?",
+      "What is the difference between HTML and XHTML?",
+      "What is the DOM?",
+      "What is inline CSS?",
+      "What is internal vs external CSS?",
+      "What is the difference between class and id selectors?",
+      "What is specificity in CSS?",
+      "What is a CSS box model?",
+      "What is margin and padding?",
+      "What is the difference between position: relative and absolute?",
+      "What is fixed and sticky positioning?",
+      "What is z-index?",
+      "What is float and clear in CSS?",
+      "How to center elements using CSS?",
+      "What is display: flex?",
+      "What is flex-direction?",
+      "What is justify-content?",
+      "What is align-items?",
+      "What is the difference between grid and flexbox?",
+      "How do you create a CSS grid?",
+      "What is gap in CSS Grid?",
+      "What is media query?",
+      "How do you make a site responsive?",
+      "What are pseudo-classes in CSS?",
+      "What is :hover and :focus?",
+      "What are pseudo-elements?",
+      "What is the difference between ::before and ::after?",
+      "What is the difference between rem and em units?",
+      "What is vh and vw in CSS?",
+      "What is calc() function in CSS?",
+      "What is inheritance in CSS?",
+      "What is the use of !important?",
+      "What is a CSS variable?",
+      "How do you use custom properties in CSS?",
+      "What is box-shadow?",
+      "What is border-radius?",
+      "How to apply gradient background in CSS?",
+      "How to add a background image?",
+      "What is object-fit: cover?",
+      "What is overflow: hidden?",
+      "What is white-space: nowrap?",
+      "What is word-wrap in CSS?",
+      "What is min-width and max-width?",
+      "How do you hide elements in HTML/CSS?",
+      "What is visibility: hidden vs display: none?",
+      "How to use animations in CSS?",
+      "What is @keyframes in CSS?",
+      "How to add transition effects?",
+      "What are transform properties?",
+      "What is translate() in CSS?",
+      "What is scale(), rotate()?",
+      "What is the difference between inline-block and block?",
+      "What is important to write clean HTML structure?",
+      "What is accessibility (a11y) in HTML?",
+      "How to make a form accessible?",
+      "What is the role of aria-label?",
+      "What is the alt attribute in accessibility?",
+      "What is favicon?",
+      "How do you add a favicon to your HTML page?",
+      "What are meta tags used for in SEO?",
+      "How to improve page load speed using CSS?",
+      "What is lazy loading?",
+      "What are CSS preprocessors like Sass?",
+      "What is BEM naming convention?",
+      "How to comment in HTML and CSS?",
+      "What is HTML validation?",
+      "What is difference between HTML4 and HTML5?",
+      "How to align text in CSS?",
+      "What is letter-spacing and line-height?",
+      "How do you make an element responsive?",
+      "How to import fonts in CSS?",
+      "What is web safe fonts?",
+      "What is the use of link tag?",
+      "What is inline SVG?",
+      "What is responsiveness in design?",
+      "How do you make a mobile-first layout?",
+      "What is the difference between RGB and HEX in CSS colors?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

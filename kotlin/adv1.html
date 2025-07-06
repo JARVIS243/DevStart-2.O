@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Advanced 1: Lambda Expressions</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 1: Lambda Expressions</h1>
+    <p>Use anonymous functions to simplify logic</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚡ What is a Lambda?</h2>
+      <p>A lambda expression is an anonymous function used to pass behavior as data.</p>
+
+      <pre><code class="language-kotlin">
+fun main() {
+    val greet = { name: String -> println("Hello, $name!") }
+    greet("Aju")
+}
+      </code></pre>
+
+      <pre><code class="language-kotlin">
+// Lambda with return
+val square: (Int) -> Int = { num -> num * num }
+println(square(4))  // Output: 16
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Key Points</h2>
+      <ul>
+        <li>Syntax: <code>{ param -> body }</code></li>
+        <li>Can be assigned to variables and passed to functions</li>
+        <li>Used in functional programming (map, filter, etc.)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a lambda that checks if a number is even</li>
+        <li>Pass a lambda to a function that repeats an action 3 times</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter10.html">← Previous</a>
+      <a href="adv2.html">Next → Higher-Order Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

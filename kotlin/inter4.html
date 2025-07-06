@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin – Intermediate 4: Overriding</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Intermediate 4: Overriding</h1>
+    <p>Change the behavior of a function in a subclass</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 Overriding a Method</h2>
+      <pre><code class="language-kotlin">
+open class Animal {
+    open fun sound() {
+        println("Some sound")
+    }
+}
+
+class Cat : Animal() {
+    override fun sound() {
+        println("Meow")
+    }
+}
+
+fun main() {
+    val c = Cat()
+    c.sound() // Meow
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>open</code> to allow a function to be overridden</li>
+        <li>Use <code>override</code> in subclass</li>
+        <li>This allows customizing behavior for specific child types</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Override the <code>move()</code> method of a <code>Vehicle</code> class in a <code>Bike</code> subclass</li>
+        <li>Create another subclass and override the same function differently</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous</a>
+      <a href="inter5.html">Next → Visibility Modifiers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

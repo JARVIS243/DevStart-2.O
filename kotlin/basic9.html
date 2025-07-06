@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 9: Strings</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 9: Strings</h1>
+    <p>Work with text using string functions and templates</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔤 String Basics</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val name = "DevStart"
+    val greeting = "Hello, $name!"
+    println(greeting)
+    println("Length: ${name.length}")
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔧 Useful String Functions</h2>
+      <pre><code class="language-kotlin">
+val text = "  Kotlin Programming  "
+
+println(text.trim())      // removes extra spaces
+println(text.uppercase()) // to UPPERCASE
+println(text.lowercase()) // to lowercase
+println(text.contains("Pro")) // true
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>$</code> inside strings for easy variable insertion</li>
+        <li>Trim and clean inputs before using them</li>
+        <li>Compare strings using <code>equals()</code> or <code>==</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Ask the user for a string and print it in uppercase</li>
+        <li>Check if a string contains the word "Kotlin"</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic8.html">← Previous</a>
+      <a href="basic10.html">Next → Comments</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

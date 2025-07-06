@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – File Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 1 – File Handling</h1>
+    <p>Read from and write to files using Python</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📄 Why File Handling?</h2>
+      <p>
+        File handling allows your program to read, write, and manage external files like text files.
+        It's used for saving data permanently (like user info, logs, etc.).
+      </p>
+    </section>
+
+    <section>
+      <h2>📖 Reading a File</h2>
+      <pre><code class="language-python">
+# Make sure "data.txt" exists in your folder
+file = open("data.txt", "r")
+content = file.read()
+print(content)
+file.close()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✍️ Writing to a File</h2>
+      <pre><code class="language-python">
+file = open("data.txt", "w")
+file.write("Welcome to DevStart!\n")
+file.write("This is Python file handling.")
+file.close()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>➕ Appending to a File</h2>
+      <pre><code class="language-python">
+file = open("data.txt", "a")
+file.write("\nThis line is added later.")
+file.close()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Reading Line by Line</h2>
+      <pre><code class="language-python">
+file = open("data.txt", "r")
+for line in file:
+    print(line.strip())
+file.close()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>💡 Using <code>with</code> Keyword (Best Practice)</h2>
+      <pre><code class="language-python">
+with open("data.txt", "r") as file:
+    print(file.read())
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a file and write a list of your favorite languages</li>
+        <li>Read the file and print each language</li>
+        <li>Append a new language to the file</li>
+        <li>Use <code>with</code> instead of <code>open/close</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>open("file", mode)</code> – open file</li>
+        <li><code>r</code> = read, <code>w</code> = write, <code>a</code> = append</li>
+        <li><code>close()</code> – always close after use</li>
+        <li><code>with</code> – auto closes file</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous: Dictionaries</a>
+      <a href="adv2.html">Next → Exception Handling</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💻 C++ Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>💻 Daily C++ Questions</h1>
+  <p>You will get 5 fresh C++ questions daily from a pool of 100!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is the difference between C and C++?",
+      "What is object-oriented programming?",
+      "Explain the concept of class and object.",
+      "How do you define a class in C++?",
+      "Write a simple C++ program to print 'Hello World'.",
+      "What are constructors and destructors?",
+      "What is inheritance in C++?",
+      "Explain the types of inheritance.",
+      "What is function overloading?",
+      "What is operator overloading?",
+      "What is polymorphism in C++?",
+      "Differentiate between compile-time and runtime polymorphism.",
+      "What is a virtual function?",
+      "Explain pure virtual function and abstract class.",
+      "What is the role of 'this' pointer?",
+      "What is a friend function?",
+      "Explain static members in C++.",
+      "What are access specifiers in C++?",
+      "What is encapsulation?",
+      "What is data hiding?",
+      "What is constructor overloading?",
+      "What is copy constructor?",
+      "What is a default constructor?",
+      "What is a parameterized constructor?",
+      "How to use 'new' and 'delete' in C++?",
+      "What is dynamic memory allocation?",
+      "Explain shallow copy and deep copy.",
+      "What is namespace in C++?",
+      "How do you use 'std' namespace?",
+      "What is the use of 'cin' and 'cout'?",
+      "Write a program using switch case.",
+      "How do you use arrays in C++?",
+      "What is a reference variable?",
+      "Explain the difference between pointers and references.",
+      "Write a program to swap two numbers using reference.",
+      "What is a template in C++?",
+      "Differentiate between function template and class template.",
+      "What are STL containers?",
+      "Explain vector and its usage.",
+      "What is iterator in STL?",
+      "What are exception handling keywords?",
+      "What is the use of try-catch block?",
+      "What is stack unwinding?",
+      "What are the file streams in C++?",
+      "How to read and write files in C++?",
+      "What is fstream, ifstream, ofstream?",
+      "Write a program to read a file line by line.",
+      "What are manipulators in C++?",
+      "What is the use of setw() and setprecision()?",
+      "What is RTTI (Run Time Type Identification)?",
+      "What is typeid operator?",
+      "What is the difference between struct and class in C++?",
+      "What is inline function?",
+      "What is macro vs inline function?",
+      "What are constant data members?",
+      "What is const function?",
+      "What is the use of mutable keyword?",
+      "What are smart pointers in modern C++?",
+      "Explain unique_ptr and shared_ptr.",
+      "What is lambda expression?",
+      "What is auto keyword?",
+      "What is a range-based for loop?",
+      "How to use initializer list?",
+      "What is the purpose of enum in C++?",
+      "What is the difference between enum and enum class?",
+      "What is static_cast and reinterpret_cast?",
+      "What is type casting in C++?",
+      "How do you overload the assignment operator?",
+      "Write a class with overloaded + operator.",
+      "What is a virtual destructor?",
+      "What is the diamond problem in inheritance?",
+      "What is multiple inheritance?",
+      "How to resolve ambiguity in multiple inheritance?",
+      "What is hybrid inheritance?",
+      "What is composition in C++?",
+      "What is aggregation?",
+      "What is the difference between aggregation and composition?",
+      "What is a static block in C++?",
+      "How to implement stack using array in C++?",
+      "How to implement queue using array?",
+      "What are the time complexities of vector operations?",
+      "What is an iterator invalidation?",
+      "What is the difference between map and unordered_map?",
+      "How to sort a vector of integers?",
+      "How to sort a vector of custom objects?",
+      "What is a functor?",
+      "What is std::function?",
+      "What is multithreading in C++?",
+      "What is std::thread?",
+      "What are condition variables?",
+      "What is mutex and lock_guard?",
+      "What is deadlock and how to avoid it?",
+      "What is memory leak and how to detect it?",
+      "What tools can be used for debugging C++?",
+      "What is valgrind?",
+      "Write a program to reverse a string using stack.",
+      "What is segmentation fault in C++?",
+      "What are virtual base classes?",
+      "What is the purpose of friend class?",
+      "What is difference between delete and delete[]?",
+      "What is the output of 5/2 in C++?",
+      "What is scope resolution operator ::?",
+      "What are lvalues and rvalues in C++?",
+      "Explain move semantics.",
+      "What is std::move and std::forward?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

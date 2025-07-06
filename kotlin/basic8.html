@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotlin – Basic 8: Lists & Arrays</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Basic 8: Lists & Arrays</h1>
+    <p>Store multiple values using arrays and lists</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Array</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val numbers = arrayOf(10, 20, 30)
+    println(numbers[0])
+    println("Size: ${numbers.size}")
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📚 List</h2>
+      <pre><code class="language-kotlin">
+fun main() {
+    val fruits = listOf("Apple", "Banana", "Cherry")
+    for (fruit in fruits) {
+        println(fruit)
+    }
+}
+      </code></pre>
+      <p><code>listOf()</code> creates an immutable list. Use <code>mutableListOf()</code> to add/remove items.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Logic Tips</h2>
+      <ul>
+        <li>Use <code>arrayOf()</code> when the size is fixed</li>
+        <li>Use <code>listOf()</code> for easy looping</li>
+        <li>Use <code>mutableListOf()</code> to modify the list</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a list of your 5 favorite movies and print each one</li>
+        <li>Use an array to store 3 numbers and print the sum</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic7.html">← Previous</a>
+      <a href="basic9.html">Next → Strings</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

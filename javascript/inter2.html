@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript – Loops</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript: Intermediate Lesson 2 – Loops</h1>
+    <p>Repeat actions using for, while, and do-while loops</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔁 What is a Loop?</h2>
+      <p>
+        A loop repeats a block of code as long as a condition is true.  
+        Instead of writing the same line many times, we use loops to save time and code.
+      </p>
+    </section>
+
+    <section>
+      <h2>1️⃣ <code>for</code> Loop – Most Common</h2>
+      <pre><code>
+for (let i = 1; i <= 5; i++) {
+  console.log("Count: " + i);
+}
+      </code></pre>
+      <p>
+        This prints 1 to 5. <br />
+        - <code>i = 1</code>: start value<br />
+        - <code>i <= 5</code>: condition<br />
+        - <code>i++</code>: increase i by 1 after each loop
+      </p>
+    </section>
+
+    <section>
+      <h2>2️⃣ <code>while</code> Loop – Repeat While True</h2>
+      <pre><code>
+let i = 1;
+while (i <= 3) {
+  console.log("i is " + i);
+  i++;
+}
+      </code></pre>
+      <p>
+        Use <code>while</code> when you don’t know how many times to loop.
+      </p>
+    </section>
+
+    <section>
+      <h2>3️⃣ <code>do...while</code> Loop – Run at Least Once</h2>
+      <pre><code>
+let num = 1;
+
+do {
+  console.log("Number is " + num);
+  num++;
+} while (num <= 3);
+      </code></pre>
+      <p>
+        This runs once even if the condition is false at the start.
+      </p>
+    </section>
+
+    <section>
+      <h2>⚠️ Avoid Infinite Loops!</h2>
+      <p>
+        Always make sure your loop has an exit condition.  
+        Otherwise, it will run forever and crash the browser.
+      </p>
+      <pre><code>
+// ❌ This will run forever!
+while (true) {
+  console.log("Don't do this");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Print numbers from 1 to 10 using <code>for</code> loop</li>
+        <li>Print only even numbers between 1–20</li>
+        <li>Use <code>while</code> loop to count down from 5 to 1</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Bonus: <code>break</code> and <code>continue</code></h2>
+      <pre><code>
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) continue;
+  console.log(i);  // Skips 3
+}
+
+for (let j = 1; j <= 5; j++) {
+  if (j === 4) break;
+  console.log(j);  // Stops at 3
+}
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous: Conditionals</a>
+      <a href="adv1.html">Next → Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Logic-First JavaScript Learning</p>
+  </footer>
+</body>
+</html>

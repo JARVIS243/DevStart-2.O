@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotlin – Advanced 7: Sealed Classes</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Kotlin – Advanced 7: Sealed Classes</h1>
+    <p>Control type hierarchies with limited subclasses</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Sealed Class?</h2>
+      <p>A sealed class restricts class hierarchies to a fixed set of subclasses. Great for exhaustive <code>when</code> statements.</p>
+
+      <pre><code class="language-kotlin">
+sealed class Result
+
+class Success(val data: String) : Result()
+class Error(val message: String) : Result()
+
+fun handle(result: Result) {
+    when (result) {
+        is Success -> println("Success: ${result.data}")
+        is Error -> println("Error: ${result.message}")
+    }
+}
+
+fun main() {
+    handle(Success("Data loaded"))
+    handle(Error("Something went wrong"))
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✅ Why Use Sealed Classes?</h2>
+      <ul>
+        <li>Safe and structured handling of multiple outcomes</li>
+        <li>Compile-time safety with <code>when</code></li>
+        <li>Used in result handling, state management</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a sealed class <code>Shape</code> with <code>Circle</code> and <code>Rectangle</code></li>
+        <li>Write a <code>when</code> to calculate area</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous</a>
+      <a href="adv8.html">Next → Annotations</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Kotlin the Logic-First Way</p>
+  </footer>
+</body>
+</html>

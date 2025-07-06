@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – OOP (Classes & Objects)</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Advanced Lesson 4 – Classes & Objects</h1>
+    <p>Use Object-Oriented Programming (OOP) to organize and reuse code efficiently</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🏗️ What is OOP?</h2>
+      <p>
+        OOP (Object-Oriented Programming) is a programming style where we build programs using objects and classes.  
+        It improves reusability, structure, and scalability.
+      </p>
+    </section>
+
+    <section>
+      <h2>📦 What is a Class?</h2>
+      <p>
+        A class is a blueprint for creating objects.  
+        It defines properties (variables) and behaviors (functions).
+      </p>
+      <pre><code class="language-python">
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Hello, my name is", self.name)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>👤 What is an Object?</h2>
+      <p>
+        An object is an instance of a class. It has its own data and functions.
+      </p>
+      <pre><code class="language-python">
+s1 = Student("Aju", 18)
+s1.greet()   # Output: Hello, my name is Aju
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>⚙️ __init__ Method</h2>
+      <p>
+        The <code>__init__</code> method is called automatically when an object is created.  
+        It's used to initialize values.
+      </p>
+    </section>
+
+    <section>
+      <h2>🏷️ Object Attributes</h2>
+      <pre><code class="language-python">
+print(s1.name)  # Aju
+print(s1.age)   # 18
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 More Methods</h2>
+      <pre><code class="language-python">
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def drive(self):
+        print(self.brand, "is driving")
+
+c = Car("Tesla")
+c.drive()
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Book</code> with title and author</li>
+        <li>Add a method to display details</li>
+        <li>Create 2 objects and call the method</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>class</code> – defines blueprint</li>
+        <li><code>__init__</code> – constructor</li>
+        <li><code>self</code> – refers to current object</li>
+        <li>Object = instance of class</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous: Modules & Packages</a>
+      <a href="adv5.html">Next → Inheritance & Polymorphism</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>

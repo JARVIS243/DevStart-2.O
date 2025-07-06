@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📱 Kotlin Random Questions</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #questions {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📱 Daily Kotlin Questions</h1>
+  <p>Boost your Android logic skills with 5 new Kotlin questions every day!</p>
+
+  <div id="questions"></div>
+
+  <script>
+    const questions = [
+      "What is Kotlin?",
+      "What are the advantages of Kotlin over Java?",
+      "What is a data class in Kotlin?",
+      "How to declare variables in Kotlin?",
+      "What is val vs var?",
+      "What is a nullable type?",
+      "What is the Elvis operator in Kotlin?",
+      "What is safe call operator?",
+      "What is the difference between !! and ? in Kotlin?",
+      "What are higher-order functions?",
+      "What is lambda expression in Kotlin?",
+      "What are extension functions?",
+      "What is a companion object?",
+      "What is object declaration in Kotlin?",
+      "What is singleton in Kotlin?",
+      "What is primary constructor?",
+      "What is secondary constructor?",
+      "What is init block in Kotlin?",
+      "What are visibility modifiers in Kotlin?",
+      "What is the use of 'open' keyword?",
+      "What is the default visibility in Kotlin?",
+      "What is inheritance in Kotlin?",
+      "What is the difference between interface and abstract class?",
+      "What is sealed class?",
+      "What is enum class?",
+      "What are collections in Kotlin?",
+      "What is the difference between List and MutableList?",
+      "What is a map and set in Kotlin?",
+      "How to filter a list in Kotlin?",
+      "What is let, apply, run, also, and with?",
+      "What is scope function in Kotlin?",
+      "What is the difference between apply and also?",
+      "What is a trailing lambda?",
+      "What is an infix function?",
+      "What is destructuring in Kotlin?",
+      "What is a string template?",
+      "What is smart casting?",
+      "What are type aliases?",
+      "What is backing field?",
+      "What is lateinit and lazy?",
+      "What is a coroutine?",
+      "What is suspend function?",
+      "What is the difference between launch and async?",
+      "What is the lifecycle of coroutine?",
+      "What is flow in Kotlin?",
+      "What is the difference between channel and flow?",
+      "What is the use of 'by' keyword?",
+      "What is delegation pattern?",
+      "What is inline function?",
+      "What is reified type in Kotlin?",
+      "What is the difference between == and === in Kotlin?",
+      "What is string interpolation?",
+      "What is an anonymous function?",
+      "What is Unit in Kotlin?",
+      "What is Nothing type?",
+      "What is Any and Any?",
+      "What are nested and inner classes?",
+      "What is the difference between class and object?",
+      "How do you create a custom getter and setter?",
+      "What is array and how to declare?",
+      "How to iterate through a list?",
+      "How to use when expression?",
+      "How is switch different from when?",
+      "How to handle null safety in Kotlin?",
+      "What is Elvis operator used for?",
+      "How to handle exceptions?",
+      "What is try-catch-finally?",
+      "What is throw keyword?",
+      "What is type casting?",
+      "What is is operator in Kotlin?",
+      "What is the difference between flatMap and map?",
+      "What is filterNotNull()?",
+      "What are top-level functions?",
+      "What is tailrec function?",
+      "What is the use of sealed interface?",
+      "How to use varargs in Kotlin?",
+      "What are annotations?",
+      "What is annotation processing?",
+      "What is reflection in Kotlin?",
+      "How do you write a singleton in Kotlin?",
+      "What is Dependency Injection in Android?",
+      "What is Koin?",
+      "What is Dagger and Hilt?",
+      "What is Android Jetpack?",
+      "What is Jetpack Compose?",
+      "What is LiveData?",
+      "What is ViewModel in Kotlin?",
+      "How to use Room database?",
+      "What is a DAO in Room?",
+      "What is Retrofit in Android?",
+      "How to perform network call in coroutine?",
+      "What is suspendCoroutine?",
+      "What is difference between blocking and suspending?",
+      "What is runBlocking?",
+      "What is lifecycleScope?",
+      "What is viewBinding?",
+      "What is dataBinding?",
+      "How to implement MVVM in Kotlin?",
+      "What is difference between Parcelable and Serializable?",
+      "How to pass data between fragments?",
+      "How to navigate using Navigation Component?"
+    ];
+
+    function generateDailyQuestions() {
+      const date = new Date().toDateString();
+      let seed = 0;
+      for (let i = 0; i < date.length; i++) {
+        seed += date.charCodeAt(i);
+      }
+
+      const selected = [];
+      while (selected.length < 1) {
+        const index = (seed * (selected.length + 1)) % questions.length;
+        const q = questions[index];
+        if (!selected.includes(q)) selected.push(q);
+        seed++;
+      }
+
+      document.getElementById("questions").innerHTML = selected
+        .map((q, i) => `<p><strong>Q${i + 1}:</strong> ${q}</p>`)
+        .join("");
+    }
+
+    generateDailyQuestions();
+  </script>
+</body>
+</html>

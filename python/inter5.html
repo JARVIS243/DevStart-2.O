@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python – Dictionaries</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Python: Intermediate Lesson 5 – Dictionaries</h1>
+    <p>Store and access data using key-value pairs</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔑 What is a Dictionary?</h2>
+      <p>
+        A dictionary is a collection of key-value pairs.  
+        Each key is unique and maps to a specific value.
+      </p>
+      <pre><code class="language-python">
+student = {
+    "name": "Aju",
+    "age": 20,
+    "grade": "A"
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Access Values</h2>
+      <pre><code class="language-python">
+print(student["name"])   # Aju
+print(student["grade"])  # A
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>✏️ Modify & Add Entries</h2>
+      <pre><code class="language-python">
+student["age"] = 21
+student["city"] = "Kochi"
+      </code></pre>
+      <p>Update existing values or add new key-value pairs.</p>
+    </section>
+
+    <section>
+      <h2>➖ Remove Items</h2>
+      <pre><code class="language-python">
+del student["grade"]  # Removes grade
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Loop Through Dictionary</h2>
+      <pre><code class="language-python">
+for key, value in student.items():
+    print(key, ":", value)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔧 Useful Methods</h2>
+      <pre><code class="language-python">
+print(student.keys())    # all keys
+print(student.values())  # all values
+print(student.get("age"))   # 21
+print(student.get("marks", "Not Found"))  # fallback
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📦 Nested Dictionary</h2>
+      <pre><code class="language-python">
+students = {
+    "aju": {"age": 20, "grade": "A"},
+    "arun": {"age": 19, "grade": "B"}
+}
+print(students["aju"]["grade"])  # A
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a dictionary with your name, age, and course</li>
+        <li>Update your course to "Python Mastery"</li>
+        <li>Loop through and print all details</li>
+        <li>Create a nested dictionary of 2 students</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li>Dictionaries use keys to access values</li>
+        <li>Use <code>{ }</code> to define and <code>[]</code> to access</li>
+        <li>Supports looping, updating, deleting, and nesting</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous: Strings</a>
+      <a href="../python/adv1.html">Next → File Handling</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn Python the Logic-First Way</p>
+  </footer>
+</body>
+</html>
