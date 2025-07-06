@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 9: Exception Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 9 – Exception Handling</h1>
+    <p>Handle errors gracefully using try, catch, and throw</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚠️ What is Exception Handling?</h2>
+      <p>
+        Mechanism to catch and handle runtime errors to prevent program crashes.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Basic try-catch</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int divide(int a, int b) {
+    if (b == 0) {
+        throw "Division by zero error!";
+    }
+    return a / b;
+}
+
+int main() {
+    try {
+        cout &lt;&lt; divide(10, 2) &lt;&lt; endl;
+        cout &lt;&lt; divide(10, 0) &lt;&lt; endl;
+    }
+    catch (const char* e) {
+        cout &lt;&lt; "Exception caught: " &lt;&lt; e &lt;&lt; endl;
+    }
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Use <code>throw</code> to raise exceptions</li>
+        <li><code>try</code> block contains code that might throw</li>
+        <li><code>catch</code> block handles exceptions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Throw exceptions of different types (int, string)</li>
+        <li>Write nested try-catch blocks</li>
+        <li>Create custom exception classes</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous: Templates</a>
+      <a href="adv1.html">Next → Advanced Lessons</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

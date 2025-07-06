@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 1: STL Vectors</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 1 – Standard Template Library (STL): Vectors</h1>
+    <p>Learn dynamic arrays using STL vectors</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What is a Vector?</h2>
+      <p>
+        Vectors are dynamic arrays that can change size during runtime.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Basic Vector Usage</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers;
+
+    // Add elements
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+
+    // Access elements
+    for (int i = 0; i &lt; numbers.size(); i++) {
+        cout &lt;&lt; "Element " &lt;&lt; i &lt;&lt; ": " &lt;&lt; numbers[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Vectors handle memory automatically</li>
+        <li>Use <code>push_back()</code> to add elements</li>
+        <li>Access elements using <code>[]</code> or <code>at()</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a vector of strings and print them</li>
+        <li>Use vector methods like <code>size()</code>, <code>empty()</code>, and <code>clear()</code></li>
+        <li>Practice inserting and erasing elements</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous: Exception Handling</a>
+      <a href="adv2.html">Next → STL Maps</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

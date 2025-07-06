@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Basic Lesson 7: Arrays and Strings Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Basic Lesson 7 – Arrays and Strings Basics</h1>
+    <p>Understanding arrays and basic string handling</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 Arrays</h2>
+      <p>An array stores multiple values of the same type in contiguous memory.</p>
+      <pre><code class="language-c">
+int numbers[5] = {10, 20, 30, 40, 50};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Accessing Array Elements</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[3] = {5, 10, 15};
+    printf("First element: %d\n", numbers[0]);
+    printf("Second element: %d\n", numbers[1]);
+    printf("Third element: %d\n", numbers[2]);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📖 Strings in C</h2>
+      <p>Strings are arrays of characters ending with a null character <code>'\0'</code>.</p>
+      <pre><code class="language-c">
+char name[6] = {'A','j','u','\0'};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create and print arrays of different types and sizes.</li>
+        <li>Write a program to input and print strings.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic6.html">← Previous: Functions</a>
+      <a href="basic8.html">Next → Pointers Introduction</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 7: Polymorphism</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 7 – Polymorphism</h1>
+    <p>Use the same interface for different data types</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🌀 What is Polymorphism?</h2>
+      <p>
+        Polymorphism allows functions or objects to behave differently based on the context.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Virtual Functions</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+class Animal {
+public:
+    virtual void speak() {
+        cout &lt;&lt; "Animal speaks" &lt;&lt; endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() override {
+        cout &lt;&lt; "Dog barks" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Dog();
+    animal->speak(); // calls Dog's speak()
+
+    delete animal;
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Use <code>virtual</code> keyword for functions to allow overriding</li>
+        <li>Derived class functions use <code>override</code> keyword for clarity</li>
+        <li>Polymorphism enables dynamic method dispatch</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a base class and derived classes with overridden methods</li>
+        <li>Use pointers or references to call methods polymorphically</li>
+        <li>Experiment with virtual destructors</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous: Inheritance</a>
+      <a href="inter8.html">Next → Templates</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

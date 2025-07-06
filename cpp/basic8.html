@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Arrays</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 8 – Arrays (1D)</h1>
+    <p>Store multiple values of the same type in one variable</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🗃️ What is an Array?</h2>
+      <p>
+        An array is a collection of variables of the same type stored in contiguous memory locations.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Declaring and Using Arrays</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int numbers[5];  // Array of 5 integers
+
+    // Assign values
+    numbers[0] = 10;
+    numbers[1] = 20;
+    numbers[2] = 30;
+    numbers[3] = 40;
+    numbers[4] = 50;
+
+    // Access and print
+    for (int i = 0; i &lt; 5; i++) {
+        cout &lt;&lt; "Element " &lt;&lt; i &lt;&lt; ": " &lt;&lt; numbers[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Array indices start at 0</li>
+        <li>Size of the array must be known at compile time</li>
+        <li>All elements must be of the same type</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Declare an array of floats and assign values</li>
+        <li>Print the elements using a loop</li>
+        <li>Modify an element and print again</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic7.html">← Previous: Functions</a>
+      <a href="basic9.html">Next → Strings</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

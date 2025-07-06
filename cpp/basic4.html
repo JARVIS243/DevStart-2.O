@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Operators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 4 – Operators</h1>
+    <p>Learn about arithmetic, relational, and logical operators</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>➕ Arithmetic Operators</h2>
+      <p>Used for mathematical calculations:</p>
+      <ul>
+        <li><code>+</code> Addition</li>
+        <li><code>-</code> Subtraction</li>
+        <li><code>*</code> Multiplication</li>
+        <li><code>/</code> Division</li>
+        <li><code>%</code> Modulus (remainder)</li>
+      </ul>
+
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 3;
+    cout &lt;&lt; "a + b = " &lt;&lt; (a + b) &lt;&lt; endl;
+    cout &lt;&lt; "a - b = " &lt;&lt; (a - b) &lt;&lt; endl;
+    cout &lt;&lt; "a * b = " &lt;&lt; (a * b) &lt;&lt; endl;
+    cout &lt;&lt; "a / b = " &lt;&lt; (a / b) &lt;&lt; endl;
+    cout &lt;&lt; "a % b = " &lt;&lt; (a % b) &lt;&lt; endl;
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Relational Operators</h2>
+      <p>Used to compare values, result is <code>true</code> or <code>false</code>:</p>
+      <ul>
+        <li><code>==</code> Equal to</li>
+        <li><code>!=</code> Not equal to</li>
+        <li><code>&lt;</code> Less than</li>
+        <li><code>&lt;=</code> Less than or equal to</li>
+        <li><code>&gt;</code> Greater than</li>
+        <li><code>&gt;=</code> Greater than or equal to</li>
+      </ul>
+      <pre><code class="language-cpp">
+int a = 5, b = 10;
+cout &lt;&lt; (a == b) &lt;&lt; endl;  // 0 (false)
+cout &lt;&lt; (a &lt; b) &lt;&lt; endl;   // 1 (true)
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔗 Logical Operators</h2>
+      <p>Used to combine multiple conditions:</p>
+      <ul>
+        <li><code>&&</code> Logical AND</li>
+        <li><code>||</code> Logical OR</li>
+        <li><code>!</code> Logical NOT</li>
+      </ul>
+      <pre><code class="language-cpp">
+bool x = true, y = false;
+cout &lt;&lt; (x && y) &lt;&lt; endl; // 0
+cout &lt;&lt; (x || y) &lt;&lt; endl; // 1
+cout &lt;&lt; (!x) &lt;&lt; endl;      // 0
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Try changing values of variables and observe outputs</li>
+        <li>Use relational and logical operators in conditional statements</li>
+        <li>Combine multiple operators in expressions</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic3.html">← Previous: Input and Output</a>
+      <a href="basic5.html">Next → Conditional Statements</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

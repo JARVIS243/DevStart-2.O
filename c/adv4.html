@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 4: Linked Lists</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 4 – Linked Lists</h1>
+    <p>Create and manage dynamic node-based lists</p>
+  </header>
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 Singly Linked List Example</h2>
+      <pre><code class="language-c">
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+void printList(struct Node* head) {
+    while (head != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
+    }
+}
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous: Macros</a>
+      <a href="adv5.html">Next → Stacks & Queues</a>
+    </div>
+  </main>
+  <footer>
+    <p>DevStart 2.0 – Master C Programming</p>
+  </footer>
+</body>
+</html>

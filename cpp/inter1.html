@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 1: Pointers Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 1 – Pointers Basics</h1>
+    <p>Understand pointers and how to use them</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📍 What is a Pointer?</h2>
+      <p>
+        A pointer is a variable that stores the memory address of another variable.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Declaring and Using Pointers</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int var = 42;
+    int* ptr = &var;  // ptr stores address of var
+
+    cout &lt;&lt; "Value of var: " &lt;&lt; var &lt;&lt; endl;
+    cout &lt;&lt; "Address of var: " &lt;&lt; &amp;var &lt;&lt; endl;
+    cout &lt;&lt; "Pointer ptr points to address: " &lt;&lt; ptr &lt;&lt; endl;
+    cout &lt;&lt; "Value pointed by ptr: " &lt;&lt; *ptr &lt;&lt; endl;
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li><code>*</code> is used to declare a pointer and to dereference it (get value at address)</li>
+        <li><code>&amp;</code> is the address-of operator</li>
+        <li>Pointers must be of the correct type</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Declare pointers to different types (float, char)</li>
+        <li>Change the value of a variable through a pointer</li>
+        <li>Print addresses of variables using pointers</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic10.html">← Previous: Practice Exercises</a>
+      <a href="inter2.html">Next → Dynamic Memory</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

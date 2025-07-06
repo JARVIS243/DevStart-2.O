@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 12: Command-Line Arguments</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 12 – Command-Line Arguments</h1>
+    <p>Pass values to your program through the terminal</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧾 What Are Command-Line Arguments?</h2>
+      <p>Arguments passed to the program when it is run from the terminal.</p>
+      <p>Useful for dynamic input without using scanf or files.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Syntax</h2>
+      <pre><code class="language-c">
+int main(int argc, char *argv[]) {
+    // argc  - argument count
+    // argv[] - argument values
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>💡 Example</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[]) {
+    printf("Total arguments: %d\n", argc);
+    for (int i = 0; i &lt; argc; i++) {
+        printf("Arg[%d]: %s\n", i, argv[i]);
+    }
+    return 0;
+}
+      </code></pre>
+      <p>💬 Run it like: <code>./a.out Hello World</code></p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Write a program to add two numbers passed as arguments.</li>
+        <li>Convert arguments to integers using <code>atoi()</code>.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv11.html">← Previous: Structures and Pointers</a>
+      <a href="adv13.html">Next → File Struct I/O</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

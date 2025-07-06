@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 3: References and Aliases</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 3 – References and Aliases</h1>
+    <p>Understand references as alternative names for variables</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔗 What is a Reference?</h2>
+      <p>
+        A reference is an alias for another variable. It must be initialized when declared.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Declaring and Using References</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int original = 10;
+    int &ref = original; // ref is reference to original
+
+    cout &lt;&lt; "original = " &lt;&lt; original &lt;&lt; endl;
+    cout &lt;&lt; "ref = " &lt;&lt; ref &lt;&lt; endl;
+
+    ref = 20; // changes original
+    cout &lt;&lt; "After modifying ref:" &lt;&lt; endl;
+    cout &lt;&lt; "original = " &lt;&lt; original &lt;&lt; endl;
+    cout &lt;&lt; "ref = " &lt;&lt; ref &lt;&lt; endl;
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>References must be initialized at declaration</li>
+        <li>They cannot be null or changed to refer to another variable</li>
+        <li>Useful for passing variables to functions without copying</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Declare references for different types</li>
+        <li>Write a function that uses reference parameters to modify variables</li>
+        <li>Compare pointers and references</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous: Dynamic Memory Allocation</a>
+      <a href="inter4.html">Next → Classes and Objects</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 8: Templates</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 8 – Templates</h1>
+    <p>Write generic and reusable code using templates</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What are Templates?</h2>
+      <p>
+        Templates allow you to write functions and classes that work with any data type.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Function Template</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt;
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    cout &lt;&lt; add(5, 3) &lt;&lt; endl;        // int
+    cout &lt;&lt; add(2.5, 3.1) &lt;&lt; endl;    // double
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Templates help avoid code duplication</li>
+        <li>Works with functions and classes</li>
+        <li>Use <code>template &lt;typename T&gt;</code> syntax</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class template for a simple container</li>
+        <li>Write function templates for other operations</li>
+        <li>Experiment with multiple template parameters</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous: Polymorphism</a>
+      <a href="inter9.html">Next → Exception Handling</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

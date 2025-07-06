@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 3: Lambda Expressions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 3 – Lambda Expressions</h1>
+    <p>Write inline anonymous functions easily</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What is a Lambda Expression?</h2>
+      <p>
+        A lambda is an anonymous function you can define inline, useful for short snippets of code.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Basic Lambda Usage</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; nums = {5, 3, 8, 1};
+
+    // Sort in ascending order using lambda
+    sort(nums.begin(), nums.end(), [](int a, int b) {
+        return a &lt; b;
+    });
+
+    for (int n : nums) {
+        cout &lt;&lt; n &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    // Lambda with captured variable
+    int factor = 2;
+    auto multiply = [factor](int x) {
+        return x * factor;
+    };
+    cout &lt;&lt; multiply(5) &lt;&lt; endl;  // Output: 10
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Lambdas can capture variables from their surrounding scope</li>
+        <li>Useful for callbacks, short functions, and algorithms</li>
+        <li>Syntax: <code>[captures](parameters) { body }</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write lambdas for filtering and transforming data</li>
+        <li>Experiment with capture modes (<code>=</code> and <code>&amp;</code>)</li>
+        <li>Use lambdas with STL algorithms like <code>for_each</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous: STL Maps</a>
+      <a href="adv4.html">Next → Smart Pointers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

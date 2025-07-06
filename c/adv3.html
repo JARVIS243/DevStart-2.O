@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 3: Macros & Preprocessors</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 3 – Macros & Preprocessors</h1>
+    <p>Use #define, #include, #ifdef to control compilation</p>
+  </header>
+  <main class="lesson-content">
+    <section>
+      <h2>🔧 Macros</h2>
+      <pre><code class="language-c">
+#define PI 3.14
+#define SQUARE(x) ((x)*(x))
+
+printf("PI = %f\n", PI);
+printf("Square = %d\n", SQUARE(4));
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📂 Conditional Compilation</h2>
+      <pre><code class="language-c">
+#ifdef DEBUG
+printf("Debug Mode ON\n");
+#endif
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv2.html">← Previous: Bitwise Operators</a>
+      <a href="adv4.html">Next → Linked Lists</a>
+    </div>
+  </main>
+  <footer>
+    <p>DevStart 2.0 – Master C Programming</p>
+  </footer>
+</body>
+</html>

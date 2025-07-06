@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 5: Stacks and Queues</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 5 – Stacks & Queues</h1>
+    <p>Implement LIFO and FIFO structures</p>
+  </header>
+  <main class="lesson-content">
+    <section>
+      <h2>📦 Stack (LIFO)</h2>
+      <pre><code class="language-c">
+#define SIZE 100
+int stack[SIZE], top = -1;
+
+void push(int value) { stack[++top] = value; }
+int pop() { return stack[top--]; }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📥 Queue (FIFO)</h2>
+      <pre><code class="language-c">
+int queue[SIZE], front = 0, rear = 0;
+
+void enqueue(int value) { queue[rear++] = value; }
+int dequeue() { return queue[front++]; }
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous: Linked Lists</a>
+      <a href="adv6.html">Next → Binary Trees</a>
+    </div>
+  </main>
+  <footer>
+    <p>DevStart 2.0 – Master C Programming</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 5: Constructors and Destructors</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 5 – Constructors and Destructors</h1>
+    <p>Learn how constructors and destructors initialize and clean up objects</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚙️ What is a Constructor?</h2>
+      <p>
+        A constructor is a special function called automatically when an object is created. It initializes the object's attributes.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Constructor and Destructor</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+class Person {
+public:
+    string name;
+
+    // Constructor
+    Person(string n) {
+        name = n;
+        cout &lt;&lt; "Constructor called for " &lt;&lt; name &lt;&lt; endl;
+    }
+
+    // Destructor
+    ~Person() {
+        cout &lt;&lt; "Destructor called for " &lt;&lt; name &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Person p1("Aju");
+    {
+        Person p2("Deva");
+    } // p2 destroyed here
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Constructor has the same name as the class and no return type</li>
+        <li>Destructor has the same name preceded by a tilde (~)</li>
+        <li>Destructor cleans up when object goes out of scope</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class with constructor and destructor printing messages</li>
+        <li>Create objects inside and outside scopes and observe constructor/destructor calls</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous: Classes and Objects</a>
+      <a href="inter6.html">Next → Inheritance</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

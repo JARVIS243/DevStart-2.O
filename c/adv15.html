@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 15: Student Database Project</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 15 – Student Database Project</h1>
+    <p>Mini project using structures, files, functions, and logic</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎯 Project Goal</h2>
+      <p>Build a simple Student Database program that can:</p>
+      <ul>
+        <li>Add student records</li>
+        <li>Display all records</li>
+        <li>Search a student by ID</li>
+        <li>Delete a student record</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧱 Structure Definition</h2>
+      <pre><code class="language-c">
+struct Student {
+    int id;
+    char name[50];
+    float grade;
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 Main Menu Logic</h2>
+      <pre><code class="language-c">
+int main() {
+    int choice;
+    do {
+        printf("1. Add\n2. View\n3. Search\n4. Delete\n5. Exit\n");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1: addStudent(); break;
+            case 2: viewAll(); break;
+            case 3: searchById(); break;
+            case 4: deleteById(); break;
+        }
+    } while (choice != 5);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try to Build</h2>
+      <ul>
+        <li>Implement each function step-by-step</li>
+        <li>Store data in a binary file</li>
+        <li>Test with multiple student records</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv14.html">← Previous: File Record Search</a>
+      <a href="adv16.html">Next → Bitwise Operators</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

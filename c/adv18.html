@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 18: Typedef and Enums</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 18 – Typedef and Enums</h1>
+    <p>Improve code readability and manage constants easily</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🆔 typedef</h2>
+      <p>Create new names (aliases) for existing data types.</p>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+typedef unsigned int uint;
+typedef struct {
+    int id;
+    char name[50];
+} Student;
+
+int main() {
+    uint age = 25;
+    Student s1 = {101, "Anu"};
+    printf("Student: %s, Age: %u\n", s1.name, age);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 enum</h2>
+      <p>Create named constants with integer values.</p>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+enum Day { MON, TUE, WED, THU, FRI, SAT, SUN };
+
+int main() {
+    enum Day today = WED;
+    printf("Day number: %d\n", today); // 2
+    return 0;
+}
+      </code></pre>
+      <p>📌 You can assign custom values too: <code>enum Day { MON=1, TUE, WED=10 }</code></p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Define a typedef for float called <code>real</code>.</li>
+        <li>Create an enum for months and print one of them.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv17.html">← Previous: Macros & Preprocessor</a>
+      <a href="adv19.html">Next → Union in C</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

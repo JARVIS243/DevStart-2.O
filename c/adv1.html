@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 1: File Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 1 – File Handling</h1>
+    <p>Read, write, and append files using C</p>
+  </header>
+  <main class="lesson-content">
+    <section>
+      <h2>📄 Writing to a File</h2>
+      <pre><code class="language-c">
+FILE *fp = fopen("notes.txt", "w");
+fprintf(fp, "DevStart C File Handling Example\n");
+fclose(fp);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📖 Reading from a File</h2>
+      <pre><code class="language-c">
+FILE *fp = fopen("notes.txt", "r");
+char line[100];
+while (fgets(line, sizeof(line), fp)) {
+    printf("%s", line);
+}
+fclose(fp);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>➕ Appending to a File</h2>
+      <pre><code class="language-c">
+fp = fopen("notes.txt", "a");
+fprintf(fp, "This line is appended.\n");
+fclose(fp);
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="../inter10.html">← Previous: Typedef & Enums</a>
+      <a href="adv2.html">Next → Bitwise Operators</a>
+    </div>
+  </main>
+  <footer>
+    <p>DevStart 2.0 – Master C Programming</p>
+  </footer>
+</body>
+</html>

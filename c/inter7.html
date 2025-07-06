@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 7: Strings and String Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 7 – Strings and String Functions</h1>
+    <p>Manipulate strings using standard functions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 Common String Functions (in <code>&lt;string.h&gt;</code>)</h2>
+      <ul>
+        <li><code>strlen()</code> – get string length</li>
+        <li><code>strcpy()</code> – copy string</li>
+        <li><code>strcat()</code> – concatenate strings</li>
+        <li><code>strcmp()</code> – compare strings</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using string functions</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[20] = "Hello";
+    char str2[20];
+
+    printf("Length: %lu\n", strlen(str1));
+    strcpy(str2, str1);
+    strcat(str2, " World");
+    printf("Concatenated: %s\n", str2);
+
+    if (strcmp(str1, "Hello") == 0) {
+        printf("Strings are equal\n");
+    }
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Practice using these functions on different strings.</li>
+        <li>Write programs to compare and manipulate strings.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter6.html">← Previous: Command-line Arguments</a>
+      <a href="inter8.html">Next → Multi-dimensional Arrays</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

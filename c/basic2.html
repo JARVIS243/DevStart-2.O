@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Basic Lesson 2: Variables & Data Types</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Basic Lesson 2 – Variables & Data Types</h1>
+    <p>Understanding variables and basic data types in C</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔤 What is a Variable?</h2>
+      <p>
+        A variable is a named storage location in memory that holds a value which can be changed during program execution.
+      </p>
+    </section>
+
+    <section>
+      <h2>📚 Common Data Types in C</h2>
+      <ul>
+        <li><code>int</code> – integer numbers (e.g., 10, -5)</li>
+        <li><code>float</code> – single-precision floating point numbers (e.g., 3.14)</li>
+        <li><code>double</code> – double-precision floating point numbers</li>
+        <li><code>char</code> – single characters (e.g., 'A', 'z')</li>
+        <li><code>void</code> – no data (used in functions)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Declaring and Using Variables</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 21;
+    float pi = 3.14;
+    char initial = 'A';
+
+    printf("Age: %d\n", age);
+    printf("Pi: %.2f\n", pi);
+    printf("Initial: %c\n", initial);
+
+    return 0;
+}
+      </code></pre>
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><code>int age = 21;</code> declares an integer variable <code>age</code> and assigns 21.</li>
+        <li><code>float pi = 3.14;</code> declares a floating-point variable.</li>
+        <li><code>char initial = 'A';</code> declares a character variable.</li>
+        <li><code>printf</code> uses format specifiers: <code>%d</code> for int, <code>%f</code> for float/double, <code>%c</code> for char.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Declare variables of each data type and print their values.</li>
+        <li>Experiment with changing variable values after declaration.</li>
+        <li>Try printing variables with incorrect format specifiers to see the result.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic1.html">← Previous: Introduction & Setup</a>
+      <a href="basic3.html">Next → Input and Output</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

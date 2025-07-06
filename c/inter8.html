@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 8: Multi-dimensional Arrays</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 8 – Multi-dimensional Arrays</h1>
+    <p>Work with arrays of arrays (matrices)</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What are Multi-dimensional Arrays?</h2>
+      <p>Arrays with more than one dimension, e.g., 2D arrays represent matrices.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: 2D Array</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int matrix[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    for (int i = 0; i &lt; 2; i++) {
+        for (int j = 0; j &lt; 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create 3D arrays and practice nested loops.</li>
+        <li>Write programs to add and multiply matrices.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter7.html">← Previous: Strings and String Functions</a>
+      <a href="inter9.html">Next → Error Handling Basics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

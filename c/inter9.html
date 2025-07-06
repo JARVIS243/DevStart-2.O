@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 9: Error Handling</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 9 – Error Handling Basics</h1>
+    <p>Handle runtime errors safely and effectively</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2⚠️ Why Error Handling?</h2>
+      <p>To prevent crashes and bugs when things go wrong (e.g., missing file, memory failure).</p>
+    </section>
+
+    <section>
+      <h2>📘 File Error Example</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fp = fopen("data.txt", "r");
+
+    if (fp == NULL) {
+        printf("❌ Error: Could not open file!\n");
+        return 1;
+    }
+
+    // Read file content...
+
+    fclose(fp);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>💾 Malloc Error Example</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *ptr = (int *)malloc(1000000000000 * sizeof(int)); // very large
+
+    if (ptr == NULL) {
+        printf("❌ Error: Memory allocation failed!\n");
+        return 1;
+    }
+
+    free(ptr);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Try to open a file that doesn’t exist.</li>
+        <li>Use malloc with a large size and check the result.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter8.html">← Previous: Multi-dimensional Arrays</a>
+      <a href="inter10.html">Next → Typedef and Enums</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

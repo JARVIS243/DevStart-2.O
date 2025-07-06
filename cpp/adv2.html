@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 2: STL Maps</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 2 – Standard Template Library (STL): Maps</h1>
+    <p>Learn associative containers with key-value pairs</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What is a Map?</h2>
+      <p>
+        Maps store elements as key-value pairs and allow fast retrieval by key.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Basic Map Usage</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+using namespace std;
+
+int main() {
+    map&lt;string, int&gt; ageMap;
+
+    // Insert key-value pairs
+    ageMap["Aju"] = 21;
+    ageMap["Deva"] = 22;
+    ageMap["Rani"] = 20;
+
+    // Access elements
+    for (auto &entry : ageMap) {
+        cout &lt;&lt; entry.first &lt;&lt; " is " &lt;&lt; entry.second &lt;&lt; " years old." &lt;&lt; endl;
+    }
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Maps store unique keys with associated values</li>
+        <li>Keys are sorted automatically</li>
+        <li>Access values using the key</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a map with country-capital pairs</li>
+        <li>Practice updating and deleting entries</li>
+        <li>Use map functions like <code>find()</code> and <code>count()</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous: STL Vectors</a>
+      <a href="adv3.html">Next → Lambda Expressions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

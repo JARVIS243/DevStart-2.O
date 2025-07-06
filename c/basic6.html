@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Basic Lesson 6: Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Basic Lesson 6 – Functions</h1>
+    <p>Learn how to write and use functions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔧 What is a Function?</h2>
+      <p>A reusable block of code that performs a specific task.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Defining and Calling Functions</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+// Function declaration
+void greet() {
+    printf("Hello from a function!\n");
+}
+
+int main() {
+    greet();  // Call the function
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 Functions with Parameters</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+void greetName(char name[]) {
+    printf("Hello, %s!\n", name);
+}
+
+int main() {
+    greetName("Aju");
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create functions that take different types of parameters.</li>
+        <li>Write functions that return values.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous: Loops</a>
+      <a href="basic7.html">Next → Arrays and Strings</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

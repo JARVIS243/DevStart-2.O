@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 3: Dynamic Memory Allocation</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 3 – Dynamic Memory Allocation</h1>
+    <p>Allocate memory at runtime using malloc and free</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 Why Dynamic Memory?</h2>
+      <p>Allows programs to request memory as needed during execution.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using malloc and free</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *ptr;
+    ptr = (int *)malloc(sizeof(int) * 5);
+
+    if (ptr == NULL) {
+        printf("Memory not allocated.\n");
+        return 1;
+    }
+
+    for (int i = 0; i &lt; 5; i++) {
+        ptr[i] = i * 10;
+        printf("%d ", ptr[i]);
+    }
+
+    free(ptr);  // Release allocated memory
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Allocate memory for arrays dynamically.</li>
+        <li>Practice freeing memory and check for memory leaks.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter2.html">← Previous: Structures</a>
+      <a href="inter4.html">Next → File Handling Basics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

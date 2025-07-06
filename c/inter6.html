@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 6: Command-line Arguments</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 6 – Command-line Arguments</h1>
+    <p>Pass arguments to programs via the command line</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>💻 What are Command-line Arguments?</h2>
+      <p>Arguments passed to the program when it starts, accessible in <code>main()</code>.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using argc and argv</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[]) {
+    printf("Number of arguments: %d\n", argc);
+    for (int i = 0; i &lt; argc; i++) {
+        printf("Argument %d: %s\n", i, argv[i]);
+    }
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Write programs that process command-line inputs.</li>
+        <li>Practice handling different numbers of arguments.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous: Recursion</a>
+      <a href="inter7.html">Next → Strings and String Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

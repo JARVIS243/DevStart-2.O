@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 17: Macros & Preprocessor</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 17 – Macros & Preprocessor Directives</h1>
+    <p>Use compile-time instructions to improve your code efficiency</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚙️ What is the Preprocessor?</h2>
+      <p>Before compilation, the C preprocessor handles instructions like <code>#define</code>, <code>#include</code>, and <code>#if</code>.</p>
+    </section>
+
+    <section>
+      <h2>🧾 Macros</h2>
+      <pre><code class="language-c">
+#define PI 3.14159
+#define SQUARE(x) ((x) * (x))
+
+int main() {
+    printf("PI: %f\n", PI);
+    printf("Square of 5: %d\n", SQUARE(5)); // 25
+    return 0;
+}
+      </code></pre>
+      <p>⚠️ Use parentheses in macros to avoid bugs.</p>
+    </section>
+
+    <section>
+      <h2>📂 Conditional Compilation</h2>
+      <pre><code class="language-c">
+#define DEBUG
+
+int main() {
+    #ifdef DEBUG
+        printf("Debugging enabled\n");
+    #endif
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📌 Other Preprocessor Directives</h2>
+      <ul>
+        <li><code>#include</code> – add external files</li>
+        <li><code>#ifndef</code> – check if not defined</li>
+        <li><code>#undef</code> – remove a macro definition</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Define a macro to convert Celsius to Fahrenheit</li>
+        <li>Use conditional compilation to hide/show test logs</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv16.html">← Previous: Bitwise Operators</a>
+      <a href="adv18.html">Next → Typedef & Enums</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

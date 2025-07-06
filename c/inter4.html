@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 4: File Handling Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 4 – File Handling Basics</h1>
+    <p>Read from and write to files</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📄 File Operations</h2>
+      <p>Open, read, write, and close files using <code>fopen</code>, <code>fread</code>, <code>fwrite</code>, and <code>fclose</code>.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Writing and Reading a File</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fp;
+
+    // Writing to file
+    fp = fopen("data.txt", "w");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        return 1;
+    }
+    fprintf(fp, "Hello, DevStart!\n");
+    fclose(fp);
+
+    // Reading from file
+    char str[100];
+    fp = fopen("data.txt", "r");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        return 1;
+    }
+    while (fgets(str, 100, fp) != NULL) {
+        printf("%s", str);
+    }
+    fclose(fp);
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create files and write multiple lines.</li>
+        <li>Read and print file contents line by line.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous: Dynamic Memory Allocation</a>
+      <a href="inter5.html">Next → Recursion</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

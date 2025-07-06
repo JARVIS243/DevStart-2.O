@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 9: Coroutines</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 9 – Coroutines</h1>
+    <p>Write asynchronous code using coroutines</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 What are Coroutines?</h2>
+      <p>
+        Coroutines allow functions to be paused and resumed, enabling asynchronous programming.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Basic Example (C++20)</h2>
+      <pre><code class="language-cpp">
+// Requires C++20 support
+
+#include &lt;coroutine&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+struct Task {
+    struct promise_type {
+        Task get_return_object() { return {}; }
+        suspend_never initial_suspend() { return {}; }
+        suspend_never final_suspend() noexcept { return {}; }
+        void return_void() {}
+        void unhandled_exception() {}
+    };
+};
+
+Task exampleCoroutine() {
+    cout &lt;&lt; "Start coroutine\n";
+    co_await std::suspend_always{};
+    cout &lt;&lt; "Resume coroutine\n";
+}
+
+int main() {
+    auto task = exampleCoroutine();
+    cout &lt;&lt; "Main function continues\n";
+    // Coroutine suspended at co_await and can be resumed later
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Coroutines simplify asynchronous code</li>
+        <li>Introduced in C++20 standard</li>
+        <li>Requires compiler support and special syntax</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write coroutines with custom promise types</li>
+        <li>Use coroutines for asynchronous I/O</li>
+        <li>Explore coroutine libraries</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous: Concepts</a>
+      <a href="../index.html">🏠 Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

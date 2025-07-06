@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 4: Smart Pointers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 4 – Smart Pointers</h1>
+    <p>Manage dynamic memory safely using smart pointers</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 What are Smart Pointers?</h2>
+      <p>
+        Smart pointers are objects that manage the lifetime of dynamically allocated memory automatically.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using std::unique_ptr</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
+using namespace std;
+
+class Demo {
+public:
+    Demo() { cout &lt;&lt; "Constructor called\n"; }
+    ~Demo() { cout &lt;&lt; "Destructor called\n"; }
+    void greet() { cout &lt;&lt; "Hello from Demo\n"; }
+};
+
+int main() {
+    unique_ptr&lt;Demo&gt; ptr = make_unique&lt;Demo&gt;();
+    ptr->greet();
+
+    // No need to delete ptr manually, destructor called automatically
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li><code>unique_ptr</code> owns the object exclusively</li>
+        <li><code>shared_ptr</code> allows multiple owners</li>
+        <li><code>weak_ptr</code> prevents cyclic references</li>
+        <li>Prevents memory leaks and dangling pointers</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create and use <code>shared_ptr</code> and <code>weak_ptr</code></li>
+        <li>Observe reference counting behavior</li>
+        <li>Write a class that uses smart pointers for member objects</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv3.html">← Previous: Lambda Expressions</a>
+      <a href="adv5.html">Next → Multithreading Basics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

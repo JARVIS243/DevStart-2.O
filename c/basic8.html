@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Basic Lesson 8: Pointers Introduction</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Basic Lesson 8 – Pointers Introduction</h1>
+    <p>Learn what pointers are and how to use them</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📍 What is a Pointer?</h2>
+      <p>A pointer stores the memory address of a variable.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Pointer Basics</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int var = 10;
+    int *ptr = &var;
+
+    printf("Value of var: %d\n", var);
+    printf("Address of var: %p\n", &var);
+    printf("Value stored in ptr: %p\n", ptr);
+    printf("Value pointed by ptr: %d\n", *ptr);
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Experiment with pointer declarations and dereferencing.</li>
+        <li>Try changing variable values through pointers.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic7.html">← Previous: Arrays and Strings Basics</a>
+      <a href="basic9.html">Next → Simple Exercises & Practice</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

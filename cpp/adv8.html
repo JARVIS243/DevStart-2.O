@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 8: Concepts</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 8 – Concepts</h1>
+    <p>Use constraints to specify template requirements</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What are Concepts?</h2>
+      <p>
+        Concepts allow you to specify requirements for template parameters, improving code clarity and error messages.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using Concepts</h2>
+      <pre><code class="language-cpp">
+#include &lt;concepts&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt;
+concept Incrementable = requires(T x) {
+    x++;
+};
+
+template &lt;Incrementable T&gt;
+T increment(T value) {
+    return value + 1;
+}
+
+int main() {
+    cout &lt;&lt; increment(5) &lt;&lt; endl;
+    // cout &lt;&lt; increment("Hello") &lt;&lt; endl; // Error: string not Incrementable
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Concepts improve template code readability</li>
+        <li>They specify what operations a type must support</li>
+        <li>Helps catch template errors at compile time</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Define your own concepts</li>
+        <li>Use multiple concepts to constrain templates</li>
+        <li>Explore standard library concepts</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv7.html">← Previous: Variadic Templates</a>
+      <a href="adv9.html">Next → Coroutines</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

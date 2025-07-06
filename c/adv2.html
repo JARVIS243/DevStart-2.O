@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 2: Bitwise Operators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 2 – Bitwise Operators</h1>
+    <p>Operate directly on bits for performance and control</p>
+  </header>
+  <main class="lesson-content">
+    <section>
+      <h2>🧠 Bitwise AND, OR, XOR</h2>
+      <pre><code class="language-c">
+int a = 5, b = 3; // 0101 & 0011
+printf("AND: %d\n", a & b);   // 1
+printf("OR : %d\n", a | b);   // 7
+printf("XOR: %d\n", a ^ b);   // 6
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔄 Shift Operators</h2>
+      <pre><code class="language-c">
+int a = 4; // 0100
+printf("Left Shift : %d\n", a << 1); // 8
+printf("Right Shift: %d\n", a >> 1); // 2
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv1.html">← Previous: File Handling</a>
+      <a href="adv3.html">Next → Macros & Preprocessors</a>
+    </div>
+  </main>
+  <footer>
+    <p>DevStart 2.0 – Master C Programming</p>
+  </footer>
+</body>
+</html>

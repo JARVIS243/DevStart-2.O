@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Conditional Statements</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 5 – Conditional Statements</h1>
+    <p>Make decisions in your program using <code>if</code>, <code>else</code>, and <code>switch</code></p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔍 if-else Statements</h2>
+      <pre><code class="language-cpp">
+int number = 10;
+
+if (number &gt; 0) {
+    cout &lt;&lt; "Positive number" &lt;&lt; endl;
+} else if (number == 0) {
+    cout &lt;&lt; "Zero" &lt;&lt; endl;
+} else {
+    cout &lt;&lt; "Negative number" &lt;&lt; endl;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 switch Statement</h2>
+      <pre><code class="language-cpp">
+char grade = 'B';
+
+switch (grade) {
+    case 'A':
+        cout &lt;&lt; "Excellent!" &lt;&lt; endl;
+        break;
+    case 'B':
+        cout &lt;&lt; "Well done" &lt;&lt; endl;
+        break;
+    case 'C':
+        cout &lt;&lt; "Good" &lt;&lt; endl;
+        break;
+    default:
+        cout &lt;&lt; "Try harder" &lt;&lt; endl;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write a program to check if a number is even or odd</li>
+        <li>Use <code>switch</code> to print the day of the week given a number (1–7)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>if</code> checks a condition and runs code if true</li>
+        <li><code>else</code> runs code if the <code>if</code> condition is false</li>
+        <li><code>switch</code> chooses between many options based on a variable</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic4.html">← Previous: Operators</a>
+      <a href="basic6.html">Next → Loops</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

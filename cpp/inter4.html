@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 4: Classes and Objects</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 4 – Classes and Objects</h1>
+    <p>Learn Object-Oriented Programming basics with classes and objects</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🏛️ What is a Class?</h2>
+      <p>
+        A class is a blueprint for creating objects. It defines attributes (data) and behaviors (functions).
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Defining a Class and Creating an Object</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+class Car {
+public:
+    string brand;
+    int year;
+
+    void displayInfo() {
+        cout &lt;&lt; "Brand: " &lt;&lt; brand &lt;&lt; ", Year: " &lt;&lt; year &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Car myCar;
+    myCar.brand = "Toyota";
+    myCar.year = 2020;
+    myCar.displayInfo();
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Use <code>class</code> keyword to define a class</li>
+        <li>Members can be public or private (default private)</li>
+        <li>Objects are instances of classes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a class <code>Student</code> with attributes name and age</li>
+        <li>Add a function to display student details</li>
+        <li>Create multiple student objects and print their details</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter3.html">← Previous: References and Aliases</a>
+      <a href="inter5.html">Next → Constructors and Destructors</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

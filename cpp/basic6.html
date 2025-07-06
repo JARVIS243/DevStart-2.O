@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Loops</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 6 – Loops</h1>
+    <p>Repeat actions using <code>while</code>, <code>for</code>, and <code>do-while</code> loops</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 while Loop</h2>
+      <pre><code class="language-cpp">
+int i = 1;
+while (i &lt;= 5) {
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+}
+cout &lt;&lt; endl;
+      </code></pre>
+      <p>Prints numbers 1 to 5.</p>
+    </section>
+
+    <section>
+      <h2>🔁 for Loop</h2>
+      <pre><code class="language-cpp">
+for (int i = 1; i &lt;= 5; i++) {
+    cout &lt;&lt; i &lt;&lt; " ";
+}
+cout &lt;&lt; endl;
+      </code></pre>
+      <p>Another way to print numbers 1 to 5.</p>
+    </section>
+
+    <section>
+      <h2>🔂 do-while Loop</h2>
+      <pre><code class="language-cpp">
+int i = 1;
+do {
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+} while (i &lt;= 5);
+cout &lt;&lt; endl;
+      </code></pre>
+      <p>Executes the loop body at least once, then checks the condition.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Print even numbers from 2 to 20 using a loop</li>
+        <li>Sum numbers from 1 to 10 using a loop</li>
+        <li>Use a <code>do-while</code> loop to ask the user to enter a password until it's correct</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic5.html">← Previous: Conditional Statements</a>
+      <a href="basic7.html">Next → Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

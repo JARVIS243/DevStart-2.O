@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 10: Pointers and Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 10 – Pointers and Functions</h1>
+    <p>Pass data efficiently and safely using pointers</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📌 Why Use Pointers in Functions?</h2>
+      <ul>
+        <li>To modify variables in the calling function</li>
+        <li>To pass large structures efficiently</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔁 Pass by Reference (Using Pointers)</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+void update(int *a) {
+    *a = *a + 10;
+}
+
+int main() {
+    int x = 5;
+    update(&x);
+    printf("Updated value: %d\n", x);
+    return 0;
+}
+      </code></pre>
+      <p>✅ Output: Updated value: 15</p>
+    </section>
+
+    <section>
+      <h2>🔗 Pointer to Function</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Hello from DevStart!\n");
+}
+
+int main() {
+    void (*funcPtr)() = greet;
+    funcPtr(); // calls greet()
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Write a function that swaps two values using pointers</li>
+        <li>Call a function through a function pointer</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv9.html">← Previous: Dynamic Memory</a>
+      <a href="adv11.html">Next → Structures & Pointers</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

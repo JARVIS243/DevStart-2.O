@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Basic Lesson 3: Input and Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Basic Lesson 3 – Input and Output</h1>
+    <p>Learn how to take input and display output in C</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📥 Taking Input</h2>
+      <p>
+        Use <code>scanf()</code> to get input from the user.
+      </p>
+    </section>
+
+    <section>
+      <h2>📤 Displaying Output</h2>
+      <p>
+        Use <code>printf()</code> to print messages and variables to the screen.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Input and Output</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    char name[30];
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter your name: ");
+    scanf("%s", name);
+
+    printf("Hello %s, you are %d years old.\n", name, age);
+
+    return 0;
+}
+      </code></pre>
+
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><code>scanf("%d", &age);</code> reads an integer from user input.</li>
+        <li><code>scanf("%s", name);</code> reads a string (word) without spaces.</li>
+        <li>Always use <code>&amp;</code> before variable names for non-array inputs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Take input for different data types and print them.</li>
+        <li>Try reading strings with spaces using other methods (later lessons).</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous: Variables & Data Types</a>
+      <a href="basic4.html">Next → Control Structures</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

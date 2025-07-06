@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💻 Code Tester – DevStart 2.0</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+  <style>
+    .tester-wrapper {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffffcc;
+      border-radius: 20px;
+      padding: 40px 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+    }
+
+    .tester-wrapper h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .tester-wrapper p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .code-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .code-grid a {
+      text-decoration: none;
+      background: linear-gradient(145deg, #ffffff, #e6f0ff);
+      color: #007bff;
+      padding: 18px 10px;
+      border-radius: 16px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .code-grid a:hover {
+      background: #007bff;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .tester-wrapper {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tester-wrapper">
+    <h1>💻 Online Code Tester</h1>
+    <p>Choose a language and start coding online instantly!</p>
+
+    <div class="code-grid">
+      <a href="https://onecompiler.com/python" target="_blank">🐍 Python</a>
+      <a href="https://onecompiler.com/c" target="_blank">🔣 C</a>
+      <a href="https://onecompiler.com/cpp" target="_blank">💻 C++</a>
+      <a href="https://onecompiler.com/java" target="_blank">☕ Java</a>
+      <a href="https://onecompiler.com/javascript" target="_blank">🌐 JavaScript</a>
+      <a href="https://onecompiler.com/typescript" target="_blank">📘 TypeScript</a>
+      <a href="https://onecompiler.com/csharp" target="_blank">🎮 C#</a>
+      <a href="https://onecompiler.com/kotlin" target="_blank">📱 Kotlin</a>
+      <a href="https://onecompiler.com/sqlserver" target="_blank">🧠 SQL</a>
+      <a href="https://codepen.io/pen" target="_blank">🌍 HTML & CSS</a>
+    </div>
+  </div>
+
+</body>
+</html>

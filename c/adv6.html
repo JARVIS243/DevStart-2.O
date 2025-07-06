@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 6: Binary Trees</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 6 – Binary Trees</h1>
+    <p>Learn to build and traverse trees</p>
+  </header>
+  <main class="lesson-content">
+    <section>
+      <h2>🌳 Binary Tree Structure</h2>
+      <pre><code class="language-c">
+struct Node {
+    int data;
+    struct Node *left, *right;
+};
+
+void inorder(struct Node* root) {
+    if (root == NULL) return;
+    inorder(root->left);
+    printf("%d ", root->data);
+    inorder(root->right);
+}
+      </code></pre>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous: Stacks & Queues</a>
+      <a href="adv7.html">Next → Sorting Algorithms</a>
+    </div>
+  </main>
+  <footer>
+    <p>DevStart 2.0 – Master C Programming</p>
+  </footer>
+</body>
+</html>

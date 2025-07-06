@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 11: Structures and Pointers</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 11 – Structures and Pointers</h1>
+    <p>Access and manipulate structure data using pointers</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>👤 Basic Structure</h2>
+      <pre><code class="language-c">
+struct Student {
+    int id;
+    char name[50];
+    float grade;
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔗 Accessing Members with Pointers</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+struct Student {
+    int id;
+    char name[50];
+    float grade;
+};
+
+int main() {
+    struct Student s1 = {101, "Anu", 92.5};
+    struct Student *ptr = &s1;
+
+    printf("ID: %d\n", ptr->id);
+    printf("Name: %s\n", ptr->name);
+    printf("Grade: %.2f\n", ptr->grade);
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create a structure for a book (title, author, price)</li>
+        <li>Use a pointer to print the book details</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv10.html">← Previous: Pointers & Functions</a>
+      <a href="adv12.html">Next → Command-line Arguments</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 6: Move Semantics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 6 – Move Semantics</h1>
+    <p>Optimize performance by transferring resources instead of copying</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚡ What is Move Semantics?</h2>
+      <p>
+        Move semantics allow the resources of temporary objects to be transferred rather than copied, improving efficiency.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Move Constructor</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+class Buffer {
+public:
+    vector&lt;int&gt; data;
+
+    // Constructor
+    Buffer(int size) : data(size) {}
+
+    // Move constructor
+    Buffer(Buffer&& other) noexcept : data(move(other.data)) {
+        cout &lt;&lt; "Move constructor called" &lt;&lt; endl;
+    }
+
+    // Copy constructor
+    Buffer(const Buffer& other) : data(other.data) {
+        cout &lt;&lt; "Copy constructor called" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Buffer b1(1000);
+    Buffer b2 = move(b1);  // Calls move constructor
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Move semantics improve performance for temporary objects</li>
+        <li>Use <code>std::move()</code> to enable move operations</li>
+        <li>Define move constructors and move assignment operators</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Implement move assignment operator</li>
+        <li>Compare performance of copy vs move</li>
+        <li>Use move semantics in your own classes</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv5.html">← Previous: Multithreading Basics</a>
+      <a href="adv7.html">Next → Variadic Templates</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

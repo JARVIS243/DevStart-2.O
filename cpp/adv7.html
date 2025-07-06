@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 7: Variadic Templates</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 7 – Variadic Templates</h1>
+    <p>Create templates with a variable number of parameters</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📚 What are Variadic Templates?</h2>
+      <p>
+        Variadic templates allow functions and classes to accept any number of template parameters.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Variadic Function Template</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+void print() {
+    cout &lt;&lt; "End of recursion" &lt;&lt; endl;
+}
+
+template &lt;typename T, typename... Args&gt;
+void print(T first, Args... args) {
+    cout &lt;&lt; first &lt;&lt; " ";
+    print(args...);
+}
+
+int main() {
+    print(1, 2.5, "three", '4');
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Recursive template functions are used to unpack parameter packs</li>
+        <li>Variadic templates increase flexibility</li>
+        <li>Useful for generic programming and libraries</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Write variadic templates for other operations like sum</li>
+        <li>Experiment with class templates using parameter packs</li>
+        <li>Combine with constexpr and template specialization</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv6.html">← Previous: Move Semantics</a>
+      <a href="adv8.html">Next → Concepts</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

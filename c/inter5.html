@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 5: Recursion</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 5 – Recursion</h1>
+    <p>Functions calling themselves</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 What is Recursion?</h2>
+      <p>A function that calls itself to solve smaller instances of a problem.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Factorial Using Recursion</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+    if (n == 0) return 1;
+    else return n * factorial(n - 1);
+}
+
+int main() {
+    int num = 5;
+    printf("Factorial of %d is %d\n", num, factorial(num));
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Write recursive functions for Fibonacci numbers.</li>
+        <li>Try recursive solutions for sum of array elements.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter4.html">← Previous: File Handling Basics</a>
+      <a href="inter6.html">Next → Command-line Arguments</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

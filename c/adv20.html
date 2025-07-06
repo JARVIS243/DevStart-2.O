@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 20: Final Project</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 20 – Final Project</h1>
+    <p>🎓 Build a Library Management System in C</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🎯 Project Goal</h2>
+      <p>Design a Library Management System using:</p>
+      <ul>
+        <li>Structures</li>
+        <li>File handling (read/write/search)</li>
+        <li>Functions & user menu</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧱 Book Structure</h2>
+      <pre><code class="language-c">
+typedef struct {
+    int id;
+    char title[100];
+    char author[50];
+    int available;
+} Book;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Main Features</h2>
+      <ul>
+        <li>Add a new book</li>
+        <li>List all books</li>
+        <li>Search by ID or title</li>
+        <li>Delete or update book details</li>
+        <li>Mark a book as borrowed/returned</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try Building This</h2>
+      <ol>
+        <li>Create <code>library.bin</code> to store book records</li>
+        <li>Use <code>fwrite()</code>, <code>fread()</code>, <code>fseek()</code></li>
+        <li>Design a clear CLI menu</li>
+        <li>Use modular functions for each feature</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>🎉 Congratulations!</h2>
+      <p>You’ve completed the full C Programming course with logic-first learning. Practice building more projects, and move on to new languages with strong fundamentals.</p>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv19.html">← Previous: Union in C</a>
+      <a href="../index.html">🏠 Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

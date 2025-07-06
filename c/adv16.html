@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 16: Bitwise Operators</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 16 – Bitwise Operators</h1>
+    <p>Perform operations directly on bits using C</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔢 Common Bitwise Operators</h2>
+      <ul>
+        <li><code>&</code> – AND</li>
+        <li><code>|</code> – OR</li>
+        <li><code>^</code> – XOR</li>
+        <li><code>~</code> – NOT</li>
+        <li><code>&lt;&lt;</code> – Left Shift</li>
+        <li><code>&gt;&gt;</code> – Right Shift</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Example</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 5, b = 3;
+
+    printf("AND: %d\n", a & b);     // 1
+    printf("OR: %d\n", a | b);      // 7
+    printf("XOR: %d\n", a ^ b);     // 6
+    printf("NOT a: %d\n", ~a);      // -6
+    printf("a << 1: %d\n", a << 1); // 10
+    printf("a >> 1: %d\n", a >> 1); // 2
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Use Cases</h2>
+      <ul>
+        <li>Low-level programming</li>
+        <li>Flags & bit masking</li>
+        <li>Optimizing performance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Write a program that checks if a number is even using bitwise AND</li>
+        <li>Set, toggle, or clear a specific bit in a number</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv15.html">← Previous: Student Database Project</a>
+      <a href="adv17.html">Next → Macro & Preprocessor</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

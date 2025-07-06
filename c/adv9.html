@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 9: Dynamic Memory</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 9 – Dynamic Memory Allocation</h1>
+    <p>Use malloc, calloc, realloc, and free to manage memory at runtime</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 malloc()</h2>
+      <p>Allocates a block of memory</p>
+      <pre><code class="language-c">
+int *arr;
+arr = (int *)malloc(5 * sizeof(int));
+
+if (arr == NULL) {
+    printf("Memory allocation failed\n");
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📦 calloc()</h2>
+      <p>Allocates memory and initializes it to zero</p>
+      <pre><code class="language-c">
+int *arr = (int *)calloc(5, sizeof(int));
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 realloc()</h2>
+      <p>Resizes previously allocated memory</p>
+      <pre><code class="language-c">
+arr = (int *)realloc(arr, 10 * sizeof(int));
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>❌ free()</h2>
+      <p>Frees allocated memory</p>
+      <pre><code class="language-c">
+free(arr);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Allocate an array dynamically using malloc.</li>
+        <li>Resize it using realloc.</li>
+        <li>Print all values and free the memory.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv8.html">← Previous: Searching Algorithms</a>
+      <a href="adv10.html">Next → Pointers & Functions</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

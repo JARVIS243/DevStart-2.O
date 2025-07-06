@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 2: Structures</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 2 – Structures (struct)</h1>
+    <p>Group related variables together</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a struct?</h2>
+      <p>A struct groups variables of different types under one name.</p>
+      <pre><code class="language-c">
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using structs</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Person p1 = {"Aju", 21};
+    printf("Name: %s\nAge: %d\n", p1.name, p1.age);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create structs for different entities.</li>
+        <li>Practice accessing and modifying struct members.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous: Advanced Pointers</a>
+      <a href="inter3.html">Next → Dynamic Memory Allocation</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

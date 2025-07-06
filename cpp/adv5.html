@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Advanced Lesson 5: Multithreading Basics</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Advanced Lesson 5 – Multithreading Basics</h1>
+    <p>Learn how to run multiple threads concurrently</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>⚙️ What is Multithreading?</h2>
+      <p>
+        Multithreading allows your program to run multiple sequences of instructions simultaneously.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Basic Thread Creation</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+using namespace std;
+
+void printMessage(string msg) {
+    cout &lt;&lt; msg &lt;&lt; endl;
+}
+
+int main() {
+    thread t1(printMessage, "Hello from thread 1");
+    thread t2(printMessage, "Hello from thread 2");
+
+    // Wait for threads to finish
+    t1.join();
+    t2.join();
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Use <code>std::thread</code> to create threads</li>
+        <li>Use <code>join()</code> to wait for thread completion</li>
+        <li>Ensure thread-safe access to shared resources</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create threads that modify shared variables</li>
+        <li>Use mutexes to prevent data races</li>
+        <li>Experiment with thread synchronization techniques</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv4.html">← Previous: Smart Pointers</a>
+      <a href="adv6.html">Next → Move Semantics</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

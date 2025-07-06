@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 19: Union in C</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 19 – Union in C</h1>
+    <p>Use shared memory structure for efficient data handling</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔄 What is a Union?</h2>
+      <p>
+        A union is like a structure, but all members share the same memory location.
+        Only one member can hold a value at any time.
+      </p>
+    </section>
+
+    <section>
+      <h2>💡 Example</h2>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+union Data {
+    int i;
+    float f;
+    char str[20];
+};
+
+int main() {
+    union Data d;
+
+    d.i = 10;
+    printf("d.i = %d\n", d.i);
+
+    d.f = 3.14;
+    printf("d.f = %.2f\n", d.f);
+
+    strcpy(d.str, "DevStart");
+    printf("d.str = %s\n", d.str);
+
+    return 0;
+}
+      </code></pre>
+      <p>⚠️ Only the last assigned value remains valid.</p>
+    </section>
+
+    <section>
+      <h2>🆚 Union vs Structure</h2>
+      <ul>
+        <li><strong>Structure</strong> – separate memory for each member</li>
+        <li><strong>Union</strong> – shared memory for all members</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create a union with multiple data types</li>
+        <li>Print the size of the union using <code>sizeof</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv18.html">← Previous: Typedef and Enums</a>
+      <a href="adv20.html">Next → Final C Project</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

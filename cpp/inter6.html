@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 6: Inheritance</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 6 – Inheritance</h1>
+    <p>Reuse and extend existing classes using inheritance</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🌳 What is Inheritance?</h2>
+      <p>
+        Inheritance allows a new class (derived) to inherit properties and behaviors from an existing class (base).
+      </p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Base and Derived Classes</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+class Animal {
+public:
+    void speak() {
+        cout &lt;&lt; "Animal speaks" &lt;&lt; endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void bark() {
+        cout &lt;&lt; "Dog barks" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Dog d;
+    d.speak();  // inherited from Animal
+    d.bark();   // own method
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Use colon <code>:</code> to specify inheritance</li>
+        <li><code>public</code> inheritance means public members are accessible</li>
+        <li>Derived classes can add new members or override base class methods</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a base class <code>Vehicle</code> and a derived class <code>Car</code></li>
+        <li>Add members to both classes and demonstrate inheritance</li>
+        <li>Override a function in the derived class</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter5.html">← Previous: Constructors and Destructors</a>
+      <a href="inter7.html">Next → Polymorphism</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

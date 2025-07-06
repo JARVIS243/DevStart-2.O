@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced C – Lesson 14: File Record Search</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>Advanced C: Lesson 14 – File Record Search</h1>
+    <p>Search specific records from a file containing structures</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📖 File with Multiple Records</h2>
+      <p>Suppose you have a file with multiple <code>Student</code> structures stored.</p>
+      <pre><code class="language-c">
+struct Student {
+    int id;
+    char name[50];
+};
+
+void searchRecord(int key) {
+    struct Student s;
+    FILE *fp = fopen("student.bin", "rb");
+    int found = 0;
+
+    while (fread(&s, sizeof(s), 1, fp)) {
+        if (s.id == key) {
+            printf("Found: %d - %s\n", s.id, s.name);
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found) {
+        printf("Record not found.\n");
+    }
+
+    fclose(fp);
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Create a function to search by student name.</li>
+        <li>Print all matching records.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="adv13.html">← Previous: File Handling with Structures</a>
+      <a href="adv15.html">Next → Project: Student Database</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Master C Programming the Logic-First Way</p>
+  </footer>
+</body>
+</html>

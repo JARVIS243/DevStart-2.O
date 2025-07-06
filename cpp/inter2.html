@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Intermediate Lesson 2: Dynamic Memory Allocation</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Intermediate Lesson 2 – Dynamic Memory Allocation</h1>
+    <p>Learn how to allocate and free memory dynamically</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📌 What is Dynamic Memory?</h2>
+      <p>Memory allocated during program execution (runtime) using pointers.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Using <code>new</code> and <code>delete</code></h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int* ptr = new int;     // allocate memory for one int
+    *ptr = 100;             // assign value
+    cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; endl;
+
+    delete ptr;             // free allocated memory
+
+    // Dynamic array
+    int size = 3;
+    int* arr = new int[size];
+    for (int i = 0; i &lt; size; i++) {
+        arr[i] = i * 10;
+    }
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; "arr[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; arr[i] &lt;&lt; endl;
+    }
+
+    delete[] arr;           // free array memory
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li><code>new</code> allocates memory</li>
+        <li><code>delete</code> frees memory</li>
+        <li>Use <code>delete[]</code> for arrays allocated with <code>new[]</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Allocate memory for different data types</li>
+        <li>Create dynamic arrays of varying sizes</li>
+        <li>Practice freeing memory to avoid leaks</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter1.html">← Previous: Pointers Basics</a>
+      <a href="inter3.html">Next → References and Aliases</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

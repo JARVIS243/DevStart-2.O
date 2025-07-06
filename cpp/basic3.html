@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Input and Output</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 3 – Input and Output</h1>
+    <p>Take input from the user and display output on the screen</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🧾 Output with <code>cout</code></h2>
+      <p><code>cout</code> is used to print values to the screen.</p>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Welcome to DevStart!" &lt;&lt; endl;
+    cout &lt;&lt; "Let's learn C++" &lt;&lt; endl;
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🎤 Input with <code>cin</code></h2>
+      <p><code>cin</code> is used to take input from the user via keyboard.</p>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+    cout &lt;&lt; "You are " &lt;&lt; age &lt;&lt; " years old." &lt;&lt; endl;
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Multiple Inputs</h2>
+      <p>You can accept multiple inputs in a single line.</p>
+      <pre><code class="language-cpp">
+int a, b;
+cin &gt;&gt; a &gt;&gt; b;
+      </code></pre>
+
+      <p>This reads two numbers separated by space.</p>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Take name, age, and country as input</li>
+        <li>Display a custom greeting using the values</li>
+        <li>Try entering characters and decimals into an <code>int</code> variable</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Summary</h2>
+      <ul>
+        <li><code>cout</code> – output stream to print to screen</li>
+        <li><code>cin</code> – input stream to read from user</li>
+        <li>Use <code>&lt;&lt;</code> with <code>cout</code>, <code>&gt;&gt;</code> with <code>cin</code></li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic2.html">← Previous: Variables</a>
+      <a href="basic4.html">Next → Operators</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

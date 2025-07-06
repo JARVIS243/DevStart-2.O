@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming – Intermediate Lesson 10: Typedef and Enums</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C Programming: Intermediate Lesson 10 – Typedef and Enums</h1>
+    <p>Make your code cleaner and more readable</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔠 typedef</h2>
+      <p>Creates an alias for a data type.</p>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+typedef unsigned int uint;
+
+int main() {
+    uint age = 25;
+    printf("Age: %u\n", age);
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔢 enum (Enumeration)</h2>
+      <p>Defines a set of named integer constants.</p>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+enum Day { MON, TUE, WED, THU, FRI };
+
+int main() {
+    enum Day today = WED;
+
+    if (today == WED)
+        printf("Mid-week day!\n");
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This Yourself</h2>
+      <ul>
+        <li>Use typedef to simplify long data types (e.g., struct Student).</li>
+        <li>Create enums for months, levels, or categories.</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="inter9.html">← Previous: Error Handling</a>
+      <a href="adv1.html">Next → Advanced: Bitwise Operations</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C the Logic-First Way</p>
+  </footer>
+</body>
+</html>

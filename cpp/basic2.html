@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ – Variables and Data Types</title>
+  <link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 2 – Variables and Data Types</h1>
+    <p>Store and manage data using variables</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>📦 What is a Variable?</h2>
+      <p>
+        A variable is a name given to a memory location where you can store data.  
+        Each variable has a <strong>type</strong>, which defines the kind of data it can hold.
+      </p>
+    </section>
+
+    <section>
+      <h2>📘 Common Data Types</h2>
+      <ul>
+        <li><code>int</code> – integers (e.g., 5, -2)</li>
+        <li><code>float</code> – decimal numbers (e.g., 3.14)</li>
+        <li><code>char</code> – single character (e.g., 'A')</li>
+        <li><code>bool</code> – true or false</li>
+        <li><code>string</code> – text (need <code>#include &lt;string&gt;</code>)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    int age = 18;
+    float height = 5.8;
+    char grade = 'A';
+    bool passed = true;
+    string name = "DevStart";
+
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "Height: " &lt;&lt; height &lt;&lt; endl;
+    cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; endl;
+    cout &lt;&lt; "Passed: " &lt;&lt; passed &lt;&lt; endl;
+
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🔍 Notes</h2>
+      <ul>
+        <li>Use <code>=</code> to assign values</li>
+        <li>Use <code>&lt;&lt;</code> with <code>cout</code> to print values</li>
+        <li><code>bool</code> prints as 1 (true) or 0 (false)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Declare your own variables (e.g., country, marks, isPassed)</li>
+        <li>Change the values and see the output</li>
+        <li>Try assigning a float to an int and observe what happens</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic1.html">← Previous: First Program</a>
+      <a href="basic3.html">Next → Input and Output</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

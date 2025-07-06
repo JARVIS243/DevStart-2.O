@@ -1,0 +1,138 @@
+/* ========== Reset and Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #d9e2ec);
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ========== Header Section ========== */
+header {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px #ccc;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  opacity: 0.9;
+}
+
+/* ========== Grid Layout ========== */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ========== Tile Buttons ========== */
+.language-grid a {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #ffffff55;
+  position: relative;
+}
+
+.language-grid a:hover {
+  background: rgba(0, 123, 255, 0.15);
+  transform: translateY(-5px) scale(1.03);
+  color: #007bff;
+  box-shadow: 0 8px 30px rgba(0, 123, 255, 0.25);
+}
+
+/* ========== Footer ========== */
+footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #666;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* ========== Button Styles ========== */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Inputs ========== */
+input[type="text"], textarea {
+  width: 90%;
+  max-width: 600px;
+  padding: 12px;
+  margin: 15px auto;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ========== Content Block (Lessons, Chat, etc.) ========== */
+.content-block {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ========== Section Titles ========== */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+/* ========== Animation ========== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ – Functions</title>
+  <link rel="stylesheet" href="../style-v2.css" />
+</head>
+<body>
+  <header>
+    <h1>C++: Basic Lesson 7 – Functions</h1>
+    <p>Organize code into reusable blocks called functions</p>
+  </header>
+
+  <main class="lesson-content">
+    <section>
+      <h2>🔹 What is a Function?</h2>
+      <p>A function is a block of code that performs a specific task and can be called multiple times.</p>
+    </section>
+
+    <section>
+      <h2>🧑‍💻 Example: Function Definition and Call</h2>
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+// Function declaration and definition
+void greet() {
+    cout &lt;&lt; "Hello from function!" &lt;&lt; endl;
+}
+
+int main() {
+    greet();  // Call the function
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>📘 Function with Parameters and Return Value</h2>
+      <pre><code class="language-cpp">
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int sum = add(5, 7);
+    cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Try This</h2>
+      <ul>
+        <li>Create a function to multiply two numbers</li>
+        <li>Write a function to check if a number is even or odd</li>
+        <li>Call your functions with different inputs</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="basic6.html">← Previous: Loops</a>
+      <a href="basic8.html">Next → Arrays</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>DevStart 2.0 – Learn C++ the Logic-First Way</p>
+  </footer>
+</body>
+</html>

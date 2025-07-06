@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevStart 2.0 – Learn Programming</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ✨ Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes animateText {
+      0% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+      100% { background-position: 0% center; }
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #e3e9ef, #bcc5ce);
+      color: #111;
+      min-height: 100vh;
+      padding: 20px;
+      background-blend-mode: lighten;
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 0.5px;
+      background: linear-gradient(270deg, #00ccff, #00ff99, #ff0099, #00ccff);
+      background-size: 200% auto;
+      color: #fff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animateText 4s ease-in-out infinite;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .language-grid a {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      position: relative;
+    }
+
+    .language-grid a::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: linear-gradient(145deg, #ffffff33, #00ffff33);
+      z-index: -1;
+      border-radius: 25px;
+      filter: blur(15px);
+      opacity: 0.3;
+    }
+
+    .language-grid a:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 -1px 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .language-grid {
+        padding: 20px;
+      }
+      .language-grid a {
+        font-size: 1rem;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DevStart 2.0</h1>
+    <p>Build Logic. Learn to Code. From Zero to Hero.</p>
+  </header>
+
+  <main class="language-grid">
+    <a href="python/basic1.html">🐍 Python</a>
+    <a href="javascript/basic1.html">🌐 JavaScript</a>
+    <a href="java/basic1.html">☕ Java</a>
+    <a href="c/basic1.html">🔣 C</a>
+    <a href="cpp/basic1.html">💻 C++</a>
+    <a href="typescript/basic1.html">📘 TypeScript</a>
+    <a href="csharp/basic1.html">🎮 C#</a>
+    <a href="kotlin/basic1.html">📱 Kotlin</a>
+    <a href="sql/basic1.html">🧠 SQL</a>
+    <a href="htmlcss/basic1.html">🌍 HTML & CSS</a>
+    <a href="code-tester/index.html">💻 Code Tester</a>
+    <a href="random/index.html">🎲 Random Questions</a>
+    <a href="fullforms.html">📘 Full Forms</a>
+  </main>
+
+  <footer>
+    <p>© 2025 DevStart. Published By Aju Krishna. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
